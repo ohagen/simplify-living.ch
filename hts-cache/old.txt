@@ -1,0 +1,4 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+22:07:44	162/162	---M--	301	error ('Moved%20Permanently')	text/html	date:Sun,%2012%20Oct%202025%2020:07:48%20GMT	http://simplify-living.ch/	C:/My%20Web%20Sites/simplify-living/simplify-living.ch/index.html	(from )
+22:07:44	162/162	---M--	301	error ('Moved%20Permanently')	text/html	date:Sun,%2012%20Oct%202025%2020:07:48%20GMT	http://simplify-living.ch/robots.txt		(from )
+22:07:45	162/162	---M--	301	error ('Moved%20Permanently')	text/html	date:Sun,%2012%20Oct%202025%2020:07:49%20GMT	http://simplify-living.ch/	C:/My%20Web%20Sites/simplify-living/simplify-living.ch/index.html	(from )
