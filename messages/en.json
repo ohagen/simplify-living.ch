@@ -46,7 +46,7 @@
   "home.about-me.p2": "Find out more about me and why helping people create order brings me so much joy.",
   "home.about-me.cta": "Learn About Simone",
 
-  "home.services.title": "The Packages",
+  "home.services.title": "Packages",
   "home.services.subtitle1": "Clothes",
   "home.services.p1": "We'll organize your closet to its full potential in an easy and fun way.",
   "home.services.subtitle2": "Paperwork",
@@ -57,22 +57,46 @@
   "home.services.p4": "We'll tidy up your entire household and arrange it in a optimal way.",
   "home.services.cta": "View All Services",
 
-  "about.title": "About Us",
-  "about.description": "Learn more about Simplify Living and our mission.",
-  "about.content": "We are a team of professional organizers...",
-  "contact.title": "Contact",
-  "contact.description": "Contact us for a free consultation.",
-  "contact.form.name": "Name",
-  "contact.form.email": "Email",
-  "contact.form.message": "Message",
-  "contact.form.submit": "Send",
-  "gallery.title": "Gallery",
-  "gallery.description": "Pictures of our work and projects.",
-  "gallery.subtitle": "Before and After",
-  "services.title": "Our Services",
-  "services.description": "What we can do for you.",
-  "services.subtitle": "Professional Organization Services",
-  "method.title": "Our Method",
-  "method.description": "How we work.",
-  "method.subtitle": "A Systematic Approach"
+  "home.gallery.title": "Gallery",
+  "home.gallery.subtitle": "Before and After",
+  "home.gallery.p1": "Slide down to view the 'before' photo.",
+  "home.gallery.cta": "View Full Gallery",
+
+  "before-after.aria-label": "Before and after comparison slider",
+  "before-after.aria-valuetext": "After image visible",
+  "before-after.label.before": "BEFORE",
+  "before-after.label.after": "AFTER",
+  "before-after.images": [
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/kitchen-before.webp",
+        "image": "../images/gallery/before-after/kitchen-before.jpg",
+        "alt": "Kitchen before organization"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/kitchen-after.webp",
+        "image": "../images/gallery/before-after/kitchen-after.jpg",
+        "alt": "Kitchen after organization"
+      }
+    },
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/bathroom-2-before.webp",
+        "image": "../images/gallery/before-after/bathroom-2-before.jpg",
+        "alt": "Bathroom before organization"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/bathroom-2-after.webp",
+        "image": "../images/gallery/before-after/bathroom-2-after.jpg",
+        "alt": "Bathroom after organization"
+      }
+    }
+  ],
+
+  "home.testimonials.title": "Testimonials", 
+
+  "home.final-cta.title": "Ready to Simplify Your Life?",
+  "home.final-cta.p1": "Are you ready to create a home that truly feels good to you?",
+  "home.final-cta.p2": "Get in touch now! Free and no strings attached.",
+  "home.final-cta.cta": "Book a Free Consultation"
 }

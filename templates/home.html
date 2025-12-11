@@ -24,7 +24,7 @@
         <p class="content__text">{{home.how-it-works.p1}}</p>
         <p class="content__text">{{home.how-it-works.p2}}</p>
         <picture class="content__picture">
-          <source srcset="../images/home/how-it.works.webp" type="image/webp" />
+          <source srcset="../images/home/how-it-works.webp" type="image/webp" />
           <img
             src="../images/home/how-it-works.jpg"
             alt="Woman meditating"
@@ -99,7 +99,9 @@
                 class="content__image--vertical"
               />
             </picture>
-            <h3 class="heading__level3--smaller-margin-bottom">{{home.services.subtitle1}}</h3>
+            <h3 class="heading__level3--smaller-margin-bottom">
+              {{home.services.subtitle1}}
+            </h3>
             <p class="content__text">{{home.services.p1}}</p>
           </div>
           <div class="content__single-column">
@@ -114,7 +116,9 @@
                 class="content__image--vertical"
               />
             </picture>
-            <h3 class="heading__level3--smaller-margin-bottom">{{home.services.subtitle2}}</h3>
+            <h3 class="heading__level3--smaller-margin-bottom">
+              {{home.services.subtitle2}}
+            </h3>
             <p class="content__text">{{home.services.p2}}</p>
           </div>
           <div class="content__single-column">
@@ -126,7 +130,9 @@
                 class="content__image--vertical"
               />
             </picture>
-            <h3 class="heading__level3--smaller-margin-bottom">{{home.services.subtitle3}}</h3>
+            <h3 class="heading__level3--smaller-margin-bottom">
+              {{home.services.subtitle3}}
+            </h3>
             <p class="content__text">{{home.services.p3}}</p>
           </div>
           <div class="content__single-column">
@@ -141,7 +147,9 @@
                 class="content__image--vertical"
               />
             </picture>
-            <h3 class="heading__level3--smaller-margin-bottom">{{home.services.subtitle4}}</h3>
+            <h3 class="heading__level3--smaller-margin-bottom">
+              {{home.services.subtitle4}}
+            </h3>
             <p class="content__text">{{home.services.p4}}</p>
           </div>
         </div>
@@ -149,6 +157,38 @@
           <a href="services/index.html" class="cta__button"
             >{{home.services.cta}}</a
           >
+        </div>
+      </section>
+
+      <!-- 5. GALLERY SECTION -->
+      <section class="content__section">
+        <h2 class="heading__level2">{{home.gallery.title}}</h2>
+        <h3 class="heading__level3">{{home.gallery.subtitle}}</h3>
+        <p class="content__text">{{home.gallery.p1}}</p>
+
+        <!-- Before/After Slider -->
+        <!-- Add more images to messages and respective indices here -->
+         <div class="before-after__two-column-container">
+        {{> common/before-after.html index=0}} 
+        {{> common/before-after.html index=1}}
+      </div>
+        <div class="cta">
+          <a href="gallery/index.html" class="cta__button">{{home.gallery.cta}}</a>
+        </div>
+      </section>
+
+      <!-- 6. TESTIMONIALS SECTION -->
+      <section class="content__section">
+        <h2 class="heading__level2">{{home.testimonials.title}}</h2>
+      </section>
+
+      <!-- 7. FINAL CTA SECTION -->
+      <section class="content__section">
+        <h2 class="heading__level2">{{home.final-cta.title}}</h2>
+        <p class="content__text">{{home.final-cta.p1}}</p>
+        <p class="content__text">{{home.final-cta.p2}}</p>
+        <div class="cta">
+          <a href="contact/index.html" class="cta__button">{{home.final-cta.cta}}</a>
         </div>
       </section>
     </main>

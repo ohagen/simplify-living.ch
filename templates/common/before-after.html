@@ -1,0 +1,81 @@
+{{!-- 
+  Before/After Slider Component
+  
+  Usage: 
+    Single instance: {{> common/before-after.html index=0}}
+    Multiple instances: {{> common/before-after.html index=0}} {{> common/before-after.html index=1}}
+  
+  To add new images, add entries to the "before-after.images" array in messages/en.json and messages/de.json:
+  
+  "before-after.images": [
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/bathroom-1-before.webp",
+        "image": "../images/gallery/before-after/bathroom-1-before.jpg",
+        "alt": "Bathroom before organization"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/bathroom-1-after.webp",
+        "image": "../images/gallery/before-after/bathroom-1-after.jpg",
+        "alt": "Bathroom after organization"
+      }
+    },
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/kitchen-before.webp",
+        "image": "../images/gallery/before-after/kitchen-before.jpg",
+        "alt": "Kitchen before organization"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/kitchen-after.webp",
+        "image": "../images/gallery/before-after/kitchen-after.jpg",
+        "alt": "Kitchen after organization"
+      }
+    }
+  ]
+  
+  Shared labels (same for all instances):
+  - before-after.aria-label (accessibility label)
+  - before-after.aria-valuetext (initial accessibility text)
+  - before-after.label.before ("BEFORE")
+  - before-after.label.after ("AFTER")
+--}}
+
+<div class="before-after">
+    <div 
+      class="before-after__container"
+      role="slider"
+      aria-label="{{before-after.aria-label}}"
+      aria-valuemin="2"
+      aria-valuemax="98"
+      aria-valuenow="2"
+      aria-valuetext="{{before-after.aria-valuetext}}"
+      tabindex="0"
+    >
+      <picture class="before-after__picture">
+        <source srcset="{{before-after.before.imageWebP}}" type="image/webp" />
+        <img
+          src="{{before-after.before.image}}"
+          alt="{{before-after.before.alt}}"
+          class="before-after__image before-after__image--before"
+        />
+      </picture>
+      <picture class="before-after__picture">
+        <source srcset="{{before-after.after.imageWebP}}" type="image/webp" />
+        <img
+          src="{{before-after.after.image}}"
+          alt="{{before-after.after.alt}}"
+          class="before-after__image before-after__image--after"
+        />
+      </picture>
+      <div class="before-after__handle" aria-hidden="true">
+        <span class="before-after__arrow before-after__arrow--up"></span>
+        <span class="before-after__arrow before-after__arrow--down"></span>
+      </div>
+      <div class="before-after__overlay" aria-hidden="true">
+        <div class="before-after__label before-after__label--before">{{before-after.label.before}}</div>
+        <div class="before-after__label before-after__label--after">{{before-after.label.after}}</div>
+      </div>
+      <div class="before-after__sr-only" aria-live="polite" aria-atomic="true"></div>
+    </div>
+  </div>

@@ -19,7 +19,7 @@ function build() {
   // Debounce: wait 300ms for multiple rapid changes
   buildTimeout = setTimeout(() => {
     console.log('\n🔄 Rebuilding...');
-    exec('node build.js', (error, stdout, stderr) => {
+    exec('node build.js', { maxBuffer: 10 * 1024 * 1024 }, (error, stdout, stderr) => {
       if (error) {
         console.error('❌ Build failed:', error.message);
         return;

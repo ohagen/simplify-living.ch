@@ -57,19 +57,40 @@ function loadMessages(locale) {
 /**
  * Include partial templates recursively: head (meta, title, description, keywords), navbar, footer
  */
-function includePartials(html, templateDir, locale, pageName, messages) {
-  // Match {{> path/to/partial.html}} syntax
+function includePartials(html, templateDir, locale, pageName, messages, indexContext = null) {
+  // Remove Handlebars comments {{!-- ... --}} before processing includes
+  // This prevents includes inside comments from being processed
+  html = html.replace(/\{\{!--[\s\S]*?--\}\}/g, '');
+  
+  // Match {{> path/to/partial.html}} or {{> path/to/partial.html index=0}} syntax
   const includePattern = /\{\{>\s*([^\}]+)\s*\}\}/g;
   let match;
   while ((match = includePattern.exec(html)) !== null) {
-    const partialPath = match[1].trim();
+    const includeContent = match[1].trim();
+    // Parse include path and optional parameters
+    const parts = includeContent.split(/\s+/);
+    const partialPath = parts[0];
+    let includeIndex = null;
+    
+    // Check for index parameter (e.g., "index=0")
+    for (let i = 1; i < parts.length; i++) {
+      if (parts[i].startsWith('index=')) {
+        includeIndex = parseInt(parts[i].split('=')[1], 10);
+        break;
+      }
+    }
+    
     // Resolve path relative to template directory
     const fullPath = path.resolve(templateDir, partialPath);
     
     if (fs.existsSync(fullPath)) {
       let partialContent = fs.readFileSync(fullPath, "utf8");
+      // Create index context for this partial if index is specified
+      const newIndexContext = includeIndex !== null ? includeIndex : indexContext;
       // Recursively process includes in the partial
-      partialContent = includePartials(partialContent, path.dirname(fullPath), locale, pageName, messages);
+      partialContent = includePartials(partialContent, path.dirname(fullPath), locale, pageName, messages, newIndexContext);
+      // Process placeholders with index context
+      partialContent = replacePlaceholders(partialContent, locale, pageName, messages, newIndexContext);
       // Replace the include directive with the partial content
       html = html.replace(match[0], partialContent);
       // Reset regex lastIndex to continue searching from the beginning
@@ -83,28 +104,46 @@ function includePartials(html, templateDir, locale, pageName, messages) {
 }
 
 /**
- * Replace placeholders in template
+ * Replace placeholders in template with optional index context for array lookups
  */
-function renderTemplate(templatePath, locale, pageName) {
-  if (!fs.existsSync(templatePath)) {
-    return null;
-  }
-
-  let html = fs.readFileSync(templatePath, "utf8");
-  const messages = loadMessages(locale);
-  const templateDir = path.dirname(templatePath);
-  
-  // Process partial includes first (before placeholder replacement)
-  html = includePartials(html, templateDir, locale, pageName, messages);
-
+function replacePlaceholders(html, locale, pageName, messages, indexContext = null) {
   // Replace {{key}} placeholders
   // Supports both full keys ({{home.title}}) and short keys ({{title}})
   // Also supports dashes in key names ({{home.how-it-works.title}})
   // Supports nested keys like {{hero.title}} which resolves to {{pageName}}.hero.title
-  html = html.replace(/\{\{([\w-]+(?:\.[\w-]+)*)\}\}/g, (match, key) => {
+  // Supports array lookups when indexContext is provided (e.g., before-after.images[0].before.image)
+  return html.replace(/\{\{([\w-]+(?:\.[\w-]+)*)\}\}/g, (match, key) => {
     // Special case: {{locale}} -> replace with actual locale
     if (key === "locale") {
       return locale;
+    }
+
+    // If indexContext is provided and key starts with a known array prefix, try array lookup first
+    if (indexContext !== null) {
+      // Check for before-after array pattern
+      if (key.startsWith('before-after.')) {
+        const arrayKey = `before-after.images`;
+        if (arrayKey in messages && Array.isArray(messages[arrayKey])) {
+          const images = messages[arrayKey];
+          if (images[indexContext]) {
+            // Extract the sub-key (e.g., "before.image" from "before-after.before.image")
+            const subKey = key.replace('before-after.', '');
+            const keys = subKey.split('.');
+            let value = images[indexContext];
+            for (const k of keys) {
+              if (value && typeof value === 'object' && k in value) {
+                value = value[k];
+              } else {
+                value = null;
+                break;
+              }
+            }
+            if (value !== null) {
+              return value;
+            }
+          }
+        }
+      }
     }
 
     // Try exact key first (e.g., "home.title", "common.nav.home")
@@ -133,6 +172,25 @@ function renderTemplate(templatePath, locale, pageName) {
     // Return original if not found
     return match;
   });
+}
+
+/**
+ * Replace placeholders in template
+ */
+function renderTemplate(templatePath, locale, pageName) {
+  if (!fs.existsSync(templatePath)) {
+    return null;
+  }
+
+  let html = fs.readFileSync(templatePath, "utf8");
+  const messages = loadMessages(locale);
+  const templateDir = path.dirname(templatePath);
+  
+  // Process partial includes first (before placeholder replacement)
+  html = includePartials(html, templateDir, locale, pageName, messages);
+
+  // Replace remaining placeholders
+  html = replacePlaceholders(html, locale, pageName, messages);
 
   // Remove empty elements (elements that only contain whitespace or unresolved placeholders)
   // This handles cases where optional content like {{hero.alert}} is empty or not found
