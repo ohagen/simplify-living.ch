@@ -1,0 +1,180 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  overflow: hidden;
+  min-height: 50vh;
+  width: 100%;
+  padding-top: clamp(5rem, 8vw, 7.5rem);
+
+  // For homepage only
+  &--full {
+    min-height: 100vh;
+  }
+
+  // For other pages
+  &--half {
+    min-height: 50vh;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    picture {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+
+      @media (max-width: 1024px) {
+        object-position: left;
+      }
+    }
+  }
+
+  // Handles only positioning & background of navbar
+  // (navbar styles are in _navbar.scss)
+  &__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.75rem var(--space-lg);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.301);
+    box-shadow: 0 10px 25px rgba(134, 134, 134, 0.281);
+    transition: transform 200ms ease, opacity 200ms ease;
+
+    @media (max-width: 768px) {
+      padding: var(--space-xs) var(--space-md);
+    }
+
+    &--hidden {
+      transform: translateY(-110%);
+      opacity: 0;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 3;
+    width: var(--container-max);
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: clamp(6rem, 3vw, 15rem);
+    text-align: left;
+    color: var(--color-heading-hero);
+
+    @media (max-width: 1024px) {
+      padding-left: var(--space-sm);
+    }
+
+    @media (max-width: 768px) {
+      padding-left: var(--space-xs);
+    }
+
+    p {
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-weight: 400;
+      margin: var(--space-md);
+
+      @media (max-width: 768px) {
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  &__heading--level1 {
+    font-size: 6rem;
+    text-transform: lowercase;
+    font-family: var(--font-heading);
+    color: var(--color-heading-hero);
+    font-weight: 400;
+    line-height: 0.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 768px) {
+      font-size: 4rem;
+    }
+  }
+
+  &__alert {
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%); // center it
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-alert);
+    border-radius: 0.5rem;
+    width: fit-content;
+    white-space: nowrap;
+
+    @media (max-width: 768px) {
+      padding: var(--space-xs) var(--space-sm);
+      gap: var(--space-xs);
+    }
+
+    @media (max-width: 480px) {
+      padding: var(--space-xs) var(--space-sm);
+    }
+  }
+
+  &__alert-icon {
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    width: 0.75rem;
+    height: 0.75rem;
+    animation: blink 1.5s ease-in-out infinite;
+
+    @media (max-width: 480px) {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+  }
+
+  &__alert-text {
+    font-size: 1.1875rem;
+    margin: 0;
+    padding: 0;
+    color: var(--color-white);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1;
+    display: inline-block;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Alert icon blinking animation
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.7);
+  }
+}

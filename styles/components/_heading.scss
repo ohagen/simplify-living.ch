@@ -1,0 +1,85 @@
+/* Shared base styles for headings */
+
+%heading-base {
+  font-family: var(--font-subheading);
+  color: var(--color-heading);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+}
+
+// BEM Block
+.heading {
+  @extend %heading-base;
+
+  &__level2 {
+    @extend %heading-base;
+    position: relative;
+    padding-bottom: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    font-size: clamp(1.875rem, 3vw + 1rem, 2.375rem); // (min 30px, max 38px)
+    font-weight: normal;
+    text-transform: none;
+
+    // Border-bottom with gradient fade
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4rem;
+      height: 2px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        var(--color-sage-400) 20%,
+        var(--color-sage-400) 80%,
+        transparent
+      );
+      border-radius: 1px;
+    }
+
+    // Small decorative dot in the center
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 6px;
+      background-color: var(--color-sage-400);
+      border-radius: 50%;
+      opacity: 0.6;
+    }
+  }
+
+  &__level3 {
+    @extend %heading-base;
+    margin-bottom: var(--space-lg);
+    font-size: clamp(1.5rem, 2.5vw + 0.75rem, 1.75rem); // (min 24px, max 28px)
+    font-weight: 400;
+  }
+
+  &__level3--capitalized {
+    @extend %heading-base;
+    margin-bottom: var(--space-lg);
+    font-size: clamp(1.125rem, 1.5vw + 0.75rem, 1.25rem); // (min 18px, max 20px)
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__level3--smaller-margin-bottom {
+    @extend %heading-base;
+    margin-bottom: var(--space-sm);
+    font-size: clamp(1.5rem, 2.5vw + 0.75rem, 1.75rem); // (min 24px, max 28px)
+    font-weight: 400;
+  }
+}

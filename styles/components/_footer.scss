@@ -1,0 +1,13 @@
+.site-footer {
+  text-align: center;
+  padding: var(--space-lg) var(--space-sm);
+  background-color: var(--color-white);
+  color: var(--color-sage-400);
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(83, 105, 66, 0.12);
+
+  p {
+    margin: 0;
+  }
+}
+

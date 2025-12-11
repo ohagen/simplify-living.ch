@@ -1,0 +1,17 @@
+<section class="hero hero--{{hero.size}}">
+  <div class="hero__bg">
+    <picture>
+      <source srcset="{{hero.imageWebP}}" type="image/webp">
+      <img src="{{hero.image}}" alt="{{hero.alt}}" />
+    </picture>
+  </div>
+  <div class="hero__nav">{{> navbar.html}}</div>
+  <div class="hero__content">
+    <h1 class="hero__heading--level1">{{hero.title}}</h1>
+    <p>{{hero.subtitle}}</p>
+  </div>
+  <div class="hero__alert">
+    <div class="hero__alert-icon"></div>
+    <p class="hero__alert-text">{{hero.alert}}</p>
+  </div>
+</section>

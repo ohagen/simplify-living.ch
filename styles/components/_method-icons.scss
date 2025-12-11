@@ -1,0 +1,82 @@
+// Method icons block:
+// - method-icons
+// - method-icons__item
+// - method-icons__icon
+// - method-icons__text
+
+.method-icons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(12rem, auto));
+  gap: var(--space-md);
+  margin: var(--space-xl) auto;
+  max-width: var(--container-max);
+  width: 100%;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    gap: var(--space-sm);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 var(--space-sm);
+  }
+
+  // Div for each icon + text
+  &__item {
+    text-align: center;
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    background-color: var(--color-sage-50);
+    border-radius: 2rem;
+    width: 100%;
+    max-width: 13rem;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      max-width: none;
+      padding: var(--space-sm);
+    }
+  }
+
+  &__icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    color: var(--color-body);
+    flex-shrink: 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    @media (max-width: 1024px) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+
+    &--rotated {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__item:hover &__icon {
+    transform: scale(1.1);
+    color: var(--color-heading);
+
+    &--rotated {
+      transform: rotate(90deg) scale(1.1);
+    }
+  }
+
+  &__text {
+    font-size: 1.125rem; // 18px
+    font-weight: 400;
+    color: var(--color-body);
+    margin: 0;
+  }
+}
