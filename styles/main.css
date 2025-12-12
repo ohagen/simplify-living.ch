@@ -637,14 +637,13 @@ a {
   font-family: var(--font-body);
   font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
   font-weight: 400;
-  line-height: 1em;
   text-transform: none;
   color: var(--color-white);
   background-color: var(--color-sage-200);
   border: none;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: transform var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.2s ease-in-out;
 }
 @media (max-width: 921px) {
   .cta__button {
@@ -657,14 +656,11 @@ a {
   }
 }
 .cta__button:hover, .cta__button:focus-visible {
-  transform: translateY(-1px);
   background-color: var(--color-sage-400);
   color: var(--color-white);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 .cta__button:active {
-  transform: translateY(0);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
 }
 
 .method-icons {
