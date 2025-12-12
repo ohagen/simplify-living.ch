@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{locale}}">
   <head>
-    {{> common/head.html}}
+    {{> components/head.html}}
   </head>
   <body>
-    {{> common/hero.html}}
+    {{> components/hero.html}}
 
     <main class="content">
       <!-- 1. WELCOME SECTION -->
@@ -35,7 +35,7 @@
         <p class="content__text">{{home.how-it-works.p3}}</p>
         <p class="content__text">{{home.how-it-works.p4}}</p>
         <!-- Method icons -->
-        {{> common/method-icons.html}}
+        {{> components/method-icons.html}}
         <!-- CTA buttons -->
         <div class="cta">
           <a href="method/index.html" class="cta__button"
@@ -168,8 +168,8 @@
         <!-- Before/After Slider -->
         <!-- Add more images to messages and respective instances here -->
          <div class="before-after__two-column-container">
-        {{> common/before-after.html index=0}} 
-        {{> common/before-after.html index=1}}
+        {{> components/before-after.html index=0}} 
+        {{> components/before-after.html index=1}}
       </div>
         <div class="cta">
           <a href="gallery/index.html" class="cta__button">{{home.gallery.cta}}</a>
@@ -179,7 +179,7 @@
       <!-- 6. TESTIMONIALS SECTION -->
       <section class="content__section">
         <h2 class="heading__level2">{{home.testimonials.title}}</h2>
-        {{> common/testimonials.html}}
+        {{> components/testimonials.html}}
       </section>
 
       <!-- 7. FINAL CTA SECTION -->
@@ -193,7 +193,7 @@
       </section>
     </main>
 
-    <footer class="site-footer">{{> common/footer.html}}</footer>
+    <footer class="site-footer">{{> components/footer.html}}</footer>
 
     <script src="../js/navbar.js" defer></script>
     <script src="../js/before-after.js" defer></script>
