@@ -1,0 +1,208 @@
+/* Testimonials Carousel Component */
+
+.testimonials-carousel {
+  margin: var(--space-xl) auto;
+  max-width: 100%;
+  width: 100%;
+
+  // Includes slides & pagination
+  &__wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  &__slides-container {
+    position: relative;
+    margin-bottom: var(--space-lg);
+  }
+
+  &__slides {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-soft);
+
+    // Slides are hidden by default
+    // When JS is initialized, the slides are shown
+    &.js-initialized .testimonials-carousel__slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1;
+      pointer-events: none;
+      transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+
+      &--active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  &__slide {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  }
+
+  // Div that wraps the testimonial image and caption
+  &__figure {
+    margin: 0;
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: start;
+    height: 26rem;
+
+    @media (max-width: 768px) {
+      padding: var(--space-xl);
+    }
+  }
+
+  &__picture {
+    margin: 0 0 var(--space-md) 0;
+    display: block;
+  }
+
+  &__image {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-white);
+    box-shadow: var(--shadow-soft);
+
+    @media (max-width: 768px) {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    @media (max-width: 640px) {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+
+  &__caption {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  &__quote {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    color: var(--color-sage-700);
+    max-width: 35rem;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+
+  &__cite {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-sage-600);
+    font-style: normal;
+    margin-top: var(--space-xs);
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-white);
+    border: 2px solid #e3e8df;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s ease;
+    color: var(--color-sage-400);
+    font-size: 1.5rem;
+    padding: 0;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-sage-100);
+      color: var(--color-sage-700);
+      outline: none;
+      box-shadow: var(--shadow-medium);
+    }
+
+    &:active {
+      transform: translateY(-50%) scale(0.95);
+    }
+
+    &--prev {
+      left: -1.5rem;
+
+      @media (max-width: 768px) {
+        left: -1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.25rem;
+      }
+    }
+
+    &--next {
+      right: -1.5rem;
+
+      @media (max-width: 768px) {
+        right: -1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xs);
+    margin-top: var(--space-lg);
+    flex-wrap: wrap;
+    padding: 0;
+    }
+
+  &__pagination-button {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-sage-300);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:focus {
+      border-color: var(--color-sage-400);
+      background-color: var(--color-sage-200);
+      outline: none;
+    }
+
+    &--active {
+      background-color: var(--color-sage-400);
+      border-color: var(--color-sage-400);
+    }
+  }
+}
+

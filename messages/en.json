@@ -92,7 +92,30 @@
     }
   ],
 
-  "home.testimonials.title": "Testimonials", 
+  "home.testimonials.title": "Testimonials",
+  "home.testimonials.aria-label": "Client testimonials carousel",
+  "home.testimonials.items": [
+    {
+      "name": "Mirj",
+      "image": "../images/testimonials/mirj.jpg",
+      "text": "The sessions with Simone have even exceeded my expectations. She totally helped me to relax and stay focused on the task at hand."
+    },
+    {
+      "name": "Karin",
+      "image": "../images/testimonials/karin.jpg",
+      "text": "Thanks to Simplify Living, I've learned to approach both my personal and professional life more mindfully. With Simone's careful guidance and inspiring support, I'm able to make decisions with greater clarity. It brings me a new sense of ease."
+    },
+    {
+      "name": "Paedi",
+      "image": "../images/testimonials/paedi.jpg",
+      "text": "I decluttered my clothes with Simone. Even though I now own less, I find what I really like much faster. My wardrobe is clear and organized. It truly feels like a new normal."
+    },
+    {
+      "name": "Stef",
+      "image": "../images/testimonials/stef.jpg",
+      "text": "By bringing order to my home, I've gained clarity in my mind. Now I have the mental space for what really matters."
+    }
+  ],
 
   "home.final-cta.title": "Ready to Simplify Your Life?",
   "home.final-cta.p1": "Are you ready to create a home that truly feels good to you?",

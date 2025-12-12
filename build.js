@@ -104,6 +104,116 @@ function includePartials(html, templateDir, locale, pageName, messages, indexCon
 }
 
 /**
+ * Process Handlebars #each loops for arrays
+ */
+function processEachLoops(html, locale, pageName, messages) {
+  // Match {{#each array.path}}...{{/each}} patterns
+  const eachPattern = /\{\{#each\s+([\w-]+(?:\.[\w-]+)*)\}\}([\s\S]*?)\{\{\/each\}\}/g;
+  let match;
+  
+  while ((match = eachPattern.exec(html)) !== null) {
+    const arrayKey = match[1];
+    const template = match[2];
+    let result = '';
+    
+    // Get the array from messages
+    let array = null;
+    
+    // First try exact key match
+    if (arrayKey in messages && Array.isArray(messages[arrayKey])) {
+      array = messages[arrayKey];
+    } else {
+      // Try nested path resolution (e.g., "home.testimonials.items" or "testimonials.items")
+      const keys = arrayKey.split('.');
+      let value = messages;
+      
+      // Try direct nested path first
+      for (const k of keys) {
+        if (value && typeof value === 'object' && k in value) {
+          value = value[k];
+        } else {
+          value = null;
+          break;
+        }
+      }
+      
+      if (Array.isArray(value)) {
+        array = value;
+      } else {
+        // Try with pageName prefix (e.g., "home.testimonials.items")
+        const prefixedKey = `${pageName}.${arrayKey}`;
+        const prefixedKeys = prefixedKey.split('.');
+        value = messages;
+        for (const k of prefixedKeys) {
+          if (value && typeof value === 'object' && k in value) {
+            value = value[k];
+          } else {
+            value = null;
+            break;
+          }
+        }
+        if (Array.isArray(value)) {
+          array = value;
+        }
+      }
+    }
+    
+    if (array) {
+      const arrayLength = array.length;
+      // Process each item in the array
+      array.forEach((item, index) => {
+        let itemHtml = template;
+        // Replace {{property}} or {{nested.property}} or {{@index}} with item.property or item.nested.property
+        // Note: @index is handled as a special case
+        itemHtml = itemHtml.replace(/\{\{(@?[\w-]+(?:\.[\w-]+)*)\}\}/g, (m, prop) => {
+          // Handle special variables first
+          if (prop === '@index') {
+            return index;
+          }
+          
+          // Handle nested properties (e.g., "home.testimonials.items.length")
+          if (prop.includes('.')) {
+            // Check if it's an array length reference first
+            if (prop.endsWith('.length')) {
+              const baseKey = prop.replace('.length', '');
+              if (baseKey === arrayKey || baseKey.endsWith(arrayKey.split('.').pop())) {
+                return arrayLength;
+              }
+            }
+            
+            // Otherwise, try to resolve nested property from item
+            const propKeys = prop.split('.');
+            let value = item;
+            for (const k of propKeys) {
+              if (value && typeof value === 'object' && k in value) {
+                value = value[k];
+              } else {
+                return m; // Return original if not found
+              }
+            }
+            return value !== undefined && value !== null ? String(value) : m;
+          } else {
+            // Handle simple properties from item object
+            if (item && typeof item === 'object' && prop in item) {
+              const value = item[prop];
+              return value !== undefined && value !== null ? String(value) : m;
+            }
+            return m;
+          }
+        });
+        result += itemHtml;
+      });
+    }
+    
+    html = html.replace(match[0], result);
+    // Reset regex to search from beginning
+    eachPattern.lastIndex = 0;
+  }
+  
+  return html;
+}
+
+/**
  * Replace placeholders in template with optional index context for array lookups
  */
 function replacePlaceholders(html, locale, pageName, messages, indexContext = null) {
@@ -188,6 +298,9 @@ function renderTemplate(templatePath, locale, pageName) {
   
   // Process partial includes first (before placeholder replacement)
   html = includePartials(html, templateDir, locale, pageName, messages);
+
+  // Process #each loops before placeholder replacement
+  html = processEachLoops(html, locale, pageName, messages);
 
   // Replace remaining placeholders
   html = replacePlaceholders(html, locale, pageName, messages);

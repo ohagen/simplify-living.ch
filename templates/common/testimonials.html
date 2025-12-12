@@ -1,0 +1,57 @@
+{{!-- 
+  TESTIMONIALS CAROUSEL COMPONENT
+  This component displays client testimonials in a carousel format.
+  
+  Usage: 
+    - To add new testimonials, add entries to the "home.testimonials.items" array in messages/en.json and messages/de.json
+    - Do not change this file - only the messages files!
+    - In the html files (e.g. home.html), add: {{> common/testimonials.html}}
+--}}
+
+<div class="testimonials-carousel" role="region" aria-label="{{home.testimonials.aria-label}}">
+  <div class="testimonials-carousel__wrapper">
+    <div class="testimonials-carousel__slides-container">
+      <div class="testimonials-carousel__slides" aria-live="polite">
+        {{#each home.testimonials.items}}
+        <div class="testimonials-carousel__slide" role="group" aria-roledescription="slide">
+          <figure class="testimonials-carousel__figure">
+            <picture class="testimonials-carousel__picture">
+              <img
+                src="{{image}}"
+                alt="{{name}}"
+                class="testimonials-carousel__image"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <figcaption class="testimonials-carousel__caption">
+              <blockquote class="testimonials-carousel__quote">
+                "{{text}}"
+              </blockquote>
+              <cite class="testimonials-carousel__cite">— {{name}}</cite>
+            </figcaption>
+          </figure>
+        </div>
+        {{/each}}
+      </div>
+      
+      <button 
+        class="testimonials-carousel__button testimonials-carousel__button--prev" 
+        aria-label="Previous testimonial"
+        type="button"
+      >
+        <span aria-hidden="true">‹</span>
+      </button>
+      <button 
+        class="testimonials-carousel__button testimonials-carousel__button--next" 
+        aria-label="Next testimonial"
+        type="button"
+      >
+        <span aria-hidden="true">›</span>
+      </button>
+    </div>
+    
+    <div class="testimonials-carousel__pagination" role="tablist" aria-label="Testimonial navigation"></div>
+  </div>
+</div>
+
