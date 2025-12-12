@@ -1,39 +1,14 @@
 {{!-- 
-  Before/After Slider Component
+  BEFORE/AFTER SLIDER COMPONENT
+  This component is used to display a before/after slider.
   
   Usage: 
-    Single instance: {{> common/before-after.html index=0}}
-    Multiple instances: {{> common/before-after.html index=0}} {{> common/before-after.html index=1}}
-  
-  To add new images, add entries to the "before-after.images" array in messages/en.json and messages/de.json:
-  
-  "before-after.images": [
-    {
-      "before": {
-        "imageWebP": "../images/gallery/before-after/bathroom-1-before.webp",
-        "image": "../images/gallery/before-after/bathroom-1-before.jpg",
-        "alt": "Bathroom before organization"
-      },
-      "after": {
-        "imageWebP": "../images/gallery/before-after/bathroom-1-after.webp",
-        "image": "../images/gallery/before-after/bathroom-1-after.jpg",
-        "alt": "Bathroom after organization"
-      }
-    },
-    {
-      "before": {
-        "imageWebP": "../images/gallery/before-after/kitchen-before.webp",
-        "image": "../images/gallery/before-after/kitchen-before.jpg",
-        "alt": "Kitchen before organization"
-      },
-      "after": {
-        "imageWebP": "../images/gallery/before-after/kitchen-after.webp",
-        "image": "../images/gallery/before-after/kitchen-after.jpg",
-        "alt": "Kitchen after organization"
-      }
-    }
-  ]
-  
+    - To add new images, add entries to the "before-after.images" array in messages/en.json and messages/de.json
+    - Do not change this file - only the messages files!
+    - In the html files (e.g. home.html and gallery.html), add: 
+        - Single instance: {{> common/before-after.html index=0}} or
+        - Multiple instances: {{> common/before-after.html index=0}} {{> common/before-after.html index=1}}
+
   Shared labels (same for all instances):
   - before-after.aria-label (accessibility label)
   - before-after.aria-valuetext (initial accessibility text)

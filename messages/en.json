@@ -58,8 +58,7 @@
   "home.services.cta": "View All Services",
 
   "home.gallery.title": "Gallery",
-  "home.gallery.subtitle": "Before and After",
-  "home.gallery.p1": "Slide down to view the 'before' photo.",
+  "home.gallery.p1": "Slide down to view the 'before' photos.",
   "home.gallery.cta": "View Full Gallery",
 
   "before-after.aria-label": "Before and after comparison slider",
