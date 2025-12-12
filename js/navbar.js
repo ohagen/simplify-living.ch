@@ -8,7 +8,7 @@
 */
 
 (() => {
-    // #################### Mobile menu toggle functionality ####################
+    // ===================== Mobile menu toggle functionality =====================
     const navToggle = document.querySelector('.navbar__toggle');
     const navLinks = document.querySelector('.navbar__links-container');
     const heroNav = document.querySelector('.hero__nav');
@@ -53,7 +53,7 @@
       });
     }
   
-    // #################### Navbar hide/show on scroll ####################
+    // ===================== Navbar hide/show on scroll =====================
     if (!heroNav) return;
   
     let lastScrollY = window.scrollY;
@@ -85,7 +85,7 @@
       { passive: true }
     );
   
-    // #################### Bfcache-friendly functionality ####################
+    // ===================== Bfcache-friendly functionality =====================
     // Ensure page is bfcache-friendly
     // This helps the browser cache the page for instant back/forward navigation
     window.addEventListener('pageshow', (event) => {

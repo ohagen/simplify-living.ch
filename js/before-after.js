@@ -25,7 +25,7 @@
     const handleOffset = 6; // Visual offset to position handle lower (in pixels)
     let sliderPosition = 0.02; // Start position (2% from top)
 
-    // ########################### Slider functionality ###########################
+    // ===================== Slider functionality =====================
     // Update slider based on Y position (0-1, where 0 = top, 1 = bottom)
     const updateSlider = (percentage, announce = false) => {
       const height = slider.offsetHeight;
@@ -83,7 +83,7 @@
       }
     }; // End of updateSlider function
 
-    // ########################### Dragging functionality ###########################
+    // ===================== Dragging functionality =====================
     // Get percentage from mouse/touch Y position
     const getPosition = (clientY) => {
       const rect = slider.getBoundingClientRect();
