@@ -30,9 +30,10 @@
     button.type = 'button'; // Prevents form submission if inside a form
     button.className = 'testimonials-carousel__pagination-button';
     
-    // Accessibility
+    // Accessibility - tablist requires role="tab" on children
+    button.setAttribute('role', 'tab');
     button.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
-    button.setAttribute('aria-pressed', index === 0 ? 'true' : 'false'); // which button is currently active
+    button.setAttribute('aria-selected', index === 0 ? 'true' : 'false'); // which button is currently active
     
     // Add click handler - arrow function creates a closure that captures the index
     // This means each button remembers which slide it should show
@@ -56,7 +57,7 @@
     paginationButtons.forEach((button, i) => {
       const isActive = i === index;
       // Update accessibility attribute
-      button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      button.setAttribute('aria-selected', isActive ? 'true' : 'false');
       // Update visual state (CSS will style active button differently)
       button.classList.toggle('testimonials-carousel__pagination-button--active', isActive);
     });
