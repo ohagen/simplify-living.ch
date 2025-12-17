@@ -1,25 +1,17 @@
-$color-body: #7a7a7a;
+$color-body: #676666;
 $color-heading-hero: #000000d6;
 $color-heading: #54595f;
 $color-nav: #101010;
-$color-icon: #526840BF;
-$color-sage-200: #96afa0;
-$color-sage-400: #80a38e;
-
-
-// $color-alert: #526840cc;
-$color-alert: #4e4630cc;
-
-$color-sage-50: #f6f8f5;
-$color-sage-100: #d5dad0;
-$color-sage-400: #526840bf;
-$color-sage-500: #526840cc;
-$color-sage-600: #536942;
-$color-neutral-900: rgba(0, 0, 0, 0.84);
-$color-neutral-700: rgba(29, 29, 29, 0.58);
+$color-nav-alert: #667a6cbc;
+$color-bronze: #E9E0D1;
+$color-dark-green: #667A6C;
+$color-dark-green-hover: #55655A;
 $color-white: #ffffff;
 $color-black: #000000;
-
+$color-sage-50: #f6f8f5;
+$color-sage-100: #dce1d7;
+$color-sage-200: #AECBB9;
+$color-sage-400: #526840bf;
 $space-xxs: 0.375rem; // 6px
 $space-xs: 0.75rem; // 12px
 $space-sm: 1rem; // 16px
@@ -34,22 +26,19 @@ $transition-base: 160ms ease-in-out;
 
 :root {
   --color-body: #{$color-body};
-  --color-heading: #{$color-heading};
   --color-heading-hero: #{$color-heading-hero};
+  --color-heading: #{$color-heading};
   --color-nav: #{$color-nav};
-  --color-alert: #{$color-alert};
-  --color-icon: #{$color-icon};
-  --color-sage-200: #{$color-sage-200};
-  --color-sage-400: #{$color-sage-400};
-
-  --color-sage-50: #{$color-sage-50};
-  --color-sage-100: #{$color-sage-100};
-  --color-sage-500: #{$color-sage-500};
-  --color-sage-600: #{$color-sage-600};
-  --color-neutral-900: #{$color-neutral-900};
-  --color-neutral-700: #{$color-neutral-700};
+  --color-nav-alert: #{$color-nav-alert};
+  --color-bronze: #{$color-bronze};
+  --color-dark-green: #{$color-dark-green};
+  --color-dark-green-hover: #{$color-dark-green-hover};
   --color-white: #{$color-white};
   --color-black: #{$color-black};
+  --color-sage-50: #{$color-sage-50};
+  --color-sage-100: #{$color-sage-100};
+  --color-sage-200: #{$color-sage-200};
+  --color-sage-400: #{$color-sage-400};
   --font-heading: "Amatic SC"; // for h1 in hero section
   --font-subheading: "Roboto Slab"; // for all other h2 & h3
   --font-body: "Josefin Sans";

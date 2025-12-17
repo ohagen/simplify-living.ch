@@ -11,49 +11,16 @@
       <section class="content__section">
         <h2 class="heading__level2">{{home.welcome.title}}</h2>
         <h3 class="heading__level3">{{home.welcome.subtitle}}</h3>
-        <p class="content__text">{{home.welcome.p1}}</p>
-        <p class="content__text">{{home.welcome.p2}}</p>
-        <p class="content__text">{{home.welcome.p3}}</p>
-        <p class="content__text">{{home.welcome.p4}}</p>
-        <p class="content__text">{{home.welcome.p5}}</p>
-      </section>
-
-      <!-- 2. HOW IT WORKS SECTION -->
-      <section class="content__section">
-        <h2 class="heading__level2">{{home.how-it-works.title}}</h2>
-        <p class="content__text">{{home.how-it-works.p1}}</p>
-        <p class="content__text">{{home.how-it-works.p2}}</p>
-        <picture class="content__picture">
-          <source srcset="../images/home/how-it-works.webp" type="image/webp" />
-          <img
-            src="../images/home/how-it-works.jpg"
-            alt="Woman meditating"
-            class="content__image--horizontal"
-          />
-        </picture>
-        <h3 class="heading__level3">{{home.how-it-works.subtitle}}</h3>
-        <p class="content__text">{{home.how-it-works.p3}}</p>
-        <p class="content__text">{{home.how-it-works.p4}}</p>
-        <!-- Method icons -->
-        {{> components/method-icons.html}}
-        <!-- CTA buttons -->
-        <div class="cta">
-          <a href="method/index.html" class="cta__button"
-            >{{home.how-it-works.cta1}}</a
-          >
-          <a href="contact/index.html" class="cta__button"
-            >{{home.how-it-works.cta2}}</a
-          >
-        </div>
-      </section>
-
-      <!-- 3. THE HEART BEHIND SIMPLIFY LIVING SECTION -->
-      <section class="content__section">
-        <h2 class="heading__level2">{{home.about-me.title}}</h2>
-        <h3 class="heading__level3--capitalized">
-          {{home.about-me.subtitle-role}}
-        </h3>
-        <div class="content__two-column">
+        <!-- Circular images -->
+        <div class="content__three-column">
+          <picture class="content__picture">
+            <source srcset="../images/logo_white.webp" type="image/webp" />
+            <img
+              src="../images/logo_white.png"
+              alt="Simplify Living logo"
+              class="content__image--round"
+            />
+          </picture>
           <picture class="content__picture">
             <source
               srcset="../images/home/simone-portrait.webp"
@@ -73,20 +40,60 @@
             />
           </picture>
         </div>
-
-        <p class="content__text">{{home.about-me.p1}}</p>
-        <p class="content__text">{{home.about-me.p2}}</p>
+        <h4 class="heading__level4">
+          {{home.welcome.subtitle-name}} • {{home.welcome.subtitle-role}}
+        </h4>
+        <p class="content__text">{{home.welcome.p1}}</p>
+        <p class="content__text">{{home.welcome.p2}}</p>
+        <p class="content__text">{{home.welcome.p3}}</p>
+        <p class="content__text">{{home.welcome.p4}}</p>
+        <p class="content__text">{{home.welcome.p5}}</p>
+        <!-- CTA buttons -->
         <div class="cta">
-          <a href="about/index.html" class="cta__button"
-            >{{home.about-me.cta}}</a
+          <a href="method/index.html" class="cta__button--primary"
+            >{{home.welcome.cta1}}</a
+          >
+          <a href="contact/index.html" class="cta__button--secondary"
+            >{{home.welcome.cta2}}</a
           >
         </div>
       </section>
 
-      <!-- 4. SERVICES SECTION -->
+      <!-- 2. HOW IT WORKS SECTION -->
+      <section class="content__section">
+        <h2 class="heading__level2">{{home.how-it-works.title}}</h2>
+        <p class="content__text">{{home.how-it-works.p1}}</p>
+        <p class="content__text">{{home.how-it-works.p2}}</p>
+        <picture class="content__picture">
+          <source srcset="../images/home/how-it-works.webp" type="image/webp" />
+          <img
+            src="../images/home/how-it-works.jpg"
+            alt="Marie Kondo meditating in a minimalistic, well-organized room"
+            class="content__image--horizontal"
+          />
+        </picture>
+        <p class="content__copyright">{{common.copyright}}</p>
+        <h3 class="heading__level3">{{home.how-it-works.subtitle}}</h3>
+        <p class="content__text">{{home.how-it-works.p3}}</p>
+        <p class="content__text">{{home.how-it-works.p4}}</p>
+        <!-- Method icons -->
+        {{> components/method-icons.html}}
+        <!-- CTA buttons -->
+        <div class="cta">
+          <a href="method/index.html" class="cta__button--primary"
+            >{{home.how-it-works.cta1}}</a
+          >
+          <a href="contact/index.html" class="cta__button--secondary"
+            >{{home.how-it-works.cta2}}</a
+          >
+        </div>
+      </section>
+
+      <!-- 3. SERVICES SECTION -->
       <section class="content__section">
         <h2 class="heading__level2">{{home.services.title}}</h2>
         <div class="content__four-column">
+          <!-- Clothes -->
           <div class="content__single-column">
             <picture class="content__picture">
               <source
@@ -104,6 +111,7 @@
             </h3>
             <p class="content__text">{{home.services.p1}}</p>
           </div>
+          <!-- Paperwork -->
           <div class="content__single-column">
             <picture class="content__picture">
               <source
@@ -121,6 +129,7 @@
             </h3>
             <p class="content__text">{{home.services.p2}}</p>
           </div>
+          <!-- Kids -->
           <div class="content__single-column">
             <picture class="content__picture">
               <source srcset="../images/services/kids.webp" type="image/webp" />
@@ -135,6 +144,7 @@
             </h3>
             <p class="content__text">{{home.services.p3}}</p>
           </div>
+          <!-- All In -->
           <div class="content__single-column">
             <picture class="content__picture">
               <source
@@ -153,42 +163,46 @@
             <p class="content__text">{{home.services.p4}}</p>
           </div>
         </div>
+        <!-- CTA button -->
         <div class="cta">
-          <a href="services/index.html" class="cta__button"
+          <a href="services/index.html" class="cta__button--primary"
             >{{home.services.cta}}</a
           >
         </div>
       </section>
 
-      <!-- 5. GALLERY SECTION -->
+      <!-- 4. GALLERY SECTION -->
       <section class="content__section">
         <h2 class="heading__level2">{{home.gallery.title}}</h2>
         <p class="content__text">{{home.gallery.p1}}</p>
-
         <!-- Before/After Slider -->
         <!-- Add more images to messages and respective instances here -->
-         <div class="before-after__two-column-container">
-        {{> components/before-after.html index=0}} 
-        {{> components/before-after.html index=1}}
-      </div>
+        <div class="before-after__two-column-container">
+          {{> components/before-after.html index=0}} 
+          {{> components/before-after.html index=1}}
+        </div>
         <div class="cta">
-          <a href="gallery/index.html" class="cta__button">{{home.gallery.cta}}</a>
+          <a href="gallery/index.html" class="cta__button--primary"
+            >{{home.gallery.cta}}</a
+          >
         </div>
       </section>
 
-      <!-- 6. TESTIMONIALS SECTION -->
+      <!-- 5. TESTIMONIALS SECTION -->
       <section class="content__section">
         <h2 class="heading__level2">{{home.testimonials.title}}</h2>
         {{> components/testimonials.html}}
       </section>
 
-      <!-- 7. FINAL CTA SECTION -->
+      <!-- 6. FINAL CTA SECTION -->
       <section class="content__section">
         <h2 class="heading__level2">{{home.final-cta.title}}</h2>
         <p class="content__text">{{home.final-cta.p1}}</p>
         <p class="content__text">{{home.final-cta.p2}}</p>
         <div class="cta">
-          <a href="contact/index.html" class="cta__button">{{home.final-cta.cta}}</a>
+          <a href="contact/index.html" class="cta__button--primary"
+            >{{home.final-cta.cta}}</a
+          >
         </div>
       </section>
     </main>

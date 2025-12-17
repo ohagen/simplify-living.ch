@@ -10,6 +10,7 @@
   "common.nav.gallery": "Gallery",
   "common.nav.contact": "Contact",
   "common.footer.copyright": "© {{year}} Simplify Living. All rights reserved.",
+  "common.copyright": "Photo courtesy of KonMari Media, Inc.",
 
   "home.hero.size": "full",
   "home.hero.image": "../images/home/hero.jpg",
@@ -20,11 +21,15 @@
   "home.hero.alert": "New in Frankfurt am Main (or online)",
   "home.welcome.title": "Welcome to Simplify Living",
   "home.welcome.subtitle": "I'm so glad you're here!",
+  "home.welcome.subtitle-name": "Simone Hagen",
+  "home.welcome.subtitle-role": "KonMari Bronze Consultant",
   "home.welcome.p1": "Is your home in chaos, no matter how often you tidy up?",
   "home.welcome.p2": "Do you feel stressed and frustrated?",
   "home.welcome.p3": "Are you looking for support on your journey to create a home that truly feels good to you?",
   "home.welcome.p4": "Then you're in the right place!",
   "home.welcome.p5": "Simplify Living helps you gain clarity about what you want—and don't want—in your home and life.",
+  "home.welcome.cta1": "Book a Free Consultation",
+  "home.welcome.cta2": "Learn About Simone",
   
   "home.how-it-works.title": "How it works",
   "home.how-it-works.p1": "Using the KonMari® Method, I'll guide you toward your personal vision of a calm and organized home.",
@@ -36,8 +41,8 @@
   "home.how-it-works.icon2": "Choose",
   "home.how-it-works.icon3": "Organise",
   "home.how-it-works.icon4": "Enjoy",
-  "home.how-it-works.cta1": "Learn About the Method",
-  "home.how-it-works.cta2": "Book a Free Consultation",
+  "home.how-it-works.cta1": "Book a Free Consultation",
+  "home.how-it-works.cta2": "Learn About the Method",
 
   "home.about-me.title": "Simone Hagen",
   "home.about-me.subtitle-name": "Simone Hagen",
@@ -118,7 +123,7 @@
   ],
 
   "home.final-cta.title": "Ready to Simplify Your Life?",
-  "home.final-cta.p1": "Are you ready to create a home that truly feels good to you?",
+  "home.final-cta.p1": "Create a home that truly feels good to you.",
   "home.final-cta.p2": "Get in touch now! Free and no strings attached.",
   "home.final-cta.cta": "Book a Free Consultation"
 }

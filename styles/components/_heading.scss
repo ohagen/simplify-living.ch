@@ -82,4 +82,11 @@
     font-size: clamp(1.5rem, 2.5vw + 0.75rem, 1.75rem); // (min 24px, max 28px)
     font-weight: 400;
   }
+
+  &__level4 {
+    @extend %heading-base;
+    margin-bottom: var(--space-xl);
+    font-size: clamp(1.125rem, 1.5vw + 0.75rem, 1.25rem); // (min 18px, max 20px)
+    font-weight: 400;
+  }
 }

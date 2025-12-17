@@ -85,11 +85,52 @@
       <section class="content__section">
         <h2 class="heading__level2">Welcome to Simplify Living</h2>
         <h3 class="heading__level3">I'm so glad you're here!</h3>
+        <!-- Circular images -->
+        <div class="content__three-column">
+          <picture class="content__picture">
+            <source srcset="../images/logo_white.webp" type="image/webp" />
+            <img
+              src="../images/logo_white.png"
+              alt="Simplify Living logo"
+              class="content__image--round"
+            />
+          </picture>
+          <picture class="content__picture">
+            <source
+              srcset="../images/home/simone-portrait.webp"
+              type="image/webp"
+            />
+            <img
+              src="../images/home/simone-portrait.jpg"
+              alt="simone hagen portrait"
+              class="content__image--round"
+            />
+          </picture>
+          <picture class="content__picture">
+            <img
+              src="../images/home/logo-bronze-consultant.png"
+              alt="konmari bronze consultant logo"
+              class="content__image--round"
+            />
+          </picture>
+        </div>
+        <h4 class="heading__level4">
+          Simone Hagen • KonMari Bronze Consultant
+        </h4>
         <p class="content__text">Is your home in chaos, no matter how often you tidy up?</p>
         <p class="content__text">Do you feel stressed and frustrated?</p>
         <p class="content__text">Are you looking for support on your journey to create a home that truly feels good to you?</p>
         <p class="content__text">Then you're in the right place!</p>
         <p class="content__text">Simplify Living helps you gain clarity about what you want—and don't want—in your home and life.</p>
+        <!-- CTA buttons -->
+        <div class="cta">
+          <a href="method/index.html" class="cta__button--primary"
+            >Book a Free Consultation</a
+          >
+          <a href="contact/index.html" class="cta__button--secondary"
+            >Learn About Simone</a
+          >
+        </div>
       </section>
 
       <!-- 2. HOW IT WORKS SECTION -->
@@ -101,10 +142,11 @@
           <source srcset="../images/home/how-it-works.webp" type="image/webp" />
           <img
             src="../images/home/how-it-works.jpg"
-            alt="Woman meditating"
+            alt="Marie Kondo meditating in a minimalistic, well-organized room"
             class="content__image--horizontal"
           />
         </picture>
+        <p class="content__copyright">Photo courtesy of KonMari Media, Inc.</p>
         <h3 class="heading__level3">Does it spark joy?</h3>
         <p class="content__text">The KonMari® Method is built around this simple question.</p>
         <p class="content__text">Through the process of selecting only those things that inspire joy, you can identify precisely what you love—and what you need.</p>
@@ -169,55 +211,20 @@
   </div>
         <!-- CTA buttons -->
         <div class="cta">
-          <a href="method/index.html" class="cta__button"
-            >Learn About the Method</a
-          >
-          <a href="contact/index.html" class="cta__button"
+          <a href="method/index.html" class="cta__button--primary"
             >Book a Free Consultation</a
           >
-        </div>
-      </section>
-
-      <!-- 3. THE HEART BEHIND SIMPLIFY LIVING SECTION -->
-      <section class="content__section">
-        <h2 class="heading__level2">Simone Hagen</h2>
-        <h3 class="heading__level3--capitalized">
-          KonMari Bronze Consultant
-        </h3>
-        <div class="content__two-column">
-          <picture class="content__picture">
-            <source
-              srcset="../images/home/simone-portrait.webp"
-              type="image/webp"
-            />
-            <img
-              src="../images/home/simone-portrait.jpg"
-              alt="simone hagen portrait"
-              class="content__image--round"
-            />
-          </picture>
-          <picture class="content__picture">
-            <img
-              src="../images/home/logo-bronze-consultant.png"
-              alt="konmari bronze consultant logo"
-              class="content__image--round"
-            />
-          </picture>
-        </div>
-
-        <p class="content__text">You might be wondering: why would anyone turn tidying up into their career.</p>
-        <p class="content__text">Find out more about me and why helping people create order brings me so much joy.</p>
-        <div class="cta">
-          <a href="about/index.html" class="cta__button"
-            >Learn About Simone</a
+          <a href="contact/index.html" class="cta__button--secondary"
+            >Learn About the Method</a
           >
         </div>
       </section>
 
-      <!-- 4. SERVICES SECTION -->
+      <!-- 3. SERVICES SECTION -->
       <section class="content__section">
         <h2 class="heading__level2">Packages</h2>
         <div class="content__four-column">
+          <!-- Clothes -->
           <div class="content__single-column">
             <picture class="content__picture">
               <source
@@ -235,6 +242,7 @@
             </h3>
             <p class="content__text">We'll organize your closet to its full potential in an easy and fun way.</p>
           </div>
+          <!-- Paperwork -->
           <div class="content__single-column">
             <picture class="content__picture">
               <source
@@ -252,6 +260,7 @@
             </h3>
             <p class="content__text">We'll reduce your paperwork and create an organizational system for you.</p>
           </div>
+          <!-- Kids -->
           <div class="content__single-column">
             <picture class="content__picture">
               <source srcset="../images/services/kids.webp" type="image/webp" />
@@ -266,6 +275,7 @@
             </h3>
             <p class="content__text">Together with the children, we'll create order in a playful and age-appropriate way.</p>
           </div>
+          <!-- All In -->
           <div class="content__single-column">
             <picture class="content__picture">
               <source
@@ -284,22 +294,22 @@
             <p class="content__text">We'll tidy up your entire household and arrange it in a optimal way.</p>
           </div>
         </div>
+        <!-- CTA button -->
         <div class="cta">
-          <a href="services/index.html" class="cta__button"
+          <a href="services/index.html" class="cta__button--primary"
             >View All Services</a
           >
         </div>
       </section>
 
-      <!-- 5. GALLERY SECTION -->
+      <!-- 4. GALLERY SECTION -->
       <section class="content__section">
         <h2 class="heading__level2">Gallery</h2>
         <p class="content__text">Slide down to view the 'before' photos.</p>
-
         <!-- Before/After Slider -->
         <!-- Add more images to messages and respective instances here -->
-         <div class="before-after__two-column-container">
-        
+        <div class="before-after__two-column-container">
+          
 
 <div class="before-after">
     <div 
@@ -339,7 +349,7 @@
       <div class="before-after__sr-only" aria-live="polite" aria-atomic="true"></div>
     </div>
   </div> 
-        
+          
 
 <div class="before-after">
     <div 
@@ -379,13 +389,15 @@
       <div class="before-after__sr-only" aria-live="polite" aria-atomic="true"></div>
     </div>
   </div>
-      </div>
+        </div>
         <div class="cta">
-          <a href="gallery/index.html" class="cta__button">View Full Gallery</a>
+          <a href="gallery/index.html" class="cta__button--primary"
+            >View Full Gallery</a
+          >
         </div>
       </section>
 
-      <!-- 6. TESTIMONIALS SECTION -->
+      <!-- 5. TESTIMONIALS SECTION -->
       <section class="content__section">
         <h2 class="heading__level2">Testimonials</h2>
         
@@ -500,13 +512,15 @@
 
       </section>
 
-      <!-- 7. FINAL CTA SECTION -->
+      <!-- 6. FINAL CTA SECTION -->
       <section class="content__section">
         <h2 class="heading__level2">Ready to Simplify Your Life?</h2>
-        <p class="content__text">Are you ready to create a home that truly feels good to you?</p>
+        <p class="content__text">Create a home that truly feels good to you.</p>
         <p class="content__text">Get in touch now! Free and no strings attached.</p>
         <div class="cta">
-          <a href="contact/index.html" class="cta__button">Book a Free Consultation</a>
+          <a href="contact/index.html" class="cta__button--primary"
+            >Book a Free Consultation</a
+          >
         </div>
       </section>
     </main>
