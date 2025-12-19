@@ -1,0 +1,80 @@
+{
+  "home.hero.size": "full",
+  "home.hero.image": "../images/home/hero.jpg",
+  "home.hero.imageWebP": "../images/home/hero.webp",
+  "home.hero.alt": "Organisiertes Wohnzimmer",
+  "home.hero.title": "Simplify Living",
+  "home.hero.subtitle": "Mehr als Ordnung",
+  "home.hero.alert": "Neu in Frankfurt am Main (oder online)",
+  
+  "home.welcome.title": "Willkommen bei Simplify Living",
+  "home.welcome.subtitle": "Schön, dass du da bist!",
+  "home.welcome.subtitle-name": "Simone Hagen",
+  "home.welcome.subtitle-role": "KonMari Bronze Consultant",
+  "home.welcome.p1": "Räumst du regelmässig auf und trotzdem herrscht Chaos?",
+  "home.welcome.p2": "Bist du gestresst und frustriert?",
+  "home.welcome.p3": "Wünschst du dir Unterstützung unterwegs zu deinem Wohlfühl-Zuhause?",
+  "home.welcome.p4": "Dann bist du hier bei Simplify Living genau richtig!",
+  "home.welcome.p5": "Simplify Living hilft dir, Klarheit über das zu bekommen, was du in deinem Zuhause und in deinem Leben willst—und was nicht.",
+  "home.welcome.cta1": "Kostenlose Beratung",
+  "home.welcome.cta2": "Über Simone",
+  
+  "home.how-it-works.title": "So funktioniert's",
+  "home.how-it-works.p1": "In Anlehnung an die KonMari® Methode helfe ich dir, deine individuellen Ziele zu erreichen.",
+  "home.how-it-works.p2": "Im Zentrum stehst du, dein ideales Zuhause und viele kleine Schritte, die dich ans Ziel bringen.",
+  "home.how-it-works.subtitle": "Does it spark joy?",
+  "home.how-it-works.p3": "Die KonMari® Methode basiert auf dieser einfachen Frage.",
+  "home.how-it-works.p4": "Durch den Prozess, nur die Dinge zu wählen, die dir Freude bereiten, kannst du genau herausfinden, was du liebst—und was du brauchst.",
+  "home.how-it-works.icon1": "definieren",
+  "home.how-it-works.icon2": "selektionieren",
+  "home.how-it-works.icon3": "organisieren",
+  "home.how-it-works.icon4": "profitieren",
+  "home.how-it-works.cta1": "Kostenlose Beratung",
+  "home.how-it-works.cta2": "Über die Methode",
+
+  "home.services.title": "Angebote",
+  "home.services.subtitle1": "Klamotten",
+  "home.services.p1": "Wir organisieren deinen Schrank auf seine volle Potenzial in einem einfachen und spaßigen Weg.",
+  "home.services.subtitle2": "Papierkram",
+  "home.services.p2": "Wir reduzieren deine Papierarbeit und erstellen ein organisatorisches System für dich.",
+  "home.services.subtitle3": "Kinderwelt",
+  "home.services.p3": "Zusammen mit den Kindern, erstellen wir Ordnung in einem spielerischen und altersgerechten Weg.",
+  "home.services.subtitle4": "All In",
+  "home.services.p4": "Wir räumen dein gesamtes Haus auf und arrangieren es in einem optimalen Weg.",
+  "home.services.cta": "Alle Angebote ansehen",
+
+  "home.gallery.title": "Gallerie",
+  "home.gallery.p1": "Zieh nach unten, um die 'Vorher' Fotos anzusehen.",
+  "home.gallery.cta": "Alle Fotos ansehen",
+
+  "home.testimonials.title": "Kunden-Feedback",
+  "home.testimonials.aria-label": "Kunden-Feedback-Karussell",
+  "home.testimonials.items": [
+    {
+      "name": "Mirj",
+      "image": "../images/testimonials/mirj.jpg",
+      "text": "Die Sessions mit Simone haben meine Erwartungen sogar übertroffen. Sie half mir total, mich zu entspannen und mit dem Fokus bei der aktuellen Aufgabe zu bleiben."
+    },
+    {
+      "name": "Karin",
+      "image": "../images/testimonials/karin.jpg",
+      "text": "Dank Simplify Living habe ich gelernt, meinen privaten und sogar beruflichen Alltag bewusster wahrzunehmen. Durch Simones sorgfältige Anleitung und inspirierende Begleitung gelingt es mir, Entscheide immer klarer zu treffen. Das schenkt mir Leichtigkeit."
+    },
+    {
+      "name": "Paedi",
+      "image": "../images/testimonials/paedi.jpg",
+      "text": "Ich habe mit Simone meine Klamotten aufgeräumt. Obwohl ich jetzt weniger besitze, finde ich schneller etwas, was mir auch wirklich gefällt. Mein Schrank ist übersichtlich. Es gibt jetzt tatsächlich ein neues Normal."
+    },
+    {
+      "name": "Stef",
+      "image": "../images/testimonials/stef.jpg",
+      "text": "Durch die Ordnung in meinem Zuhause habe ich zu mehr Klarheit in meinen Gedanken gefunden. Jetzt habe ich den Kopf frei für andere Dinge."
+    }
+  ],
+
+  "home.final-cta.title": "Bereit, dein Leben zu vereinfachen?",
+  "home.final-cta.p1": "Erstelle ein Zuhause, das dir wirklich gut gefällt.",
+  "home.final-cta.p2": "Kontaktiere mich jetzt! Kostenlos und ohne Verpflichtungen.",
+  "home.final-cta.cta": "Kostenlose Beratung"
+}
+

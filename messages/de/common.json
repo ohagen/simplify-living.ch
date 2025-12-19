@@ -5,10 +5,11 @@
 
   "common.nav.home": "Home",
   "common.nav.about": "About",
-  "common.nav.method": "Method",
-  "common.nav.services": "Services",
-  "common.nav.gallery": "Gallery",
-  "common.nav.contact": "Contact",
-  "common.footer.copyright": "© {{year}} Simplify Living. All rights reserved.",
-  "common.copyright": "Photo courtesy of KonMari Media, Inc."
+  "common.nav.method": "Methode",
+  "common.nav.services": "Angebote",
+  "common.nav.gallery": "Galerie",
+  "common.nav.contact": "Kontakt",
+  "common.footer.copyright": "© {{year}} Simplify Living. Alle Rechte vorbehalten.",
+  "common.copyright": "Foto mit freundlicher Genehmigung von KonMari Media, Inc."
 }
+

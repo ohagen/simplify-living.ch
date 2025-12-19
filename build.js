@@ -57,6 +57,20 @@ function loadMessages(locale, pageName = null) {
     }
   }
   
+  // Load shared component message files (used across multiple pages)
+  const sharedComponentFiles = ['gallery_before-after.json'];
+  sharedComponentFiles.forEach(fileName => {
+    const sharedPath = `messages/${locale}/${fileName}`;
+    if (fs.existsSync(sharedPath)) {
+      try {
+        const sharedMessages = JSON.parse(fs.readFileSync(sharedPath, "utf8"));
+        Object.assign(messages, sharedMessages);
+      } catch (error) {
+        console.warn(`Warning: Could not load ${sharedPath}:`, error.message);
+      }
+    }
+  });
+  
   // Load page-specific messages if pageName is provided
   if (pageName) {
     const pagePath = `messages/${locale}/${pageName}.json`;
@@ -248,6 +262,46 @@ function processEachLoops(html, locale, pageName, messages) {
 }
 
 /**
+ * Generate language selector HTML with two separate links
+ */
+function getLangSelector(locale, pageName) {
+  const otherLocale = locale === "en" ? "de" : "en";
+  
+  // Determine relative path based on page depth
+  // Home page: ../{otherLocale}/index.html
+  // Other pages: ../../{otherLocale}/{page}/index.html
+  const otherPath = pageName === "home" 
+    ? `../${otherLocale}/index.html`
+    : `../../${otherLocale}/${pageName}/index.html`;
+  
+  // Current page path (for the active language link - just current page)
+  const currentPath = pageName === "home"
+    ? `index.html`
+    : `${pageName}/index.html`;
+  
+  const currentLang = locale.toUpperCase();
+  const otherLang = otherLocale.toUpperCase();
+  
+  // Generate paths for both languages - always use full paths to avoid confusion
+  const enPath = pageName === "home" 
+    ? "../en/index.html"
+    : `../../en/${pageName}/index.html`;
+  
+  const dePath = pageName === "home"
+    ? "../de/index.html"
+    : `../../de/${pageName}/index.html`;
+  
+  const enActive = locale === "en" ? " navbar__lang-button--active" : "";
+  const deActive = locale === "de" ? " navbar__lang-button--active" : "";
+  
+  return `<span class="navbar__lang-buttons">
+    <a href="${dePath}" class="navbar__lang-button${deActive}"${locale === "de" ? ' aria-current="page"' : ''}>DE</a>
+    <span class="navbar__lang-separator">•</span>
+    <a href="${enPath}" class="navbar__lang-button${enActive}"${locale === "en" ? ' aria-current="page"' : ''}>EN</a>
+  </span>`;
+}
+
+/**
  * Replace placeholders in template with optional index context for array lookups
  */
 function replacePlaceholders(html, locale, pageName, messages, indexContext = null) {
@@ -260,6 +314,11 @@ function replacePlaceholders(html, locale, pageName, messages, indexContext = nu
     // Special case: {{locale}} -> replace with actual locale
     if (key === "locale") {
       return locale;
+    }
+    
+    // Special case: {{lang-switcher}} -> generate language selector HTML with two separate links
+    if (key === "lang-switcher") {
+      return getLangSelector(locale, pageName);
     }
 
     // If indexContext is provided and key starts with a known array prefix, try array lookup first

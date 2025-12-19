@@ -69,6 +69,11 @@
     <a href="services/index.html" class="navbar__link">Services</a>
     <a href="gallery/index.html" class="navbar__link">Gallery</a>
     <a href="contact/index.html" class="navbar__link">Contact</a>
+    <span class="navbar__lang-buttons">
+    <a href="../de/index.html" class="navbar__lang-button">DE</a>
+    <span class="navbar__lang-separator">•</span>
+    <a href="../en/index.html" class="navbar__lang-button navbar__lang-button--active" aria-current="page">EN</a>
+  </span>
   </div>
 </nav>
 </div>
@@ -350,26 +355,26 @@
     <div 
       class="before-after__container"
       role="slider"
-      aria-label="{{before-after.aria-label}}"
+      aria-label="Before and after comparison slider"
       aria-valuemin="2"
       aria-valuemax="98"
       aria-valuenow="2"
-      aria-valuetext="{{before-after.aria-valuetext}}"
+      aria-valuetext="After image visible"
       tabindex="0"
     >
       <picture class="before-after__picture">
-        <source srcset="{{before-after.before.imageWebP}}" type="image/webp" />
+        <source srcset="../images/gallery/before-after/kitchen-before.webp" type="image/webp" />
         <img
-          src="{{before-after.before.image}}"
-          alt="{{before-after.before.alt}}"
+          src="../images/gallery/before-after/kitchen-before.jpg"
+          alt="Kitchen before organization"
           class="before-after__image before-after__image--before"
         />
       </picture>
       <picture class="before-after__picture">
-        <source srcset="{{before-after.after.imageWebP}}" type="image/webp" />
+        <source srcset="../images/gallery/before-after/kitchen-after.webp" type="image/webp" />
         <img
-          src="{{before-after.after.image}}"
-          alt="{{before-after.after.alt}}"
+          src="../images/gallery/before-after/kitchen-after.jpg"
+          alt="Kitchen after organization"
           class="before-after__image before-after__image--after"
         />
       </picture>
@@ -378,8 +383,8 @@
         <span class="before-after__arrow before-after__arrow--down"></span>
       </div>
       <div class="before-after__overlay" aria-hidden="true">
-        <div class="before-after__label before-after__label--before">{{before-after.label.before}}</div>
-        <div class="before-after__label before-after__label--after">{{before-after.label.after}}</div>
+        <div class="before-after__label before-after__label--before">BEFORE</div>
+        <div class="before-after__label before-after__label--after">AFTER</div>
       </div>
       <div class="before-after__sr-only" aria-live="polite" aria-atomic="true"></div>
     </div>
@@ -390,26 +395,26 @@
     <div 
       class="before-after__container"
       role="slider"
-      aria-label="{{before-after.aria-label}}"
+      aria-label="Before and after comparison slider"
       aria-valuemin="2"
       aria-valuemax="98"
       aria-valuenow="2"
-      aria-valuetext="{{before-after.aria-valuetext}}"
+      aria-valuetext="After image visible"
       tabindex="0"
     >
       <picture class="before-after__picture">
-        <source srcset="{{before-after.before.imageWebP}}" type="image/webp" />
+        <source srcset="../images/gallery/before-after/bathroom-2-before.webp" type="image/webp" />
         <img
-          src="{{before-after.before.image}}"
-          alt="{{before-after.before.alt}}"
+          src="../images/gallery/before-after/bathroom-2-before.jpg"
+          alt="Bathroom before organization"
           class="before-after__image before-after__image--before"
         />
       </picture>
       <picture class="before-after__picture">
-        <source srcset="{{before-after.after.imageWebP}}" type="image/webp" />
+        <source srcset="../images/gallery/before-after/bathroom-2-after.webp" type="image/webp" />
         <img
-          src="{{before-after.after.image}}"
-          alt="{{before-after.after.alt}}"
+          src="../images/gallery/before-after/bathroom-2-after.jpg"
+          alt="Bathroom after organization"
           class="before-after__image before-after__image--after"
         />
       </picture>
@@ -418,8 +423,8 @@
         <span class="before-after__arrow before-after__arrow--down"></span>
       </div>
       <div class="before-after__overlay" aria-hidden="true">
-        <div class="before-after__label before-after__label--before">{{before-after.label.before}}</div>
-        <div class="before-after__label before-after__label--after">{{before-after.label.after}}</div>
+        <div class="before-after__label before-after__label--before">BEFORE</div>
+        <div class="before-after__label before-after__label--after">AFTER</div>
       </div>
       <div class="before-after__sr-only" aria-live="polite" aria-atomic="true"></div>
     </div>

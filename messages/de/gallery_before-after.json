@@ -1,0 +1,32 @@
+{
+  "before-after.aria-label": "Vorher und Nachher Vergleichs-Slider",
+  "before-after.aria-valuetext": "Nachher Bild sichtbar",
+  "before-after.label.before": "VORHER",
+  "before-after.label.after": "NACHHER",
+  "before-after.images": [
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/kitchen-before.webp",
+        "image": "../images/gallery/before-after/kitchen-before.jpg",
+        "alt": "Küche vor der Organisation"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/kitchen-after.webp",
+        "image": "../images/gallery/before-after/kitchen-after.jpg",
+        "alt": "Küche nach der Organisation"
+      }
+    },
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/bathroom-2-before.webp",
+        "image": "../images/gallery/before-after/bathroom-2-before.jpg",
+        "alt": "Badezimmer vor der Organisation"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/bathroom-2-after.webp",
+        "image": "../images/gallery/before-after/bathroom-2-after.jpg",
+        "alt": "Badezimmer nach der Organisation"
+      }
+    }
+  ]
+}

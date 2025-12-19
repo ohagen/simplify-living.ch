@@ -316,6 +316,43 @@ a {
     justify-content: center;
   }
 }
+.navbar__lang-buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xxs);
+}
+.navbar__lang-button {
+  font-size: 1rem;
+  color: var(--color-nav);
+  text-decoration: none;
+  font-weight: 300;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.navbar__lang-button:hover {
+  opacity: 1;
+  scale: 1.05;
+}
+.navbar__lang-button:active {
+  scale: 0.95;
+}
+.navbar__lang-button--active {
+  font-weight: 600;
+  color: var(--color-dark-green);
+  opacity: 1;
+}
+.navbar__lang-separator {
+  color: var(--color-nav);
+  opacity: 1;
+  font-weight: 300;
+  user-select: none;
+  font-size: 1.5rem;
+}
 
 /* Hero section (main photo + navbar) across all pages */
 .hero {
