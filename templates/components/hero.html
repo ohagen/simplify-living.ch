@@ -1,17 +1,41 @@
 <section class="hero hero--{{hero.size}}">
   <div class="hero__bg">
     <picture>
-      <source srcset="{{hero.imageWebP}}" type="image/webp">
+      <source srcset="{{hero.imageWebP}}" type="image/webp" />
       <img src="{{hero.image}}" alt="{{hero.alt}}" />
     </picture>
   </div>
   <div class="hero__nav">{{> navbar.html}}</div>
-  <div class="hero__content">
-    <h1 class="hero__heading--level1">{{hero.title}}</h1>
-    <p>{{hero.subtitle}}</p>
+  <div class="hero__content" id="hero-content">
+    <h1
+      class="hero__heading--level1"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine"
+    >
+      {{hero.title}}
+    </h1>
+    <p
+      data-aos="fade-right"
+      data-aos-delay="300"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine"
+    >
+      {{hero.subtitle}}
+    </p>
   </div>
-  <div class="hero__alert">
-    <div class="hero__alert-icon"></div>
-    <p class="hero__alert-text">{{hero.alert}}</p>
+  <div class="hero__alert-wrapper">
+    <div
+      class="hero__alert"
+      data-aos="fade-up"
+      data-aos-delay="400"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-sine"
+      data-aos-anchor="#hero-content"
+      data-aos-anchor-placement="center-bottom"
+    >
+      <div class="hero__alert-icon"></div>
+      <p class="hero__alert-text">{{hero.alert}}</p>
+    </div>
   </div>
 </section>

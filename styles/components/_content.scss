@@ -3,7 +3,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xxl);
+  gap: var(--space-xxxl);
   justify-content: start;
   text-align: center;
   color: var(--color-body);
@@ -89,7 +89,10 @@
     color: var(--color-body);
     text-align: center;
     margin-bottom: var(--space-md);
-    line-height: 1.4;
+    line-height: 1.4; 
+    max-width: 65ch; // Optimal reading width
+    margin-left: auto;
+    margin-right: auto;
   }
 
   // HTML picture wrapper for images

@@ -112,12 +112,15 @@
     }
   }
 
-  &__alert {
+  &__alert-wrapper {
     position: absolute;
     left: 50%;
     bottom: 8%;
     transform: translateX(-50%); // center it
     z-index: 3;
+  }
+
+  &__alert {
     display: flex;
     align-items: center;
     justify-content: center;

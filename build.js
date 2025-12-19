@@ -105,6 +105,9 @@ function includePartials(html, templateDir, locale, pageName, messages, indexCon
 
 /**
  * Process Handlebars #each loops for arrays
+ * processEachLoops generates the HTML; 
+ * AOS then scans that HTML for data-aos attributes. ,
+ * Without this function, dynamic content wouldn't exist for AOS to animate.
  */
 function processEachLoops(html, locale, pageName, messages) {
   // Match {{#each array.path}}...{{/each}} patterns

@@ -35,12 +35,15 @@
 <!-- Styles -->
 <link rel="stylesheet" href="../styles/main.css" />
 
+<!-- AOS (Animate On Scroll) Library -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   </head>
   <body>
     <section class="hero hero--full">
   <div class="hero__bg">
     <picture>
-      <source srcset="../images/home/hero.webp" type="image/webp">
+      <source srcset="../images/home/hero.webp" type="image/webp" />
       <img src="../images/home/hero.jpg" alt="Organized living room" />
     </picture>
   </div>
@@ -69,25 +72,49 @@
   </div>
 </nav>
 </div>
-  <div class="hero__content">
-    <h1 class="hero__heading--level1">Simplify Living</h1>
-    <p>Beyond Tidiness</p>
+  <div class="hero__content" id="hero-content">
+    <h1
+      class="hero__heading--level1"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine"
+    >
+      Simplify Living
+    </h1>
+    <p
+      data-aos="fade-right"
+      data-aos-delay="300"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-sine"
+    >
+      Beyond Tidiness
+    </p>
   </div>
-  <div class="hero__alert">
-    <div class="hero__alert-icon"></div>
-    <p class="hero__alert-text">New in Frankfurt am Main (or online)</p>
+  <div class="hero__alert-wrapper">
+    <div
+      class="hero__alert"
+      data-aos="fade-up"
+      data-aos-delay="400"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-sine"
+      data-aos-anchor="#hero-content"
+      data-aos-anchor-placement="center-bottom"
+    >
+      <div class="hero__alert-icon"></div>
+      <p class="hero__alert-text">New in Frankfurt am Main (or online)</p>
+    </div>
   </div>
 </section>
 
 
     <main class="content">
       <!-- 1. WELCOME SECTION -->
-      <section class="content__section">
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
         <h2 class="heading__level2">Welcome to Simplify Living</h2>
         <h3 class="heading__level3">I'm so glad you're here!</h3>
         <!-- Circular images -->
         <div class="content__three-column">
-          <picture class="content__picture">
+          <picture class="content__picture" data-aos="zoom-in" data-aos-delay="250">
             <source srcset="../images/logo_white.webp" type="image/webp" />
             <img
               src="../images/logo_white.png"
@@ -95,7 +122,7 @@
               class="content__image--round"
             />
           </picture>
-          <picture class="content__picture">
+          <picture class="content__picture" data-aos="zoom-in" data-aos-delay="200">
             <source
               srcset="../images/home/simone-portrait.webp"
               type="image/webp"
@@ -106,7 +133,7 @@
               class="content__image--round"
             />
           </picture>
-          <picture class="content__picture">
+          <picture class="content__picture" data-aos="zoomin" data-aos-delay="300">
             <img
               src="../images/home/logo-bronze-consultant.png"
               alt="konmari bronze consultant logo"
@@ -114,16 +141,18 @@
             />
           </picture>
         </div>
-        <h4 class="heading__level4">
+        <h4 class="heading__level4" data-aos="fade-up" data-aos-delay="200">
           Simone Hagen • KonMari Bronze Consultant
         </h4>
-        <p class="content__text">Is your home in chaos, no matter how often you tidy up?</p>
-        <p class="content__text">Do you feel stressed and frustrated?</p>
-        <p class="content__text">Are you looking for support on your journey to create a home that truly feels good to you?</p>
-        <p class="content__text">Then you're in the right place!</p>
-        <p class="content__text">Simplify Living helps you gain clarity about what you want—and don't want—in your home and life.</p>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <p class="content__text">Is your home in chaos, no matter how often you tidy up?</p>
+          <p class="content__text">Do you feel stressed and frustrated?</p>
+          <p class="content__text">Are you looking for support on your journey to create a home that truly feels good to you?</p>
+          <p class="content__text">Then you're in the right place!</p>
+          <p class="content__text">Simplify Living helps you gain clarity about what you want—and don't want—in your home and life.</p>
+        </div>
         <!-- CTA buttons -->
-        <div class="cta">
+        <div>
           <a href="contact/index.html" class="cta__button--primary"
             >Book a Free Consultation</a
           >
@@ -134,11 +163,13 @@
       </section>
 
       <!-- 2. HOW IT WORKS SECTION -->
-      <section class="content__section">
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
         <h2 class="heading__level2">How it works</h2>
-        <p class="content__text">Using the KonMari® Method, I'll guide you toward your personal vision of a calm and organized home.</p>
-        <p class="content__text">At the center of the process is you: your ideal home, and the small, practical steps that will take you there.</p>
-        <picture class="content__picture">
+        <div data-aos="fade-up">
+          <p class="content__text">Using the KonMari® Method, I'll guide you toward your personal vision of a calm and organized home.</p>
+          <p class="content__text">At the center of the process is you: your ideal home, and the small, practical steps that will take you there.</p>
+        </div>
+        <picture class="content__picture" data-aos="fade-up" data-aos-delay="200">
           <source srcset="../images/home/how-it-works.webp" type="image/webp" />
           <img
             src="../images/home/how-it-works.jpg"
@@ -147,11 +178,14 @@
           />
         </picture>
         <p class="content__copyright">Photo courtesy of KonMari Media, Inc.</p>
+        <div  data-aos="fade-up" data-aos-delay="400">
         <h3 class="heading__level3">Does it spark joy?</h3>
-        <p class="content__text">The KonMari® Method is built around this simple question.</p>
-        <p class="content__text">Through the process of selecting only those things that inspire joy, you can identify precisely what you love—and what you need.</p>
+        <div>
+          <p class="content__text">The KonMari® Method is built around this simple question.</p>
+          <p class="content__text">Through the process of selecting only those things that inspire joy, you can identify precisely what you love—and what you need.</p>
+        </div>
         <!-- Method icons -->
-        <div class="method-icons">
+        <div><div class="method-icons">
     <!-- Define icon -->
     <div class="method-icons__item">
       <svg
@@ -208,7 +242,7 @@
       </svg>
       <p class="method-icons__text">Enjoy</p>
     </div>
-  </div>
+  </div></div>
         <!-- CTA buttons -->
         <div class="cta">
           <a href="contact/index.html" class="cta__button--primary"
@@ -218,14 +252,15 @@
             >Learn About the Method</a
           >
         </div>
+      </div>
       </section>
 
-      <!-- 3. SERVICES SECTION -->
-      <section class="content__section">
-        <h2 class="heading__level2">Packages</h2>
+      <!-- 3. PACKAGES SECTION -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h2 class="heading__level2">Services</h2>
         <div class="content__four-column">
           <!-- Clothes -->
-          <div class="content__single-column">
+          <div class="content__single-column" data-aos="fade-up" data-aos-delay="150">
             <picture class="content__picture">
               <source
                 srcset="../images/services/clothes-&-more.webp"
@@ -243,7 +278,7 @@
             <p class="content__text">We'll organize your closet to its full potential in an easy and fun way.</p>
           </div>
           <!-- Paperwork -->
-          <div class="content__single-column">
+          <div class="content__single-column" data-aos="fade-up" data-aos-delay="200">
             <picture class="content__picture">
               <source
                 srcset="../images/services/paperwork.webp"
@@ -261,7 +296,7 @@
             <p class="content__text">We'll reduce your paperwork and create an organizational system for you.</p>
           </div>
           <!-- Kids -->
-          <div class="content__single-column">
+          <div class="content__single-column" data-aos="fade-up" data-aos-delay="250">
             <picture class="content__picture">
               <source srcset="../images/services/kids.webp" type="image/webp" />
               <img
@@ -276,7 +311,7 @@
             <p class="content__text">Together with the children, we'll create order in a playful and age-appropriate way.</p>
           </div>
           <!-- All In -->
-          <div class="content__single-column">
+          <div class="content__single-column" data-aos="fade-up" data-aos-delay="300">
             <picture class="content__picture">
               <source
                 srcset="../images/services/all-in.webp"
@@ -303,12 +338,12 @@
       </section>
 
       <!-- 4. GALLERY SECTION -->
-      <section class="content__section">
-        <h2 class="heading__level2">Gallery</h2>
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h2 class="heading__level2" >Gallery</h2>
         <p class="content__text">Slide down to view the 'before' photos.</p>
         <!-- Before/After Slider -->
         <!-- Add more images to messages and respective instances here -->
-        <div class="before-after__two-column-container">
+        <div class="before-after__two-column-container" data-aos="fade-up" data-aos-delay="300">
           
 
 <div class="before-after">
@@ -398,9 +433,9 @@
       </section>
 
       <!-- 5. TESTIMONIALS SECTION -->
-      <section class="content__section">
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
         <h2 class="heading__level2">Testimonials</h2>
-        
+        <div data-aos="fade-up" data-aos-delay="200">
 
 <div class="testimonials-carousel" role="region" aria-label="Client testimonials carousel">
   <div class="testimonials-carousel__wrapper">
@@ -509,14 +544,16 @@
   </div>
 </div>
 
-
+</div>
       </section>
 
       <!-- 6. FINAL CTA SECTION -->
-      <section class="content__section">
-        <h2 class="heading__level2">Ready to Simplify Your Life?</h2>
-        <p class="content__text">Create a home that truly feels good to you.</p>
-        <p class="content__text">Get in touch now! Free and no strings attached.</p>
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h2 class="heading__level2"">Ready to Simplify Your Life?</h2>
+        <div>
+          <p class="content__text">Create a home that truly feels good to you.</p>
+          <p class="content__text">Get in touch now! Free and no strings attached.</p>
+        </div>
         <div class="cta">
           <a href="contact/index.html" class="cta__button--primary"
             >Book a Free Consultation</a
@@ -528,6 +565,9 @@
     <footer class="site-footer"><p>© 2025 Simplify Living. All rights reserved.</p>
 </footer>
 
+    <!-- AOS (Animate On Scroll) Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../js/scroll-animations.js" defer></script>
     <script src="../js/navbar.js" defer></script>
     <script src="../js/before-after.js" defer></script>
     <script src="../js/testimonials.js" defer></script>
