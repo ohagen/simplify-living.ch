@@ -41,17 +41,48 @@ const PAGES = [
 
 /**
  * Load translation messages for a locale
+ * Loads common.json and page-specific JSON files, then merges them
  */
-function loadMessages(locale) {
-  const filePath = `messages/${locale}.json`;
-  if (!fs.existsSync(filePath)) {
-    return {};
+function loadMessages(locale, pageName = null) {
+  const messages = {};
+  
+  // Always load common messages first (nav, footer, meta, etc.)
+  const commonPath = `messages/${locale}/common.json`;
+  if (fs.existsSync(commonPath)) {
+    try {
+      const commonMessages = JSON.parse(fs.readFileSync(commonPath, "utf8"));
+      Object.assign(messages, commonMessages);
+    } catch (error) {
+      console.warn(`Warning: Could not load ${commonPath}:`, error.message);
+    }
   }
-  try {
-    return JSON.parse(fs.readFileSync(filePath, "utf8"));
-  } catch (error) {
-    return {};
+  
+  // Load page-specific messages if pageName is provided
+  if (pageName) {
+    const pagePath = `messages/${locale}/${pageName}.json`;
+    if (fs.existsSync(pagePath)) {
+      try {
+        const pageMessages = JSON.parse(fs.readFileSync(pagePath, "utf8"));
+        Object.assign(messages, pageMessages);
+      } catch (error) {
+        console.warn(`Warning: Could not load ${pagePath}:`, error.message);
+      }
+    }
   }
+  
+  // Fallback: try loading from old flat structure for backward compatibility
+  if (Object.keys(messages).length === 0) {
+    const legacyPath = `messages/${locale}.json`;
+    if (fs.existsSync(legacyPath)) {
+      try {
+        return JSON.parse(fs.readFileSync(legacyPath, "utf8"));
+      } catch (error) {
+        console.warn(`Warning: Could not load ${legacyPath}:`, error.message);
+      }
+    }
+  }
+  
+  return messages;
 }
 
 /**
@@ -296,7 +327,7 @@ function renderTemplate(templatePath, locale, pageName) {
   }
 
   let html = fs.readFileSync(templatePath, "utf8");
-  const messages = loadMessages(locale);
+  const messages = loadMessages(locale, pageName);
   const templateDir = path.dirname(templatePath);
   
   // Process partial includes first (before placeholder replacement)
