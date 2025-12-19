@@ -58,7 +58,9 @@ function loadMessages(locale, pageName = null) {
   }
   
   // Load shared component message files (used across multiple pages)
-  const sharedComponentFiles = ['gallery_before-after.json'];
+  // These files contain data for reusable components (e.g., before-after slider)
+  // Component files should be named after the component, not a page
+  const sharedComponentFiles = ['before-after.json'];
   sharedComponentFiles.forEach(fileName => {
     const sharedPath = `messages/${locale}/${fileName}`;
     if (fs.existsSync(sharedPath)) {
@@ -262,6 +264,19 @@ function processEachLoops(html, locale, pageName, messages) {
 }
 
 /**
+ * Generate navbar link path based on page depth
+ */
+function getNavLink(targetPage, currentPage) {
+  if (currentPage === "home") {
+    // From home page: links go to subdirectories
+    return targetPage === "home" ? "index.html" : `${targetPage}/index.html`;
+  } else {
+    // From subdirectory pages: links go up one level
+    return targetPage === "home" ? "../index.html" : `../${targetPage}/index.html`;
+  }
+}
+
+/**
  * Generate language selector HTML with two separate links
  */
 function getLangSelector(locale, pageName) {
@@ -310,15 +325,26 @@ function replacePlaceholders(html, locale, pageName, messages, indexContext = nu
   // Also supports dashes in key names ({{home.how-it-works.title}})
   // Supports nested keys like {{hero.title}} which resolves to {{pageName}}.hero.title
   // Supports array lookups when indexContext is provided (e.g., before-after.images[0].before.image)
-  return html.replace(/\{\{([\w-]+(?:\.[\w-]+)*)\}\}/g, (match, key) => {
+  return html.replace(/\{\{([\w-]+(?:\.[\w-]+|:[\w-]+)*)\}\}/g, (match, key) => {
     // Special case: {{locale}} -> replace with actual locale
     if (key === "locale") {
       return locale;
     }
     
+    // Special case: {{base-path}} -> relative path to root (../ for home, ../../ for subdirs)
+    if (key === "base-path") {
+      return pageName === "home" ? "../" : "../../";
+    }
+    
     // Special case: {{lang-switcher}} -> generate language selector HTML with two separate links
     if (key === "lang-switcher") {
       return getLangSelector(locale, pageName);
+    }
+    
+    // Special case: {{nav-link:pageName}} -> generate navbar link path
+    if (key.startsWith("nav-link:")) {
+      const targetPage = key.replace("nav-link:", "");
+      return getNavLink(targetPage, pageName);
     }
 
     // If indexContext is provided and key starts with a known array prefix, try array lookup first
@@ -399,8 +425,11 @@ function renderTemplate(templatePath, locale, pageName) {
   html = replacePlaceholders(html, locale, pageName, messages);
 
   // Remove empty elements (elements that only contain whitespace or unresolved placeholders)
-  // This handles cases where optional content like {{hero.alert}} is empty or not found
-  html = html.replace(/<p[^>]*class="hero__alert"[^>]*>\s*({{[^}]+}})?\s*<\/p>/gi, '');
+  // This handles cases where optional content like {{hero.alert}} or {{hero.subtitle}} is empty or not found
+  html = html.replace(/<p[^>]*class="hero__alert-text"[^>]*>\s*({{[^}]+}})?\s*<\/p>/gi, '');
+  html = html.replace(/<p[^>]*class="hero__subtitle"[^>]*>\s*({{[^}]+}})?\s*<\/p>/gi, '');
+  // Remove alert wrapper if it contains empty alert
+  html = html.replace(/<div[^>]*class="hero__alert-wrapper"[^>]*>\s*<div[^>]*class="hero__alert"[^>]*>\s*<div[^>]*class="hero__alert-icon"[^>]*><\/div>\s*<\/div>\s*<\/div>/gi, '');
 
   // Update lang attribute (remove duplicates first, then set)
   html = html.replace(/<html([^>]*)>/i, (match, attrs) => {

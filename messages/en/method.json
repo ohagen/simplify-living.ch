@@ -1,0 +1,10 @@
+{
+    "method.hero.size": "half",
+    "method.hero.image": "../../images/method/hero.jpg",
+    "method.hero.imageWebP": "../../images/method/hero.webp",
+    "method.hero.alt": "Method page hero image",
+    "method.hero.title": "Method",
+    
+    "method.welcome.title": "KonMari® Method"
+  }
+  

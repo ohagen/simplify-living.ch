@@ -1,0 +1,9 @@
+{
+  "about.hero.size": "half",
+  "about.hero.image": "../../images/about/hero.jpg",
+  "about.hero.imageWebP": "../../images/about/hero.webp",
+  "about.hero.alt": "About page hero image",
+  "about.hero.title": "Simone Hagen",
+  
+  "about.welcome.title": "About Simone"
+}

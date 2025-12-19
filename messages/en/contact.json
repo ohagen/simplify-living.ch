@@ -1,0 +1,10 @@
+{
+    "contact.hero.size": "half",
+    "contact.hero.image": "../../images/contact/hero.jpg",
+    "contact.hero.imageWebP": "../../images/contact/hero.webp",
+    "contact.hero.alt": "Contact page hero image",
+    "contact.hero.title": "Contact",
+    
+    "contact.welcome.title": "Get in touch"
+  }
+  

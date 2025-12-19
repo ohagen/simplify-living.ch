@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{locale}}">
+  <head>
+    {{> components/head.html}}
+  </head>
+  <body>
+    {{> components/hero.html}}
+
+    <main class="content">
+      <!-- 1. WELCOME SECTION -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h2 class="heading__level2">{{about.welcome.title}}</h2>
+      </section>
+    </main>
+
+    <footer class="site-footer">{{> components/footer.html}}</footer>
+
+    <!-- AOS (Animate On Scroll) Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="{{base-path}}js/scroll-animations.js" defer></script>
+    <script src="{{base-path}}js/navbar.js" defer></script>
+    <script src="{{base-path}}js/before-after.js" defer></script>
+    <script src="{{base-path}}js/testimonials.js" defer></script>
+  </body>
+</html>

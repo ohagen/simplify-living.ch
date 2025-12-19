@@ -1,0 +1,10 @@
+{
+    "services.hero.size": "half",
+    "services.hero.image": "../../images/services/hero.jpg",
+    "services.hero.imageWebP": "../../images/services/hero.webp",
+    "services.hero.alt": "Services page hero image",
+    "services.hero.title": "Services",
+    
+    "services.welcome.title": "Services"
+  }
+  

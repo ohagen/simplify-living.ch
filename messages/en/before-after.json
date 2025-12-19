@@ -1,32 +1,33 @@
 {
-  "before-after.aria-label": "Vorher und Nachher Vergleichs-Slider",
-  "before-after.aria-valuetext": "Nachher Bild sichtbar",
-  "before-after.label.before": "VORHER",
-  "before-after.label.after": "NACHHER",
+  "before-after.aria-label": "Before and after comparison slider",
+  "before-after.aria-valuetext": "After image visible",
+  "before-after.label.before": "BEFORE",
+  "before-after.label.after": "AFTER",
   "before-after.images": [
     {
       "before": {
         "imageWebP": "../images/gallery/before-after/kitchen-before.webp",
         "image": "../images/gallery/before-after/kitchen-before.jpg",
-        "alt": "Küche vor der Organisation"
+        "alt": "Kitchen before organization"
       },
       "after": {
         "imageWebP": "../images/gallery/before-after/kitchen-after.webp",
         "image": "../images/gallery/before-after/kitchen-after.jpg",
-        "alt": "Küche nach der Organisation"
+        "alt": "Kitchen after organization"
       }
     },
     {
       "before": {
         "imageWebP": "../images/gallery/before-after/bathroom-2-before.webp",
         "image": "../images/gallery/before-after/bathroom-2-before.jpg",
-        "alt": "Badezimmer vor der Organisation"
+        "alt": "Bathroom before organization"
       },
       "after": {
         "imageWebP": "../images/gallery/before-after/bathroom-2-after.webp",
         "image": "../images/gallery/before-after/bathroom-2-after.jpg",
-        "alt": "Badezimmer nach der Organisation"
+        "alt": "Bathroom after organization"
       }
     }
   ]
 }
+

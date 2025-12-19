@@ -1,0 +1,9 @@
+{
+  "gallery.hero.size": "half",
+  "gallery.hero.image": "../../images/gallery/hero.jpg",
+  "gallery.hero.imageWebP": "../../images/gallery/hero.webp",
+  "gallery.hero.alt": "Gallery page hero image",
+  "gallery.hero.title": "Gallery",
+
+  "gallery.welcome.title": "Before and after gallery"
+}

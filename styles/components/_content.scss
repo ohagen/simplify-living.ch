@@ -10,6 +10,7 @@
   width: min(100%, var(--container-max));
   margin: 0 auto;
   padding: var(--space-xxl);
+  flex: 1; // Allows content to grow and fill the available space, pushing footer to bottom
 
   @media (max-width: 1024px) {
     padding: var(--space-xl);
