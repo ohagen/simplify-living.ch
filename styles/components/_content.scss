@@ -12,6 +12,11 @@
   padding: var(--space-xxl);
   flex: 1; // Allows content to grow and fill the available space, pushing footer to bottom
 
+  // Modifier for smaller gap (for other pages)
+  &--gap-xxl {
+    gap: var(--space-xxl);
+  }
+
   @media (max-width: 1024px) {
     padding: var(--space-xl);
   }
@@ -38,6 +43,28 @@
     margin-right: auto;
   }
 
+  &__two-column--with-gap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xxl);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+      max-width: 100%;
+    }
+  }
+
+  &__two-column-item {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__three-column {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -47,6 +74,23 @@
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  &__three-column--with-gap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+      gap: var(--space-xs);
+      max-width:90%;
+    }
   }
   
   &__four-column {
@@ -164,6 +208,19 @@
     }
   }
 
+  &__image--horizontal-no-shadow {
+    width: 60%;
+    border-radius: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      border-radius: 2rem;
+    }
+  }
+
   &__image--vertical {
     width: 100%;
     height: auto;
@@ -190,4 +247,5 @@
   &__picture + &__copyright {
     margin-top: var(--space-xxs);
   }
+
 }

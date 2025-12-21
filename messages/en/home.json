@@ -20,11 +20,11 @@
   "home.welcome.cta2": "Learn About Simone",
   
   "home.how-it-works.title": "How it works",
-  "home.how-it-works.p1": "Using the KonMari® Method, I'll guide you toward your personal vision of a calm and organized home.",
+  "home.how-it-works.p1": "Using the KonMari® Method, I'll guide you toward your personal vision of a calm and organised home.",
   "home.how-it-works.p2": "At the center of the process is you: your ideal home, and the small, practical steps that will take you there.",
   "home.how-it-works.subtitle": "Does it spark joy?",
   "home.how-it-works.p3": "The KonMari® Method is built around this simple question.",
-  "home.how-it-works.p4": "Through the process of selecting only those things that inspire joy, you can identify precisely what you love—and what you need.",
+  "home.how-it-works.p4": "Through the process of selecting only those things that inspire joy, you can identify precisely what you love and what you need.",
   "home.how-it-works.icon1": "Define",
   "home.how-it-works.icon2": "Choose",
   "home.how-it-works.icon3": "Organise",
@@ -34,9 +34,9 @@
 
   "home.services.title": "Services",
   "home.services.subtitle1": "Clothes",
-  "home.services.p1": "We'll organize your closet to its full potential in an easy and fun way.",
+  "home.services.p1": "We'll organise your closet to its full potential in an easy and fun way.",
   "home.services.subtitle2": "Paperwork",
-  "home.services.p2": "We'll reduce your paperwork and create an organizational system for you.",
+  "home.services.p2": "We'll reduce your paperwork and create an organisational system for you.",
   "home.services.subtitle3": "Kids",
   "home.services.p3": "Together with the children, we'll create order in a playful and age-appropriate way.",
   "home.services.subtitle4": "All In",
@@ -63,7 +63,7 @@
     {
       "name": "Paedi",
       "image": "../images/testimonials/paedi.jpg",
-      "text": "I decluttered my clothes with Simone. Even though I now own less, I find what I really like much faster. My wardrobe is clear and organized. It truly feels like a new normal."
+      "text": "I decluttered my clothes with Simone. Even though I now own less, I find what I really like much faster. My wardrobe is clear and organised. It truly feels like a new normal."
     },
     {
       "name": "Stef",

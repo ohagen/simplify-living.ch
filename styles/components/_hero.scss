@@ -40,6 +40,15 @@
     .hero__alert-wrapper {
       display: none;
     }
+
+    // White text with strong shadow for h1 on half-height heroes
+    .hero__heading--level1 {
+      color: var(--color-white);
+      text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.8),
+        0 0 8px rgba(0, 0, 0, 0.6),
+        0 0 16px rgba(0, 0, 0, 0.4);
+    }
   }
 
   &__bg {

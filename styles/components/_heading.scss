@@ -83,6 +83,14 @@
     font-weight: 400;
   }
 
+  &__level3--larger-margin-top {
+    @extend %heading-base;
+    margin-top: var(--space-xxl);
+    margin-bottom: var(--space-lg);
+    font-size: clamp(1.5rem, 2.5vw + 0.75rem, 1.75rem); // (min 24px, max 28px)
+    font-weight: 400;
+  }
+
   &__level4 {
     @extend %heading-base;
     margin-bottom: var(--space-xl);
