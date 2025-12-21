@@ -14,7 +14,7 @@ function initAOS() {
       duration: 800,
       easing: 'ease-out-cubic',
       once: true, // Whether animation should happen only once - prevents re-animation on scroll up
-      offset: 150, // Offset (in px) from the original trigger point - triggers when element is closer to viewport
+      offset: 250, // Offset (in px) from the original trigger point - triggers when element is closer to viewport
       delay: 0, // Base delay in milliseconds (individual delays are set via data-aos-delay)
       
       // Performance settings
