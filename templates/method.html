@@ -6,10 +6,77 @@
   <body>
     {{> components/hero.html}}
 
-    <main class="content">
-      <!-- 1. WELCOME SECTION -->
+    <main class="content content--gap-xxl">
+      <!-- 1. INTRO -->
       <section class="content__section" data-aos="fade-up" data-aos-delay="150">
-        <h2 class="heading__level2">{{method.welcome.title}}</h2>
+        <h2 class="heading__level2">{{method.title}}</h2>
+        <h3 class="heading__level3">{{method.subtitle}}</h3>
+        <p class="content__text">{{method.intro1}}</p>
+        <p class="content__text">{{method.intro2}}</p>
+        <picture class="content__picture">
+          <source srcset="{{base-path}}images/method/marie-kondo.webp" type="image/webp" />
+          <img
+            src="{{base-path}}images/method/marie-kondo.png"
+            alt="Marie Kondo"
+            class="content__image--vertical"
+          />
+        </picture>
+        <p class="content__copyright">{{common.copyright}}</p>
+        <p class="content__text">{{method.intro3}}</p>
+        <h4 class="heading__level4">{{method.subtitle1}}</h4>
+        <p class="content__text">{{method.p1a}}</p>
+        <p class="content__text">{{method.p1b}}</p>
+      </section>
+
+      <!-- 2. WHAT TO EXPECT -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="heading__level3">{{method.subtitle2}}</h3>
+        <p class="content__text">{{method.p2a}}</p>
+        <div class="method-steps">
+          <!-- Step 1 -->
+          <div class="method-steps__step" data-aos="fade-up" data-aos-delay="200">
+            <div class="method-steps__step-number">1</div>
+            <div class="method-steps__step-content">
+              <p class="method-steps__step-text">{{method.p2b}}</p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="method-steps__step" data-aos="fade-up" data-aos-delay="250">
+            <div class="method-steps__step-number">2</div>
+            <div class="method-steps__step-content">
+              <p class="method-steps__step-text">{{method.p2c}}</p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="method-steps__step" data-aos="fade-up" data-aos-delay="300">
+            <div class="method-steps__step-number">3</div>
+            <div class="method-steps__step-content">
+              <p class="method-steps__step-text">{{method.p2d}}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- 4. IMPACT BEYOND TIDYING -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="heading__level3">{{method.subtitle3}}</h3>
+        <p class="content__text">{{method.p3a}}</p>
+        <p class="content__text">{{method.p3b}}</p>
+        <!-- Method icons -->
+        <div>{{> components/method-icons.html}}</div>
+        <p class="content__text">{{method.p4a}}</p>
+        <p class="content__text">{{method.p4b}}</p>
+      </section>
+
+      <!-- 5. FINAL CTA -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="heading__level3">{{method.final-cta.title}}</h3>
+        <p class="content__text">{{method.final-cta.p1}}</p>
+        <div class="cta">
+          <a href="contact/index.html" class="cta__button--primary"
+            >{{method.final-cta.cta}}</a
+          >
+        </div>
       </section>
     </main>
 
@@ -21,5 +88,6 @@
     <script src="{{base-path}}js/navbar.js" defer></script>
     <script src="{{base-path}}js/before-after.js" defer></script>
     <script src="{{base-path}}js/testimonials.js" defer></script>
+    <script src="{{base-path}}js/method-steps.js" defer></script>
   </body>
 </html>

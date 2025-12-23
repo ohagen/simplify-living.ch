@@ -1,0 +1,36 @@
+{
+    "method.hero.size": "half",
+    "method.hero.image": "../../images/method/hero.jpg",
+    "method.hero.imageWebP": "../../images/method/hero.webp",
+    "method.hero.alt": "Methode-Seite Hero-Bild",
+    "method.hero.title": "Methode",
+  
+    "method.title": "KonMari-Methode",
+    "method.subtitle": "Wie schafft man langfristig Ordnung?",
+    "method.intro1": "Simplify Living orientiert sich an der KonMari-Methode®. Diese dient als roter Faden. Selbstverständlich werden persönliche und individuelle Aspekte immer miteinbezogen, um authentische und nachhaltige Lösungen anzubieten.",
+    "method.intro2": "Die KonMari-Methode® ist eine Aufräummethode, die von Marie Kondo entwickelt wurde, um ein individuelles, ideales Wohnen zu ermöglichen.",
+    "method.intro3": "Damit räumst du dein Zuhause gründlich und vollständig auf. Das Ergebnis ist nicht nur ein sauberes Zuhause, sondern ein Zuhause, das deinen Werten entspricht und deinem täglichen Leben unterstützt.",
+    
+    "method.subtitle1": "Joy Checking",
+    "method.p1a": "Grundlegende Idee der Methode ist das so genannte „Joy Checking“: Alles, was du brauchst oder was dich glücklich macht, behältst du! Der Rest darf gehen. So bleibt mehr Platz für das, was dir wirklich wichtig ist. Gleichzeitig lässt du alles los, was in dir unangenehme Gefühle auslöst.",
+    "method.p1b": "Klingt gut, oder?",
+
+    "method.subtitle2": "Was erwartet dich",
+    "method.p2a": "Die Vorgehensweise ist dabei klar strukturiert.",
+    "method.p2b": "Zuerst werden in einem kostenlosen und unverbindlichen Erstgespräch der Ist-Zustand, Visionen und weitere Rahmenbedingungen analysiert.",
+    "method.p2c": "Nacheinander sortierst du deinen gesamten Besitz nach bestimmten Kategorien. Dabei entscheidest du selbst, was du behalten möchtest. Durch die kontinuierliche Auseinandersetzung mit der Frage: „Macht mich das glücklich?“ („Does it spark joy?“) entwickelst du immer mehr ein Gespür dafür, was du in deiner Wohnung und in deinem Leben möchtest und was nicht (mehr).",
+    "method.p2d": "Anschließend finden wir eine passende Ordnungsstruktur für alles, was bleibt.",
+
+    "method.subtitle3": "Mehr als Aufräumen",
+    "method.p3a": "Ein Zuhause, das übersichtlich und im Einklang mit den eigenen Bedürfnissen gestaltet ist, wirkt weit über die vier Wände hinaus. Wer sich für die KonMari-Methode entscheidet und sein Zuhause vollständig ordnet, begibt sich auf eine Reise zu sich selbst.",
+    "method.p3b": "Aufräumen bedeutet nicht nur, sich von Überflüssigem zu trennen. Es ist auch ein Prozess des Innehaltens, des Reflektierens und der bewussten Entscheidung: Was darf bleiben? Was ist mir wirklich wichtig?",
+
+    "method.subtitle4": "Der Einfluss",
+    "method.p4a": "Mit jedem Schritt hin zu mehr Klarheit im Außen entsteht auch mehr Klarheit im Inneren. Viele Menschen erleben, dass sie nach dem Aufräumen mit neuer Leichtigkeit durchs Leben gehen, plötzlich wissen, was ihnen guttut, und was nicht (mehr) zu ihnen passt.",
+    "method.p4b": "Die neugewonnene Ordnung schenkt nicht nur Raum, sondern auch Zeit, Energie und Klarheit. Es ist, als würde man durch das Loslassen im Außen Platz schaffen für das, was im Leben wirklich zählt.",
+
+    "method.final-cta.title": "Was macht dich glücklich?",
+    "method.final-cta.p1": "Finde es heraus!",
+    "method.final-cta.cta": "Los geht's"
+  }
+  

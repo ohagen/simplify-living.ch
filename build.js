@@ -60,7 +60,8 @@ function loadMessages(locale, pageName = null) {
   // Load shared component message files (used across multiple pages)
   // These files contain data for reusable components (e.g., before-after slider)
   // Component files should be named after the component, not a page
-  const sharedComponentFiles = ['before-after.json'];
+  // home.json is included because method-icons component uses home.how-it-works data
+  const sharedComponentFiles = ['before-after.json', 'home.json'];
   sharedComponentFiles.forEach(fileName => {
     const sharedPath = `messages/${locale}/${fileName}`;
     if (fs.existsSync(sharedPath)) {

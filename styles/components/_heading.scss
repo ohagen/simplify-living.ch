@@ -93,7 +93,8 @@
 
   &__level4 {
     @extend %heading-base;
-    margin-bottom: var(--space-xl);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-lg);
     font-size: clamp(1.125rem, 1.5vw + 0.75rem, 1.25rem); // (min 18px, max 20px)
     font-weight: 400;
   }
