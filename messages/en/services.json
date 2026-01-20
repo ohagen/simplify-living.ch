@@ -5,6 +5,55 @@
     "services.hero.alt": "Services page hero image",
     "services.hero.title": "Services",
     
-    "services.welcome.title": "Services"
+    "services.title": "All Services Available",
+    "services.subtitle": "Simplify Living services can be booked in person in the Frankfurt am Main area or online from anywhere in the world.",
+    "services.cta": "Book a Free Consultation",
+    "services.whats-included": "See what's included",
+    "services.hide-details": "Hide details",
+
+    "services.service1.title": "Clothes and More",
+    "services.service1.intro1": "Your wardrobe is overflowing, yet you have nothing to wear?",
+    "services.service1.intro2": "We'll sort through your clothes, shoes, and accessories together, and create a system that makes getting dressed easy and fun.",
+    "services.service1.support": "With my support, you will:",
+    "services.service1.li1": "Clarify your wishes and goals",
+    "services.service1.li2": "Joy-check every piece of clothing with confidence",
+    "services.service1.li3": "Learn smart folding and storage methods",
+    "services.service1.li4": "Reorganise your wardrobe so you can finally enjoy your favourite outfits again",
+    "services.service1.price": "From €555",
+
+    "services.service2.title": "Paperwork",
+    "services.service2.intro1": "Can't find that warranty? Or your tax documents? No problem. In the future you'll find everything at once.",
+    "services.service2.intro2": "I'll help you to sensibly reduce your paperwork and show you a filing system that keeps its promise in the long term.",
+    "services.service2.support": "With my support, you will:",
+    "services.service2.li1": "Clarify your wishes and goals",
+    "services.service2.li2": "Gather and sort your documents",
+    "services.service2.li3": "Decide what to keep",
+    "services.service2.li4": "Discover space-saving filing systems that actually work",
+    "services.service2.price": "From €555",
+
+    "services.service3.title": "Declutter with kids",
+    "services.service3.intro1": "It's not always easy to create a tidy, comfortable home that also supports your children's development. Together with the kids, we'll bring order in a playful, age-appropriate way, leaving plenty of space for creative play.",
+    "services.service3.intro2": "Drawing on my years as an elementary school teacher, I know easy strategies to help your family keep things organised.",
+    "services.service3.support": "With my support, you will:",
+    "services.service3.li1": "Clarify your wishes and goals",
+    "services.service3.li2": "Discover storage solutions that save space and fit your lifestyle",
+    "services.service3.li3": "Arrange your home to fit the current needs of your family",
+    "services.service3.li4": "Establish ideal conditions for playful learning and creative exploration",
+    "services.service3.price": "Pricing after initial consultation",
+
+    "services.service4.title": "All in",
+    "services.service4.intro1": "Are you ready for a full transformation? 'All in' is your complete decluttering journey.",
+    "services.service4.intro2": "Together over the course of at least six months, we'll systematically organise your entire home and design spaces that truly fit your life.",
+    "services.service4.support": "With my support, you will:",
+    "services.service4.li1": "Define your tidying journey with confidence",
+    "services.service4.li2": "Work closely with me over at least six months",
+    "services.service4.li3": "Receive regular in-person or online guidance",
+    "services.service4.li4": "Get ongoing written support while creating your feel-good home",
+    "services.service4.price": "Pricing after initial consultation",
+
+    "services.final-cta.title": "Let's simplify your home together",
+    "services.final-cta.p1": "Still not sure where to begin?",
+    "services.final-cta.p2": "Book a free, no-obligation initial consultation and we'll find out together.",
+    "services.final-cta.cta": "Begin Today"
   }
   

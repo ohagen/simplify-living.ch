@@ -139,6 +139,18 @@
     margin-left: auto;
     margin-right: auto;
   }
+  
+  &__text--left {
+    font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem); // (min 18px, max 22px)
+    font-weight: 300;
+    color: var(--color-body);
+    text-align: left;
+    margin-bottom: var(--space-md);
+    line-height: 1.4; 
+    max-width: 65ch; // Optimal reading width
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   // HTML picture wrapper for images
   &__picture {

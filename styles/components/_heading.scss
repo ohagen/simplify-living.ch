@@ -3,11 +3,11 @@
 %heading-base {
   font-family: var(--font-subheading);
   color: var(--color-heading);
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
   letter-spacing: 0.04em;
   line-height: 1.1;
+  text-align: center; // Default alignment for all headings
 
   @media (max-width: 768px) {
     max-width: 100%;
@@ -34,6 +34,7 @@
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
+      text-align: center;
       width: 4rem;
       height: 2px;
       background: linear-gradient(
@@ -52,6 +53,7 @@
       position: absolute;
       bottom: -2px;
       left: 50%;
+      text-align: center;
       transform: translateX(-50%);
       width: 6px;
       height: 6px;
@@ -91,11 +93,33 @@
     font-weight: 400;
   }
 
+  &__level3--left {
+    @extend %heading-base;
+    margin-bottom: var(--space-lg);
+    font-size: clamp(1.5rem, 2.5vw + 0.75rem, 1.75rem); // (min 24px, max 28px)
+    font-weight: 400;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   &__level4 {
     @extend %heading-base;
     margin-top: var(--space-xl);
     margin-bottom: var(--space-lg);
     font-size: clamp(1.125rem, 1.5vw + 0.75rem, 1.25rem); // (min 18px, max 20px)
     font-weight: 400;
+  }
+
+  &__level4--left {
+    @extend %heading-base;
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+    font-size: clamp(1.125rem, 1.5vw + 0.75rem, 1.25rem); // (min 18px, max 20px)
+    font-weight: 400;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 1.4;
   }
 }

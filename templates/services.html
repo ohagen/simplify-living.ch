@@ -9,7 +9,197 @@
     <main class="content">
       <!-- 1. WELCOME SECTION -->
       <section class="content__section" data-aos="fade-up" data-aos-delay="150">
-        <h2 class="heading__level2">{{services.welcome.title}}</h2>
+        <h2 class="heading__level2">{{services.title}}</h2>
+        <p class="content__text">{{services.subtitle}}</p>
+      </section>
+      <!-- SERVICES -->
+      <section class="services" data-aos="fade-up" data-aos-delay="150">
+        <!-- Service 1: Clothes and More -->
+        <div class="services__item">
+          <picture class="content__picture">
+            <source
+              srcset="{{base-path}}images/services/clothes-&-more_large.webp"
+              type="image/webp"
+            />
+            <img
+              src="{{base-path}}images/services/clothes-&-more_large.jpg"
+              alt="Clothes hanging in a closet"
+              class="content__image--vertical"
+            />
+          </picture>
+          <div class="services__content">
+            <h3 class="heading__level3--left">{{services.service1.title}}</h3>
+            <p class="services__price">{{services.service1.price}}</p>
+            <p class="content__text--left">{{services.service1.intro1}}</p>
+            <p class="content__text--left">{{services.service1.intro2}}</p>
+            <!-- Visual grouping container for CTA and toggle -->
+            <div class="services__action-group">
+              <!-- Always visible CTA -->
+              <div class="cta">
+                <a href="contact/index.html" class="cta__button--secondary"
+                  >{{services.cta}}</a
+                >
+              </div>
+              <button 
+                class="services__toggle services__toggle--collapsed" 
+              aria-expanded="false" 
+              data-service="service1"
+            >
+              <span class="services__toggle-text">{{services.whats-included}}</span>
+              <div class="services__toggle-content">
+                <h4 class="heading__level4--left">{{services.service1.support}}</h4>
+                <ul class="services__list">
+                  <li class="content__text--left">{{services.service1.li1}}</li>
+                  <li class="content__text--left">{{services.service1.li2}}</li>
+                  <li class="content__text--left">{{services.service1.li3}}</li>
+                  <li class="content__text--left">{{services.service1.li4}}</li>
+                </ul>
+              </div>
+            </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Paperwork -->
+        <div class="services__item">
+          <picture class="content__picture">
+            <source srcset="{{base-path}}images/services/paperwork_large.webp" type="image/webp" />
+            <img
+              src="{{base-path}}images/services/paperwork_large.jpg"
+              alt="Pile of paperwork"
+              class="content__image--vertical"
+            />
+          </picture>
+          <div class="services__content">
+            <h3 class="heading__level3--left">{{services.service2.title}}</h3>
+            <p class="services__price">{{services.service2.price}}</p>
+            <p class="content__text--left">{{services.service2.intro1}}</p>
+            <p class="content__text--left">{{services.service2.intro2}}</p>
+            <!-- Visual grouping container for CTA and toggle -->
+            <div class="services__action-group">
+              <!-- Always visible CTA -->
+              <div class="cta">
+                <a href="contact/index.html" class="cta__button--secondary"
+                  >{{services.cta}}</a
+                >
+              </div>
+              <button 
+                class="services__toggle services__toggle--collapsed" 
+              aria-expanded="false" 
+              data-service="service2"
+            >
+              <span class="services__toggle-text">{{services.whats-included}}</span>
+              <div class="services__toggle-content">
+                <h4 class="heading__level4--left">{{services.service2.support}}</h4>
+                <ul class="services__list">
+                  <li class="content__text--left">{{services.service2.li1}}</li>
+                  <li class="content__text--left">{{services.service2.li2}}</li>
+                  <li class="content__text--left">{{services.service2.li3}}</li>
+                  <li class="content__text--left">{{services.service2.li4}}</li>
+                </ul>
+              </div>
+            </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Declutter with kids -->
+        <div class="services__item">
+          <picture class="content__picture">
+            <source srcset="{{base-path}}images/services/kids_large.webp" type="image/webp" />
+            <img
+              src="{{base-path}}images/services/kids_large.jpg"
+              alt="Child sitting at a desk"
+              class="content__image--vertical"
+            />
+          </picture>
+          <div class="services__content">
+            <h3 class="heading__level3--left">{{services.service3.title}}</h3>
+            <p class="services__price">{{services.service3.price}}</p>
+            <p class="content__text--left">{{services.service3.intro1}}</p>
+            <p class="content__text--left">{{services.service3.intro2}}</p>
+            <!-- Visual grouping container for CTA and toggle -->
+            <div class="services__action-group">
+              <!-- Always visible CTA -->
+              <div class="cta">
+                <a href="contact/index.html" class="cta__button--secondary"
+                  >{{services.cta}}</a
+                >
+              </div>
+              <button 
+                class="services__toggle services__toggle--collapsed" 
+              aria-expanded="false" 
+              data-service="service3"
+            >
+              <span class="services__toggle-text">{{services.whats-included}}</span>
+              <div class="services__toggle-content">
+                <h4 class="heading__level4--left">{{services.service3.support}}</h4>
+                <ul class="services__list">
+                  <li class="content__text--left">{{services.service3.li1}}</li>
+                  <li class="content__text--left">{{services.service3.li2}}</li>
+                  <li class="content__text--left">{{services.service3.li3}}</li>
+                  <li class="content__text--left">{{services.service3.li4}}</li>
+                </ul>
+              </div>
+            </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: All in -->
+        <div class="services__item">
+          <picture class="content__picture">
+            <source srcset="{{base-path}}images/services/all-in_large.webp" type="image/webp" />
+            <img
+              src="{{base-path}}images/services/all-in_large.jpg"
+              alt="Calming, organised kitchen"
+              class="content__image--vertical"
+            />
+          </picture>
+          <div class="services__content">
+            <h3 class="heading__level3--left">{{services.service4.title}}</h3>
+            <p class="services__price">{{services.service4.price}}</p>
+            <p class="content__text--left">{{services.service4.intro1}}</p>
+            <p class="content__text--left">{{services.service4.intro2}}</p>
+            <!-- Visual grouping container for CTA and toggle -->
+            <div class="services__action-group">
+              <!-- Always visible CTA -->
+              <div class="cta">
+                <a href="contact/index.html" class="cta__button--secondary"
+                  >{{services.cta}}</a
+                >
+              </div>
+              <button 
+                class="services__toggle services__toggle--collapsed" 
+              aria-expanded="false" 
+              data-service="service4"
+            >
+              <span class="services__toggle-text">{{services.whats-included}}</span>
+              <div class="services__toggle-content">
+                <h4 class="heading__level4--left">{{services.service4.support}}</h4>
+                <ul class="services__list">
+                  <li class="content__text--left">{{services.service4.li1}}</li>
+                  <li class="content__text--left">{{services.service4.li2}}</li>
+                  <li class="content__text--left">{{services.service4.li3}}</li>
+                  <li class="content__text--left">{{services.service4.li4}}</li>
+                </ul>
+              </div>
+            </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       <!-- 5. FINAL CTA -->
+       <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="heading__level3">{{services.final-cta.title}}</h3>
+        <p class="content__text">{{services.final-cta.p1}}</p>
+        <p class="content__text">{{services.final-cta.p2}}</p>
+        <div class="cta">
+          <a href="contact/index.html" class="cta__button--primary"
+            >{{services.final-cta.cta}}</a
+          >
+        </div>
       </section>
     </main>
 
@@ -21,5 +211,6 @@
     <script src="{{base-path}}js/navbar.js" defer></script>
     <script src="{{base-path}}js/before-after.js" defer></script>
     <script src="{{base-path}}js/testimonials.js" defer></script>
+    <script src="{{base-path}}js/services-toggle.js" defer></script>
   </body>
 </html>
