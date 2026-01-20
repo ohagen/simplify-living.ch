@@ -587,6 +587,14 @@ a {
     padding: var(--space-lg);
   }
 }
+.content--gallery {
+  gap: var(--space-xxl);
+}
+@media (max-width: 768px) {
+  .content--gallery {
+    gap: var(--space-lg);
+  }
+}
 .content__section {
   padding: 0;
   margin: 0;
@@ -1074,6 +1082,7 @@ a {
   position: relative;
   width: 100%;
   max-width: 40rem;
+  aspect-ratio: 3/4;
   overflow: hidden;
   user-select: none;
   cursor: grab;
@@ -1099,7 +1108,7 @@ a {
   padding: 0;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .before-after__picture:first-child {
   position: relative;
@@ -1113,24 +1122,15 @@ a {
 }
 .before-after__image {
   display: block;
-  width: 90%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   pointer-events: none;
-}
-@media (max-width: 768px) {
-  .before-after__image {
-    width: 70%;
-  }
-}
-@media (max-width: 640px) {
-  .before-after__image {
-    width: 80%;
-  }
 }
 .before-after__image--before {
   z-index: 1;
   position: relative;
-  display: block;
 }
 .before-after__image--after {
   z-index: 2;
@@ -1140,6 +1140,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   clip-path: inset(0 0 0% 0);
   transition: clip-path 0.1s ease-out;
 }

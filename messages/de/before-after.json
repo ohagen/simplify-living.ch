@@ -20,12 +20,108 @@
       "before": {
         "imageWebP": "../images/gallery/before-after/bathroom-2-before.webp",
         "image": "../images/gallery/before-after/bathroom-2-before.jpg",
-        "alt": "Badezimmer vor der Organisation"
+        "alt": "Badezimmer 2 vor der Organisation"
       },
       "after": {
         "imageWebP": "../images/gallery/before-after/bathroom-2-after.webp",
         "image": "../images/gallery/before-after/bathroom-2-after.jpg",
-        "alt": "Badezimmer nach der Organisation"
+        "alt": "Badezimmer 2 nach der Organisation"
+      }
+    },
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/bathroom-1-before.webp",
+        "image": "../images/gallery/before-after/bathroom-1-before.jpg",
+        "alt": "Badezimmer 1 vor der Organisation"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/bathroom-1-after.webp",
+        "image": "../images/gallery/before-after/bathroom-1-after.jpg",
+        "alt": "Badezimmer 1 nach der Organisation"
+      }
+    },
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/closet-before.webp",
+        "image": "../images/gallery/before-after/closet-before.jpg",
+        "alt": "Schrank vor der Organisation"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/closet-after.webp",
+        "image": "../images/gallery/before-after/closet-after.jpg",
+        "alt": "Schrank nach der Organisation"
+      }
+    },
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/livingroom-before.webp",
+        "image": "../images/gallery/before-after/livingroom-before.jpg",
+        "alt": "Wohnzimmer vor der Organisation"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/livingroom-after.webp",
+        "image": "../images/gallery/before-after/livingroom-after.jpg",
+        "alt": "Wohnzimmer nach der Organisation"
+      }
+    },
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/office-1-before.webp",
+        "image": "../images/gallery/before-after/office-1-before.jpg",
+        "alt": "Arbeitszimmer 1 vor der Organisation"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/office-1-after.webp",
+        "image": "../images/gallery/before-after/office-1-after.jpg",
+        "alt": "Arbeitszimmer 1 nach der Organisation"
+      }
+    },
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/office-2-before.webp",
+        "image": "../images/gallery/before-after/office-2-before.jpg",
+        "alt": "Arbeitszimmer 2 vor der Organisation"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/office-2-after.webp",
+        "image": "../images/gallery/before-after/office-2-after.jpg",
+        "alt": "Arbeitszimmer 2 nach der Organisation"
+      }
+    },
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/shelves-1-before.webp",
+        "image": "../images/gallery/before-after/shelves-1-before.jpg",
+        "alt": "Regale 1 vor der Organisation"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/shelves-1-after.webp",
+        "image": "../images/gallery/before-after/shelves-1-after.jpg",
+        "alt": "Regale 1 nach der Organisation"
+      }
+    },
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/shelves-2-before.webp",
+        "image": "../images/gallery/before-after/shelves-2-before.jpg",
+        "alt": "Regale 2 vor der Organisation"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/shelves-2-after.webp",
+        "image": "../images/gallery/before-after/shelves-2-after.jpg",
+        "alt": "Regale 2 nach der Organisation"
+      }
+    },
+    {
+      "before": {
+        "imageWebP": "../images/gallery/before-after/wardrobe-before.webp",
+        "image": "../images/gallery/before-after/wardrobe-before.jpg",
+        "alt": "Schrank vor der Organisation"
+      },
+      "after": {
+        "imageWebP": "../images/gallery/before-after/wardrobe-after.webp",
+        "image": "../images/gallery/before-after/wardrobe-after.jpg",
+        "alt": "Schrank nach der Organisation"
       }
     }
   ]

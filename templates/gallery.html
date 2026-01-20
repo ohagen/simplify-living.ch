@@ -6,10 +6,39 @@
   <body>
     {{> components/hero.html}}
 
-    <main class="content">
-      <!-- 1. WELCOME SECTION -->
+    <main class="content content--gallery">
+      <!-- INTRO -->
       <section class="content__section" data-aos="fade-up" data-aos-delay="150">
         <h2 class="heading__level2">{{gallery.welcome.title}}</h2>
+        <p class="content__text">{{gallery.welcome.p1}}</p>
+      </section>
+
+      <!-- BEFORE/AFTER GALLERY -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <!-- Before/After Sliders - Images come from before-after.json -->
+        <div class="before-after__two-column-container" data-aos="fade-up" data-aos-delay="300">
+          {{> components/before-after.html index=0}}
+          {{> components/before-after.html index=1}}
+          {{> components/before-after.html index=2}}
+          {{> components/before-after.html index=3}}
+          {{> components/before-after.html index=4}}
+          {{> components/before-after.html index=5}}
+          {{> components/before-after.html index=6}}
+          {{> components/before-after.html index=7}}
+          {{> components/before-after.html index=8}}
+          {{> components/before-after.html index=9}}
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+          <h3 class="heading__level3">{{gallery.final-cta.title}}</h3>
+        <p class="content__text">{{gallery.final-cta.p1}}</p>
+        <div class="cta">
+          <a href="contact/index.html" class="cta__button--primary"
+            >{{gallery.final-cta.cta}}</a
+          >
+        </div>
       </section>
     </main>
 

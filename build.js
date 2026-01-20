@@ -369,6 +369,13 @@ function replacePlaceholders(html, locale, pageName, messages, indexContext = nu
               }
             }
             if (value !== null) {
+              // If this is an image path, prepend base-path and remove leading ../
+              if ((keys[keys.length - 1] === 'image' || keys[keys.length - 1] === 'imageWebP') && typeof value === 'string') {
+                const basePath = pageName === "home" ? "../" : "../../";
+                // Remove leading ../ if present and prepend base-path
+                const cleanPath = value.replace(/^\.\.\//, '');
+                return basePath + cleanPath;
+              }
               return value;
             }
           }

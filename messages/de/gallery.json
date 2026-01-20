@@ -1,0 +1,14 @@
+{
+  "gallery.hero.size": "half",
+  "gallery.hero.image": "../../images/gallery/hero.jpg",
+  "gallery.hero.imageWebP": "../../images/gallery/hero.webp",
+  "gallery.hero.alt": "Gallery page hero image",
+  "gallery.hero.title": "Galerie",
+
+  "gallery.welcome.title": "Entdecke einige Projekte",
+  "gallery.welcome.p1": "Zieh den Curser nach unten, um das Vorher Foto anzuschauen.",
+
+  "gallery.final-cta.title": "Hast du Lust, auch dein Zuhause zu transformieren?",
+  "gallery.final-cta.p1": "Kontaktiere mich noch heute unverbindlich und kostenlos.",
+  "gallery.final-cta.cta": "Ich bin bereit!"
+}

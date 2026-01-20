@@ -26,6 +26,16 @@
     padding: var(--space-lg);
   }
 
+  // Gallery page - reduced spacing between sections 
+  // (placed after media queries to override)
+  &--gallery {
+    gap: var(--space-xxl);
+
+    @media (max-width: 768px) {
+      gap: var(--space-lg);
+    }
+  }
+
   // Each new content section
   &__section {
     padding: 0;
