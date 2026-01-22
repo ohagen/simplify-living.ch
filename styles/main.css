@@ -127,6 +127,7 @@ The other fonts are loaded from the fonts/ folder
   --space-xl: 3rem;
   --space-xxl: 5rem;
   --space-xxxl: 7.5rem;
+  --container-medium: 60rem;
   --container-max: 72rem;
   --shadow-soft: 5px 5px 10px rgba(0, 0, 0, 0.2);
   --transition-base: 160ms ease-in-out;
@@ -568,7 +569,7 @@ a {
   justify-content: start;
   text-align: center;
   color: var(--color-body);
-  width: min(100%, var(--container-max));
+  width: min(100%, var(--container-medium));
   margin: 0 auto;
   padding: var(--space-xxl);
   flex: 1;
@@ -699,6 +700,12 @@ a {
   max-width: 65ch;
   margin-left: auto;
   margin-right: auto;
+}
+.content__text--no-margin {
+  margin-bottom: 0;
+}
+.content__text--bold {
+  font-weight: 400;
 }
 .content__text--left {
   font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem);
@@ -1861,4 +1868,315 @@ a {
 }
 .services__list .content__text--left {
   margin-bottom: var(--space-xxs);
+}
+
+/* Contact Form Styles */
+.contact-form {
+  width: min(100%, var(--container-max));
+  margin: 0 auto;
+  text-align: left;
+  background-color: var(--color-sage-50);
+  padding: var(--space-md);
+  border-radius: 1rem;
+}
+.contact-form__section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .contact-form__section {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+  }
+}
+.contact-form__field {
+  margin-bottom: var(--space-lg);
+}
+.contact-form__field label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-family: var(--font-body);
+  font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+  font-weight: 400;
+  color: var(--color-heading);
+}
+.contact-form__field input[type=text],
+.contact-form__field input[type=email],
+.contact-form__field input[type=tel],
+.contact-form__field select,
+.contact-form__field textarea {
+  width: 100%;
+  padding: var(--space-sm);
+  border: 1px solid var(--color-sage-200);
+  border-radius: 0.5rem;
+  font-family: var(--font-body);
+  font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+  color: var(--color-body);
+  background-color: var(--color-white);
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.contact-form__field input[type=text]:focus,
+.contact-form__field input[type=email]:focus,
+.contact-form__field input[type=tel]:focus,
+.contact-form__field select:focus,
+.contact-form__field textarea:focus {
+  outline: none;
+  border-color: var(--color-dark-green);
+  box-shadow: 0 0 0 3px rgba(102, 122, 108, 0.1);
+}
+.contact-form__field input[type=text]::placeholder,
+.contact-form__field input[type=email]::placeholder,
+.contact-form__field input[type=tel]::placeholder,
+.contact-form__field select::placeholder,
+.contact-form__field textarea::placeholder {
+  color: var(--color-sage-200);
+  opacity: 0.7;
+}
+.contact-form__field textarea {
+  min-height: 150px;
+  resize: vertical;
+  font-family: var(--font-body);
+}
+.contact-form__submit {
+  margin-top: var(--space-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+.contact-form__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 2rem;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
+  font-weight: 400;
+  text-transform: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.2s ease-in-out;
+  color: var(--color-white);
+  background-color: var(--color-dark-green);
+  border: none;
+  width: 100%;
+  max-width: 300px;
+}
+@media (max-width: 921px) {
+  .contact-form__button {
+    font-size: 0.941rem;
+  }
+}
+@media (max-width: 544px) {
+  .contact-form__button {
+    font-size: 0.824rem;
+  }
+}
+.contact-form__button:hover, .contact-form__button:focus-visible {
+  background-color: var(--color-dark-green-hover);
+  color: var(--color-white);
+}
+.contact-form__button:active {
+  transform: translateY(-1px);
+}
+.contact-form__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.contact-form__message {
+  margin-top: var(--space-md);
+  padding: var(--space-sm);
+  border-radius: 0.5rem;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+}
+.contact-form__message--success {
+  background-color: var(--color-sage-50);
+  color: var(--color-dark-green);
+  border: 1px solid var(--color-sage-200);
+}
+.contact-form__message--error {
+  background-color: #fee;
+  color: #c33;
+  border: 1px solid #fcc;
+}
+.contact-form__preferredcontactmethod-group {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-xl);
+  margin-top: var(--space-xs);
+}
+.contact-form__preferredcontactmethod-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-xs);
+  cursor: pointer;
+}
+.contact-form__preferredcontactmethod-option input[type=radio] {
+  width: 1rem;
+  height: 1rem;
+  margin: 0;
+  accent-color: var(--color-dark-green);
+  cursor: pointer;
+}
+.contact-form__preferredcontactmethod-option label {
+  margin: 0;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+  color: var(--color-body);
+  font-weight: 300;
+}
+
+.contact-info {
+  margin-top: 0;
+}
+.contact-info__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  max-width: min(100%, var(--container-max));
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .contact-info__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    max-width: 100%;
+  }
+}
+.contact-info__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  border: 1px solid var(--color-sage-100);
+  border-radius: 1rem;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.contact-info__item:hover {
+  border-color: var(--color-sage-200);
+  box-shadow: 0 2px 8px rgba(102, 122, 108, 0.1);
+}
+@media (max-width: 768px) {
+  .contact-info__item {
+    padding: var(--space-sm);
+  }
+}
+.contact-info__label {
+  font-family: var(--font-body);
+  font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem);
+  font-weight: 400;
+  color: var(--color-heading);
+  margin-bottom: var(--space-xs);
+}
+.contact-info__link {
+  font-family: var(--font-body);
+  font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem);
+  color: var(--color-heading);
+  font-weight: 300;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  word-break: break-all;
+}
+.contact-info__link:hover, .contact-info__link:focus-visible {
+  color: var(--color-dark-green-hover);
+  text-decoration: underline;
+}
+.contact-info__phones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.contact-info__phone-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--color-heading);
+  transition: all 0.2s ease-in-out;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.contact-info__phone-link:hover {
+  border-color: var(--color-sage-100);
+  background-color: var(--color-sage-50);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(102, 122, 108, 0.1);
+}
+.contact-info__phone-link:focus-visible {
+  outline: 2px solid var(--color-sage-200);
+  outline-offset: 2px;
+}
+.contact-info__phone-link--whatsapp {
+  border: 1px solid var(--color-sage-100);
+}
+.contact-info__phone-link--whatsapp:hover {
+  background-color: var(--color-sage-200);
+  border-color: var(--color-dark-green);
+  color: white !important;
+}
+.contact-info__phone-link--call {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.contact-info__phone-link--call:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(102, 122, 108, 0.1);
+  background-color: var(--color-sage-50);
+  border-color: var(--color-sage-100);
+  opacity: 1;
+}
+.contact-info__phone-link--call:active {
+  transform: translateY(0);
+}
+.contact-info__phone-link--call[href^="tel:"] {
+  opacity: 1;
+  text-decoration: none;
+}
+.contact-info__phone-link--call[href^="tel:"]:hover {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white !important;
+}
+.contact-info__phone-link--call[href^="tel:"]:hover .contact-info__phone-number,
+.contact-info__phone-link--call[href^="tel:"]:hover .contact-info__phone-label {
+  color: white !important;
+}
+.contact-info__phone-link--desktop {
+  cursor: default !important;
+  pointer-events: none !important;
+}
+.contact-info__phone-link--desktop:hover {
+  transform: none;
+  box-shadow: none;
+  background-color: transparent;
+  border-color: transparent;
+}
+.contact-info__phone-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.contact-info__phone-number {
+  font-family: var(--font-body);
+  font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem);
+  color: var(--color-heading);
+  font-weight: 300;
+  margin-right: var(--space-xs);
+}
+.contact-info__phone-label {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.125rem);
+  color: var(--color-heading);
+  font-weight: 300;
+  opacity: 0.8;
 }

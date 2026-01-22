@@ -153,3 +153,19 @@ The build system uses pure Node.js (no external dependencies), but SCSS compilat
 - Pure HTML, CSS, JavaScript - no runtime dependencies
 - Static files ready to deploy to any web server
 - SEO-friendly with proper meta tags, canonical URLs, and hreflang tags
+
+## Contact Form 
+
+### Formspree Credentials:
+- Link: https://formspree.io/login
+- Email: info@simplify-living.ch
+- Password: SamplePassword2026@
+
+### Conditions:
+- Free
+- 50 submissions per month limit
+- Instant email notifications on form submissions
+- Usage alerts at 50%, 75%, 90%, and 100% of monthly limit
+- Up to 2 email addresses for notifications (you can later add your personal email if you wish on your Formspree account)
+
+

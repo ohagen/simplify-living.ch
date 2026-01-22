@@ -10,6 +10,164 @@
       <!-- 1. WELCOME SECTION -->
       <section class="content__section" data-aos="fade-up" data-aos-delay="150">
         <h2 class="heading__level2">{{contact.welcome.title}}</h2>
+        <p class="content__text content__text--no-margin">{{contact.welcome.quote1}}</p>
+        <p class="content__text">{{contact.welcome.quote2}}</p>
+        <p class="content__text content__text--bold">{{contact.welcome.quoteauthor}}</p>
+      </section>
+
+      <!-- 2. CONTACT FORM SECTION -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="heading__level3">{{contact.form.title}}</h3>
+        <p class="content__text">{{contact.form.description}}</p>
+        
+        <!-- Form attributes:
+        action: URL where form data gets sent (Formspree's server)
+        method: HTTP method (POST for data)
+        id: Unique identifier for JavaScript to find this form
+        data-*: Custom attributes for my JavaScript messages -->
+        <form
+          class="contact-form"
+          id="contact-form" 
+          action="https://formspree.io/f/mykkdwrj"
+          method="POST"
+          data-submitting="{{contact.form.submitting}}"
+          data-success="{{contact.form.success}}"
+          data-error="{{contact.form.error}}"
+          data-submit="{{contact.form.submit}}"
+          data-validation-phone-required="{{contact.form.validation.phone-required}}"
+        >
+          <!-- Hidden field to help Formspree identify the form -->
+          <input type="hidden" name="_subject" value="New contact form submission" />
+
+          <!-- Name fields -->
+          <div class="contact-form__section">
+            <div class="contact-form__field">
+              <label for="firstname">{{contact.form.firstname.label}}</label>
+              <!-- Key input attributes - these are the items being shipped to Formspree:
+              name: CRITICAL - This becomes the key in my data object
+              id: Used by <label for="firstname"> for accessibility
+              type: input type (text, email, tel, etc.)
+              required: whether the input is required
+              -->
+              <input 
+                type="text" 
+                id="firstname" 
+                name="firstname" 
+                required 
+                placeholder="{{contact.form.firstname.placeholder}}"
+              />
+            </div>
+
+            <div class="contact-form__field">
+              <label for="lastname">{{contact.form.lastname.label}}</label>
+              <input 
+                type="text" 
+                id="lastname" 
+                name="lastname" 
+                required 
+                placeholder="{{contact.form.lastname.placeholder}}"
+              />
+            </div>
+          </div>
+
+          <!-- Email field -->
+          <div class="contact-form__field">
+            <label for="email">{{contact.form.email.label}}</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              placeholder="{{contact.form.email.placeholder}}"
+            />
+          </div>
+
+          <!-- Phone field -->
+          <div class="contact-form__field">
+            <label for="phone">{{contact.form.phone.label}}</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="{{contact.form.phone.placeholder}}"
+            />
+          </div>
+
+          <!-- Message field -->
+          <div class="contact-form__field">
+            <label for="message">{{contact.form.message.label}}</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="{{contact.form.message.placeholder}}"
+            ></textarea>
+          </div>
+
+          <!-- Preferred contact method field -->
+          <div class="contact-form__field">
+            <label>{{contact.form.preferredcontactmethod.label}}</label>
+            <div class="contact-form__preferredcontactmethod-group">
+              <div class="contact-form__preferredcontactmethod-option">
+                <input
+                  type="radio"
+                  id="contact-email"
+                  name="preferred-contact-method"
+                  value="email"
+                  required
+                />
+                <label for="contact-email">{{contact.form.preferredcontactmethod.email}}</label>
+              </div>
+              <div class="contact-form__preferredcontactmethod-option">
+                <input
+                  type="radio"
+                  id="contact-phone"
+                  name="preferred-contact-method"
+                  value="phone"
+                  required
+                />
+                <label for="contact-phone">{{contact.form.preferredcontactmethod.phone}}</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit button -->
+          <div class="contact-form__submit">
+            <button type="submit" class="contact-form__button" id="submit-button">
+              {{contact.form.submit}}
+            </button>
+            <div id="form-message" class="contact-form__message" style="display: none;" role="alert"></div>
+          </div>
+        </form>
+      </section>
+
+      <!-- 3. CONTACT INFO SECTION -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="250">
+        <h3 class="heading__level3">{{contact.info.title}}</h3>
+        <p class="content__text">{{contact.info.description}}</p>
+        <div class="contact-info">
+          <div class="contact-info__grid">
+            <div class="contact-info__item contact-info__item--email">
+              <div class="contact-info__label">{{contact.info.email.label}}</div>
+              <a href="mailto:{{contact.email}}" class="contact-info__link">{{contact.email}}</a>
+            </div>
+            <div class="contact-info__item contact-info__item--phone">
+              <div class="contact-info__label">{{contact.info.phone.label}}</div>
+              <div class="contact-info__phones">
+                <a class="contact-info__phone-link contact-info__phone-link--call" data-phone="{{contact.phone-de}}" data-mobile-label="{{contact.phone-de-label-mobile}}">
+                  <!-- <span class="contact-info__phone-icon">📞</span> -->
+                  <span class="contact-info__phone-number">{{contact.phone-de}}</span>
+                  <span class="contact-info__phone-label">{{contact.phone-de-label}}</span>
+                </a>
+                <a href="https://wa.me/{{contact.phone-ch-clean}}?text={{contact.whatsapp.message}}" target="_blank" class="contact-info__phone-link contact-info__phone-link--whatsapp">
+                  <!-- <span class="contact-info__phone-icon">💬</span> -->
+                  <span class="contact-info__phone-number">{{contact.phone-ch}}</span>
+                  <span class="contact-info__phone-label">{{contact.phone-ch-label}}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -19,7 +177,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="{{base-path}}js/scroll-animations.js" defer></script>
     <script src="{{base-path}}js/navbar.js" defer></script>
-    <script src="{{base-path}}js/before-after.js" defer></script>
-    <script src="{{base-path}}js/testimonials.js" defer></script>
+    <script src="{{base-path}}js/form-submission.js" defer></script>
+    <script src="{{base-path}}js/phone-copy.js" defer></script>
   </body>
 </html>

@@ -20,6 +20,7 @@ $space-lg: 2rem; // 32px
 $space-xl: 3rem; // 48px
 $space-xxl: 5rem; // 80px
 $space-xxxl: 7.5rem; // 120px
+$container-medium: 60rem;
 $container-max: 72rem;
 $shadow-soft: 5px 5px 10px rgba(0, 0, 0, 0.2);
 $transition-base: 160ms ease-in-out;
@@ -50,6 +51,7 @@ $transition-base: 160ms ease-in-out;
   --space-xl: #{$space-xl};
   --space-xxl: #{$space-xxl};
   --space-xxxl: #{$space-xxxl};
+  --container-medium: #{$container-medium};
   --container-max: #{$container-max};
   --shadow-soft: #{$shadow-soft};
   --transition-base: #{$transition-base};

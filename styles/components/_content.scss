@@ -7,7 +7,7 @@
   justify-content: start;
   text-align: center;
   color: var(--color-body);
-  width: min(100%, var(--container-max));
+  width: min(100%, var(--container-medium));
   margin: 0 auto;
   padding: var(--space-xxl);
   flex: 1; // Allows content to grow and fill the available space, pushing footer to bottom
@@ -148,6 +148,14 @@
     max-width: 65ch; // Optimal reading width
     margin-left: auto;
     margin-right: auto;
+  }
+
+  &__text--no-margin {
+    margin-bottom: 0;
+  }
+
+  &__text--bold {
+    font-weight: 400;
   }
   
   &__text--left {
