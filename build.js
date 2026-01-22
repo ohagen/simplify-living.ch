@@ -446,16 +446,20 @@ function renderTemplate(templatePath, locale, pageName) {
     return `<html lang="${locale}"${attrs}>`;
   });
 
-  // Update title - try page title, then meta title
+  // Update title - try page-specific SEO title, then page title, then meta title
   const title =
+    messages["meta.pageTitle"] ||
     messages[`${pageName}.title`] ||
     messages["meta.title"] ||
     "Simplify Living";
   html = html.replace(/<title>.*?<\/title>/i, `<title>${title}</title>`);
 
-  // Update meta description - try page description, then meta description
+  // Update meta description - try page-specific SEO description, then page description, then meta description
   const description =
-    messages[`${pageName}.description`] || messages["meta.description"] || "";
+    messages["meta.pageDescription"] ||
+    messages[`${pageName}.description`] ||
+    messages["meta.description"] ||
+    "";
   if (description) {
     if (html.includes('name="description"')) {
       html = html.replace(
