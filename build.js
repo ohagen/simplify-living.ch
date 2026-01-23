@@ -529,6 +529,28 @@ function injectYear(text) {
 }
 
 /**
+ * Copy static SEO files (robots.txt, sitemap.xml, Google verification) to root
+ */
+function copyStaticFiles() {
+  const staticFiles = ['robots.txt', 'sitemap.xml', 'google46e6b753d738807d.html'];
+
+  staticFiles.forEach(fileName => {
+    const sourcePath = path.join(__dirname, fileName);
+
+    if (fs.existsSync(sourcePath)) {
+      try {
+        // Files are already in root, just log success
+        console.log(`✓ Static file ready: ${fileName}`);
+      } catch (error) {
+        console.warn(`Warning: Could not process ${fileName}:`, error.message);
+      }
+    } else {
+      console.warn(`Warning: ${fileName} not found in source directory`);
+    }
+  });
+}
+
+/**
  * Build all pages for all locales
  */
 function build() {
@@ -554,6 +576,9 @@ function build() {
       }
     });
   });
+
+  // Copy static SEO files
+  copyStaticFiles();
 
   // Simple summary
   if (errorCount > 0) {
