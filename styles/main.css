@@ -707,12 +707,12 @@ a {
 .content__text--bold {
   font-weight: 400;
 }
-.content__text--left {
-  font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem);
+.content__text--left-smaller {
+  font-size: clamp(1.1875rem, 1vw + 0.75rem, 1.25rem);
   font-weight: 300;
   color: var(--color-body);
   text-align: left;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-xs);
   line-height: 1.4;
   max-width: 65ch;
   margin-left: 0;
@@ -1763,7 +1763,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  margin-top: var(--space-md);
+  margin-top: var(--space-xs);
   margin-bottom: var(--space-xs);
   padding: var(--space-md);
   background-color: var(--color-sage-50);
