@@ -1,0 +1,361 @@
+/* Contact Form Styles */
+
+.contact-form {
+  width: min(100%, var(--container-max));
+  margin: 0 auto;
+  text-align: left;
+  background-color: var(--color-sage-50);
+  padding: var(--space-md);
+  border-radius: 1rem;
+
+
+  // Name (first & last) field in 2 responsive columns
+  &__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    width: 100%;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0;
+    }
+  }
+
+  // Each field of the form (egm names, email, phone, ect.)
+  &__field {
+    margin-bottom: var(--space-lg);
+
+    label {
+      display: block;
+      margin-bottom: var(--space-xs);
+      font-family: var(--font-body);
+      font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+      font-weight: 400;
+      color: var(--color-heading);
+    }
+
+    // Each input field (where user types their info)
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: var(--space-sm);
+      border: 1px solid var(--color-sage-200);
+      border-radius: 0.5rem;
+      font-family: var(--font-body);
+      font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+      color: var(--color-body);
+      background-color: var(--color-white);
+      transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+      &:focus {
+        outline: none;
+        border-color: var(--color-dark-green);
+        box-shadow: 0 0 0 3px rgba(102, 122, 108, 0.1);
+      }
+
+      &::placeholder {
+        color: var(--color-sage-200);
+        opacity: 0.7;
+      }
+    }
+
+    // Message field (textarea)
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+      font-family: var(--font-body);
+    }
+  }
+
+  &__submit {
+    margin-top: var(--space-md);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 2rem;
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
+    font-weight: 400;
+    text-transform: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.2s ease-in-out;
+    color: var(--color-white);
+    background-color: var(--color-dark-green);
+    border: none;
+    width: 100%;
+    max-width: 300px;
+
+    @media (max-width: 921px) {
+      font-size: 0.941rem;
+    }
+
+    @media (max-width: 544px) {
+      font-size: 0.824rem;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--color-dark-green-hover);
+      color: var(--color-white);
+    }
+
+    &:active {
+      transform: translateY(-1px);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  // Success and error messages after form submission
+  &__message {
+    margin-top: var(--space-md);
+    padding: var(--space-sm);
+    border-radius: 0.5rem;
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+
+    &--success {
+      background-color: var(--color-sage-50);
+      color: var(--color-dark-green);
+      border: 1px solid var(--color-sage-200);
+    }
+
+    &--error {
+      background-color: #fee;
+      color: #c33;
+      border: 1px solid #fcc;
+    }
+  }
+
+  // Preferred contact method group (email + phone)
+  &__preferredcontactmethod-group {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-xl);
+    margin-top: var(--space-xs);
+  }
+
+  // Preferred Email or phone option
+  &__preferredcontactmethod-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-xs);
+    cursor: pointer;
+
+    // Circle to tick preferred contact option
+    input[type="radio"] {
+      width: 1rem;
+      height: 1rem;
+      margin: 0;
+      accent-color: var(--color-dark-green);
+      cursor: pointer;
+    }
+
+    // Email or Phone text
+    label {
+      margin: 0;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+      color: var(--color-body);
+      font-weight: 300;
+    }
+  }
+}
+
+.contact-info {
+  margin-top: 0;
+
+  // Email and Phone section
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    max-width: min(100%, var(--container-max));
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      max-width: 100%;
+    }
+  }
+
+
+  // Email OR Phone item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+    border: 1px solid var(--color-sage-100);
+    border-radius: 1rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+    &:hover {
+      border-color: var(--color-sage-200);
+      box-shadow: 0 2px 8px rgba(102, 122, 108, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      padding: var(--space-sm);
+    }
+  }
+
+  //  Email and Phone titles
+  &__label {
+    font-family: var(--font-body);
+    font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem); // (min 18px, max 22px)
+    font-weight: 400;
+    color: var(--color-heading);
+    margin-bottom: var(--space-xs);
+  }
+
+  // Email link text
+  &__link {
+    font-family: var(--font-body);
+    font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem); // (min 18px, max 22px)
+    color: var(--color-heading);
+    font-weight: 300;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    word-break: break-all;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--color-dark-green-hover);
+      text-decoration: underline;
+    }
+  }
+
+  // Phone section
+  &__phones {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  &__phone-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--color-heading);
+    transition: all 0.2s ease-in-out;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--color-sage-100);
+      background-color: var(--color-sage-50);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(102, 122, 108, 0.1);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-sage-200);
+      outline-offset: 2px;
+    }
+
+    &--whatsapp {
+      border: 1px solid var(--color-sage-100);
+
+      &:hover {
+        background-color:var(--color-sage-200);
+        border-color: var(--color-dark-green);
+        color: white !important;
+      }
+    }
+
+    &--call {
+      cursor: pointer;
+      opacity: 0.8;
+
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(102, 122, 108, 0.1);
+        background-color: var(--color-sage-50);
+        border-color: var(--color-sage-100);
+        opacity: 1;
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+
+      // When converted to tel: link on mobile, make it look like a proper link
+      &[href^="tel:"] {
+        opacity: 1;
+        text-decoration: none;
+
+        &:hover {
+          background-color: #007bff;
+          border-color: #007bff;
+          color: white !important;
+
+          .contact-info__phone-number,
+          .contact-info__phone-label {
+            color: white !important;
+          }
+        }
+      }
+    }
+
+    &--desktop {
+      cursor: default !important;
+      pointer-events: none !important;
+
+      &:hover {
+        transform: none;
+        box-shadow: none;
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__phone-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  // Both DE and CH numbers (+49.../+41...)
+  &__phone-number {
+    font-family: var(--font-body);
+    font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem); // (min 18px, max 22px)
+    color: var(--color-heading);
+    font-weight: 300;
+    margin-right: var(--space-xs);
+  }
+
+  // Both DE and CH labels (📞 call or 💬 WhatsApp)
+  &__phone-label {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.125rem); // (min 16px, max 18px)
+    color: var(--color-heading);
+    font-weight: 300;
+    opacity: 0.8;
+  }
+}

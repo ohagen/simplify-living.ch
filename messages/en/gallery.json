@@ -1,0 +1,17 @@
+{
+  "meta.pageTitle": "Before & After Gallery – Decluttering Transformations | Simplify Living",
+  "meta.pageDescription": "See real before and after photos from professional KonMari decluttering projects done by Simplify Living.",
+
+  "gallery.hero.size": "half",
+  "gallery.hero.image": "../../images/gallery/hero.jpg",
+  "gallery.hero.imageWebP": "../../images/gallery/hero.webp",
+  "gallery.hero.alt": "Gallery page hero image",
+  "gallery.hero.title": "Gallery",
+
+  "gallery.welcome.title": "Take a look at a few projects",
+  "gallery.welcome.p1": "Slide the cursor down to view the 'before' photo.",
+
+  "gallery.final-cta.title": "Ready to transform your home?",
+  "gallery.final-cta.p1": "Reach out today! It's free and completely non-binding.",
+  "gallery.final-cta.cta": "I'm ready!"
+}

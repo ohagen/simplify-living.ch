@@ -1,0 +1,25 @@
+<nav class="navbar">
+  <!-- Logo -->
+  <div class="navbar__logo-container">
+    <a href="{{nav-link:home}}" class="navbar__logo">
+      <picture>
+        <source srcset="{{base-path}}images/logo@2x.webp 2x, {{base-path}}images/logo.webp 1x" type="image/webp">
+        <img src="{{base-path}}images/logo.png" alt="Simplify Living logo" />
+      </picture>
+    </a>
+  </div>
+
+  <!-- Mobile menu button -->
+  <button class="navbar__toggle" aria-label="Toggle navigation menu" aria-expanded="false"></button>
+  
+  <!-- Menu links -->
+  <div class="navbar__links-container">
+    <a href="{{nav-link:home}}" class="navbar__link">{{common.nav.home}}</a>
+    <a href="{{nav-link:about}}" class="navbar__link">{{common.nav.about}}</a>
+    <a href="{{nav-link:method}}" class="navbar__link">{{common.nav.method}}</a>
+    <a href="{{nav-link:services}}" class="navbar__link">{{common.nav.services}}</a>
+    <a href="{{nav-link:gallery}}" class="navbar__link">{{common.nav.gallery}}</a>
+    <a href="{{nav-link:contact}}" class="navbar__link">{{common.nav.contact}}</a>
+    {{lang-switcher}}
+  </div>
+</nav>

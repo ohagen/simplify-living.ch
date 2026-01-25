@@ -1,0 +1,198 @@
+/* Services container - holds all service items */
+
+// Reduce gap between content sections when services section is present
+.content:has(.services) {
+  gap: var(--space-xxl); // gap between sections in services page
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxxl); // gap between services
+  
+  /* Individual service item - image left, content right */
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    gap: var(--space-xl);
+    max-width: 100%;
+
+    // Stack vertically on mobile
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+  }
+
+  .heading__level3--left {
+    margin-bottom: var(--space-xxxs);
+  }
+
+  .heading__level4--left {
+    margin-bottom: var(--space-xxs);
+  }
+
+
+  /* Content wrapper for right side */
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    justify-content: start;
+    text-align: left;
+
+    // Override CTA centering to align left in services only
+    .cta {
+      justify-content: flex-start;
+    }
+  }
+
+  &__price {
+    font-size: clamp(1.5rem, 2.5vw + 0.75rem, 1.75rem); // (min 24px, max 28px)
+    color: var(--color-sage-200);
+    width: fit-content;
+    margin-bottom: var(--space-md);
+    font-weight: 300;
+  }
+
+  // Visual grouping container for CTA and toggle buttons
+  &__action-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-top: var(--space-xs);
+    margin-bottom: var(--space-xs);
+    padding: var(--space-md);
+    background-color: var(--color-sage-50);
+    border-radius: 1rem;
+
+    // Tailor margin-top/bottom from CTA div inside this action group only
+    .cta {
+      margin-top: 0;
+      margin-bottom: var(--space-xs);
+    }
+  }
+
+  // Toggle button to show/hide service details
+  &__toggle {
+    background-color: var(--color-white); 
+    border: 1px solid var(--color-sage-100);
+    color: var(--color-sage-400);
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    padding: var(--space-sm) var(--space-md);
+    text-align: left;
+    text-decoration: none;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    font-weight: 400;
+    width: 100%;
+    overflow: hidden;
+    max-height: 50px; // Collapsed height (approximate)
+    transition: max-height 0.4s ease, background 0.2s ease, color 0.2s ease;
+
+
+    &:active {
+      background-color: var(--color-sage-100);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-dark-green);
+      outline-offset: 2px;
+    }
+
+    // Expanded state
+    &:not(.services__toggle--collapsed) {
+      max-height: 1000px; // Large enough to accommodate content
+    }
+
+    // Collapsed state
+    &--collapsed {
+      max-height: 50px;
+    }
+  }
+
+  &__toggle-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: var(--space-sm);
+    padding-bottom: var(--space-xs);
+
+    &::after {
+      content: '▼';
+      font-size: 1em;
+      transition: transform 0.3s ease;
+      display: inline-block;
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+  }
+
+  &__toggle:hover &__toggle-text::after,
+  &__toggle:focus &__toggle-text::after {
+    opacity: 1;
+  }
+
+  &__toggle:not(.services__toggle--collapsed) &__toggle-text::after {
+    transform: rotate(180deg);
+  }
+
+  &__toggle-content {
+    width: 100%;
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-sage-100); // Visual separator
+    margin-top: var(--space-xs);
+    opacity: 0;
+    transition: opacity 0.3s ease 0.1s;
+  }
+
+  &__toggle:not(.services__toggle--collapsed) &__toggle-content {
+    opacity: 1;
+  }
+
+  &__details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+
+    // Collapsed state (default)
+    &--collapsed {
+      max-height: 0 !important;
+      overflow: hidden !important;
+      opacity: 0 !important;
+      margin-top: 0 !important;
+    }
+
+    // Expanded state
+    &:not(.services__details--collapsed) {
+      max-height: 1000px; // Large enough to accommodate content
+      opacity: 1;
+      margin-top: var(--space-xs);
+      overflow: visible;
+    }
+  }
+
+  &__list {
+    list-style: disc;
+    margin-left: var(--space-md);
+    margin-top: var(--space-xs);
+    text-align: left;
+    padding-left: var(--space-xs); // Ensure bullets are visible
+
+    // Override content__text--left margin-bottom to 0
+    .content__text--left {
+      margin-bottom: var(--space-xxs);
+    }
+  }
+}

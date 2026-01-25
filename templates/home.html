@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="{{locale}}">
+  <head>
+    {{> components/head.html}}
+  </head>
+  <body>
+    {{> components/hero.html}}
+
+    <main class="content">
+      <!-- 1. WELCOME SECTION -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h2 class="heading__level2">{{home.welcome.title}}</h2>
+        <h3 class="heading__level3">{{home.welcome.subtitle}}</h3>
+        <!-- Circular images -->
+        <div class="content__three-column">
+          <picture class="content__picture" data-aos="zoom-in" data-aos-delay="250">
+            <source srcset="../images/logo_white.webp" type="image/webp" />
+            <img
+              src="../images/logo_white.png"
+              alt="Simplify Living logo"
+              class="content__image--round"
+            />
+          </picture>
+          <picture class="content__picture" data-aos="zoom-in" data-aos-delay="200">
+            <source
+              srcset="../images/home/simone-portrait.webp"
+              type="image/webp"
+            />
+            <img
+              src="../images/home/simone-portrait.jpg"
+              alt="simone hagen portrait"
+              class="content__image--round"
+            />
+          </picture>
+          <picture class="content__picture" data-aos="zoomin" data-aos-delay="300">
+            <img
+              src="../images/home/logo-bronze-consultant.png"
+              alt="konmari bronze consultant logo"
+              class="content__image--round"
+            />
+          </picture>
+        </div>
+        <h4 class="heading__level4">
+          {{home.welcome.subtitle-name}} • {{home.welcome.subtitle-role}}
+        </h4>
+        <div>
+          <p class="content__text">{{home.welcome.p1}}</p>
+          <p class="content__text">{{home.welcome.p2}}</p>
+          <p class="content__text">{{home.welcome.p3}}</p>
+          <p class="content__text">{{home.welcome.p4}}</p>
+          <p class="content__text">{{home.welcome.p5}}</p>
+        </div>
+        <!-- CTA buttons -->
+        <div>
+          <a href="contact/index.html" class="cta__button--primary"
+            >{{home.welcome.cta1}}</a
+          >
+          <a href="about/index.html" class="cta__button--secondary"
+            >{{home.welcome.cta2}}</a
+          >
+        </div>
+      </section>
+
+      <!-- 2. HOW IT WORKS SECTION -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h2 class="heading__level2">{{home.how-it-works.title}}</h2>
+        <div data-aos="fade-up">
+          <p class="content__text">{{home.how-it-works.p1}}</p>
+          <p class="content__text">{{home.how-it-works.p2}}</p>
+        </div>
+        <picture class="content__picture" data-aos="fade-up" data-aos-delay="200">
+          <source srcset="../images/home/how-it-works.webp" type="image/webp" />
+          <img
+            src="../images/home/how-it-works.jpg"
+            alt="Marie Kondo meditating in a minimalistic, well-organized room"
+            class="content__image--horizontal"
+          />
+        </picture>
+        <p class="content__copyright">{{common.copyright}}</p>
+        <div  data-aos="fade-up" data-aos-delay="400">
+        <h3 class="heading__level3">{{home.how-it-works.subtitle}}</h3>
+        <div>
+          <p class="content__text">{{home.how-it-works.p3}}</p>
+          <p class="content__text">{{home.how-it-works.p4}}</p>
+        </div>
+        <!-- Method icons -->
+        <div>{{> components/method-icons.html}}</div>
+        <!-- CTA buttons -->
+        <div class="cta">
+          <a href="contact/index.html" class="cta__button--primary"
+            >{{home.how-it-works.cta1}}</a
+          >
+          <a href="method/index.html" class="cta__button--secondary"
+            >{{home.how-it-works.cta2}}</a
+          >
+        </div>
+      </div>
+      </section>
+
+      <!-- 3. PACKAGES SECTION -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h2 class="heading__level2">{{home.services.title}}</h2>
+        <div class="content__four-column">
+          <!-- Clothes -->
+          <div class="content__single-column" data-aos="fade-up" data-aos-delay="150">
+            <picture class="content__picture">
+              <source
+                srcset="../images/services/clothes-&-more.webp"
+                type="image/webp"
+              />
+              <img
+                src="../images/services/clothes-&-more.jpg"
+                alt="clothes & more service"
+                class="content__image--vertical"
+              />
+            </picture>
+            <h3 class="heading__level3--smaller-margin-bottom">
+              {{home.services.subtitle1}}
+            </h3>
+            <p class="content__text">{{home.services.p1}}</p>
+          </div>
+          <!-- Paperwork -->
+          <div class="content__single-column" data-aos="fade-up" data-aos-delay="200">
+            <picture class="content__picture">
+              <source
+                srcset="../images/services/paperwork.webp"
+                type="image/webp"
+              />
+              <img
+                src="../images/services/paperwork.jpg"
+                alt="paperwork service"
+                class="content__image--vertical"
+              />
+            </picture>
+            <h3 class="heading__level3--smaller-margin-bottom">
+              {{home.services.subtitle2}}
+            </h3>
+            <p class="content__text">{{home.services.p2}}</p>
+          </div>
+          <!-- Kids -->
+          <div class="content__single-column" data-aos="fade-up" data-aos-delay="250">
+            <picture class="content__picture">
+              <source srcset="../images/services/kids.webp" type="image/webp" />
+              <img
+                src="../images/services/kids.jpg"
+                alt="kids service"
+                class="content__image--vertical"
+              />
+            </picture>
+            <h3 class="heading__level3--smaller-margin-bottom">
+              {{home.services.subtitle3}}
+            </h3>
+            <p class="content__text">{{home.services.p3}}</p>
+          </div>
+          <!-- All In -->
+          <div class="content__single-column" data-aos="fade-up" data-aos-delay="300">
+            <picture class="content__picture">
+              <source
+                srcset="../images/services/all-in.webp"
+                type="image/webp"
+              />
+              <img
+                src="../images/services/all-in.jpg"
+                alt="all in service"
+                class="content__image--vertical"
+              />
+            </picture>
+            <h3 class="heading__level3--smaller-margin-bottom">
+              {{home.services.subtitle4}}
+            </h3>
+            <p class="content__text">{{home.services.p4}}</p>
+          </div>
+        </div>
+        <!-- CTA button -->
+        <div class="cta">
+          <a href="services/index.html" class="cta__button--primary"
+            >{{home.services.cta}}</a
+          >
+        </div>
+      </section>
+
+      <!-- 4. GALLERY SECTION -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h2 class="heading__level2" >{{home.gallery.title}}</h2>
+        <p class="content__text">{{home.gallery.p1}}</p>
+        <!-- Before/After Slider -->
+        <!-- Add more images to messages and respective instances here -->
+        <div class="before-after__two-column-container" data-aos="fade-up" data-aos-delay="300">
+          {{> components/before-after.html index=0}} 
+          {{> components/before-after.html index=1}}
+        </div>
+        <div class="cta">
+          <a href="gallery/index.html" class="cta__button--primary"
+            >{{home.gallery.cta}}</a
+          >
+        </div>
+      </section>
+
+      <!-- 5. TESTIMONIALS SECTION -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h2 class="heading__level2">{{home.testimonials.title}}</h2>
+        <div data-aos="fade-up" data-aos-delay="200">{{> components/testimonials.html}}</div>
+      </section>
+
+      <!-- 6. FINAL CTA SECTION -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h2 class="heading__level2"">{{home.final-cta.title}}</h2>
+        <div>
+          <p class="content__text">{{home.final-cta.p1}}</p>
+          <p class="content__text">{{home.final-cta.p2}}</p>
+        </div>
+        <div class="cta">
+          <a href="contact/index.html" class="cta__button--primary"
+            >{{home.final-cta.cta}}</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">{{> components/footer.html}}</footer>
+
+    <!-- AOS (Animate On Scroll) Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="../js/scroll-animations.js" defer></script>
+    <script src="../js/navbar.js" defer></script>
+    <script src="../js/before-after.js" defer></script>
+    <script src="../js/testimonials.js" defer></script>
+  </body>
+</html>

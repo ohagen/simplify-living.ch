@@ -1,0 +1,26 @@
+/* Base reset and settings */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}

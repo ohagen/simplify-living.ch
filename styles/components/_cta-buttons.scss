@@ -1,0 +1,67 @@
+/* Call To Action buttons */
+
+.cta {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+
+  // Base button styles shared by both primary and secondary
+  &__button--primary,
+  &__button--secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 2rem;
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem); // (min 16px, max 20px)
+    font-weight: 400;
+    text-transform: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.2s ease-in-out;
+
+    @media (max-width: 921px) {
+      font-size: 0.941rem; // 16px
+    }
+
+    @media (max-width: 544px) {
+      font-size: 0.824rem; // 14px
+    }
+
+    &:active {
+      transform: translateY(-1px);
+    }
+  }
+
+  // Primary button styles
+  &__button--primary {
+    color: var(--color-white);
+    background-color: var(--color-dark-green);
+    border: none;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--color-dark-green-hover);
+      color: var(--color-white);
+    }
+  }
+
+  // Secondary button styles
+  &__button--secondary {
+    background-color: var(--color-white);
+    color: var(--color-dark-green);
+    border: 1px solid var(--color-dark-green);
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--color-sage-100);
+      color: var(--color-dark-green);
+      border-color: var(--color-sage-200);
+    }
+  }
+}

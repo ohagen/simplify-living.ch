@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="{{locale}}">
+  <head>
+    {{> components/head.html}}
+  </head>
+  <body>
+    <div class="hero__nav">{{> components/navbar.html}}</div>
+
+    <main class="legal legal--gap-xxl">
+      <!-- PRIVACY POLICY CONTENT -->
+      <section class="content__section content__section--legal-page" data-aos="fade-up" data-aos-delay="150">
+        <h1 class="heading__level2--legal">{{privacy-policy.title}}</h1>
+
+        <h2 class="heading__level3--legal">{{privacy-policy.introduction.title}}</h2>
+        <p class="legal__text">{{privacy-policy.introduction.p1}}</p>
+
+        <h2 class="heading__level3--legal">{{privacy-policy.data-collection.title}}</h2>
+        <h3 class="heading__level4--legal">{{privacy-policy.data-collection.contact.title}}</h3>
+        <p class="legal__text">{{privacy-policy.data-collection.contact.p1}}</p>
+        <p class="legal__text">{{privacy-policy.data-collection.contact.p2}}</p>
+        <p class="legal__text">{{privacy-policy.data-collection.contact.p3}}</p>
+
+        <h3 class="heading__level4--legal">{{privacy-policy.data-collection.analytics.title}}</h3>
+        <p class="legal__text">{{privacy-policy.data-collection.analytics.p1}}</p>
+        <p class="legal__text">{{privacy-policy.data-collection.analytics.p2}}</p>
+        <p class="legal__text">{{privacy-policy.data-collection.analytics.p3}}</p>
+        <p class="legal__text">{{privacy-policy.data-collection.analytics.p4}}</p>
+
+        <h3 class="heading__level4--legal">{{privacy-policy.data-collection.hosting.title}}</h3>
+        <p class="legal__text">{{privacy-policy.data-collection.hosting.p1}}</p>
+        <p class="legal__text">{{privacy-policy.data-collection.hosting.p2}}</p>
+        <p class="legal__text">{{privacy-policy.data-collection.hosting.p3}}</p>
+
+        <h2 class="heading__level3--legal">{{privacy-policy.legal-basis.title}}</h2>
+        <p class="legal__text">{{privacy-policy.legal-basis.p1}}</p>
+        <ul class="legal__text--list">
+          <li>{{privacy-policy.legal-basis.contact}}</li>
+          <li>{{privacy-policy.legal-basis.analytics}}</li>
+          <li>{{privacy-policy.legal-basis.hosting}}</li>
+        </ul>
+
+        <h2 class="heading__level3--legal">{{privacy-policy.data-usage.title}}</h2>
+        <p class="legal__text">{{privacy-policy.data-usage.p1}}</p>
+        <ul class="legal__text--list">
+          <li>{{privacy-policy.data-usage.inquires}}</li>
+          <li>{{privacy-policy.data-usage.improve}}</li>
+          <li>{{privacy-policy.data-usage.security}}</li>
+        </ul>
+
+        <h2 class="heading__level3--legal">{{privacy-policy.retention.title}}</h2>
+        <p class="legal__text">{{privacy-policy.retention.p1}}</p>
+        <ul class="legal__text--list">
+          <li>{{privacy-policy.retention.contact}}</li>
+          <li>{{privacy-policy.retention.analytics}}</li>
+          <li>{{privacy-policy.retention.hosting}}</li>
+        </ul>
+
+        <h2 class="heading__level3--legal">{{privacy-policy.data-sharing.title}}</h2>
+        <p class="legal__text">{{privacy-policy.data-sharing.p1}}</p>
+        <p class="legal__text">{{privacy-policy.data-sharing.p2}}</p>
+
+        <h2 class="heading__level3--legal">{{privacy-policy.data-rights.title}}</h2>
+        <p class="legal__text">{{privacy-policy.data-rights.p1}}</p>
+        <ul class="legal__text--list">
+          <li>{{privacy-policy.data-rights.access}}</li>
+          <li>{{privacy-policy.data-rights.rectification}}</li>
+          <li>{{privacy-policy.data-rights.erasure}}</li>
+          <li>{{privacy-policy.data-rights.restriction}}</li>
+          <li>{{privacy-policy.data-rights.portability}}</li>
+          <li>{{privacy-policy.data-rights.object}}</li>
+          <li>{{privacy-policy.data-rights.withdraw}}</li>
+          <li>{{privacy-policy.data-rights.complaint}}</li>
+        </ul>
+
+        <h2 class="heading__level3--legal">{{privacy-policy.dpo.title}}</h2>
+        <p class="legal__text">{{privacy-policy.dpo.p1}}</p>
+
+        <h2 class="heading__level3--legal">{{privacy-policy.contact.title}}</h2>
+        <p class="legal__text">{{privacy-policy.contact.p1}}</p>
+        <p class="legal__text">{{privacy-policy.contact.p2}}</p>
+
+        <h2 class="heading__level3--legal">{{privacy-policy.updates.title}}</h2>
+        <p class="legal__text">{{privacy-policy.updates.p1}}</p>
+        <p class="legal__text--small">{{privacy-policy.last-updated}}</p>
+
+      </section>
+    </main>
+
+    <footer class="site-footer site-footer--legal">{{> components/footer.html}}</footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="{{base-path}}js/scroll-animations.js" defer></script>
+    <script src="{{base-path}}js/navbar.js" defer></script>
+  </body>
+</html>

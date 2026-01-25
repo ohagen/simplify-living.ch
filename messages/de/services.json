@@ -1,0 +1,62 @@
+{
+    "meta.pageTitle": "Alle Angebote – Professionelle Wohnorganisation | Simplify Living",
+    "meta.pageDescription": "Professionelle Entrümpelung: Schrankorganisation, Papierkram-Sortierung, Kinderräume und komplette Wohnungstransformation. Vor Ort in Frankfurt am Mainoder online weltweit. Kostenlose Beratung buchen.",
+
+    "services.hero.size": "half",
+    "services.hero.image": "../../images/services/hero.jpg",
+    "services.hero.imageWebP": "../../images/services/hero.webp",
+    "services.hero.alt": "Angebote Seite Hero-Bild",
+    "services.hero.title": "Angebot",
+    
+    "services.title": "Alle Angebote verfügbar",
+    "services.subtitle": "Alle Dienstleistungen von Simplify Living sind vor Ort im Raum Frankfurt am Main oder weltweit als Online Sessions buchbar.",
+    "services.cta": "Kostenlose Beratung buchen",
+    "services.whats-included": "Ansehen, was enthalten ist",
+    "services.hide-details": "Ausblenden",
+
+    "services.service1.title": "Klamotten & Co.",
+    "services.service1.intro1": "Dein Schrank ist überfüllt und trotzdem hast du nichts anzuziehen?",
+    "services.service1.intro2": "Wir bringen gemeinsam Ordnung in deine Textilien, Schuhe und Accessoires. Ich helfe dir, deinen Schrank optimal zu organisieren.",
+    "services.service1.support": "Mit diesem Service wirst du:",
+    "services.service1.li1": "Deine Wünsche und Ziele formulieren.",
+    "services.service1.li2": "Deine Klamotten, Schuhe und Accessoires joy-checken. Ich unterstütze dich bei der Entscheidungsfindung und du lernst, wie dir Entscheide zukünftig leichtfallen.",
+    "services.service1.li3": "Geeignete Methoden kennenlernen, wie man Klamotten und Co. platzsparend und sinnvoll falten und versorgen kann.",
+    "services.service1.li4": "Deinen Schrank optimal einräumen und deine Lieblingsteile endlich wieder bewusst nutzen.",
+    "services.service1.price": "Ab €555",
+
+    "services.service2.title": "Papierkram",
+    "services.service2.intro1": "Wo war nochmal die Garantie? Und die Unterlagen für die Steuererklärung? No problem. Kein Problem. In Zukunft findest du alles auf Anhin.",
+    "services.service2.intro2": "Ich helfe dir, deinen Papierkram sinnvoll zu reduzieren und zeige dir ein Ordnungssystem, das langfristig hält, was es verspricht.",
+    "services.service2.support": "Mit diesem Service wirst du:",
+    "services.service2.li1": "Deine Wünsche und Ziele formulieren.",
+    "services.service2.li2": "Alle deine Unterlagen sammeln und in Unterkategorien für die nächsten Schritte vorbereiten.",
+    "services.service2.li3": "Deine Unterlagen durchkämmen und herausfinden, was du behalten musst/willst.",
+    "services.service2.li4": "Platzsparende Aufbewahrungsmöglichkeiten kennenlernen, die dir in Zukunft das Ablegen und Finden wichtiger Dokumente erleichtern.",
+    "services.service2.price": "Ab €555",
+
+    "services.service3.title": "Kinderwelt",
+    "services.service3.intro1": "Eine ordentliche Wohlfühlatmosphäre und zugleich eine entwicklungsgerechte Umgebung für den Nachwuchs zu bieten, ist oft eine Herausforderung. Gemeinsam mit den Kindern schaffen wir spielerisch und altersadäquat Ordnung und machen Platz für das kreative Spiel.",
+    "services.service3.intro2": "Durch meine langjährige Erfahrung als Grundschullehrerin kenne ich kinderleichte Strategien, die euch helfen, die Ordnung beizubehalten.",
+    "services.service3.support": "Mit diesem Service wirst du:",
+    "services.service3.li1": "Eure Wünsche und Ziele formulieren.",
+    "services.service3.li2": "Platzsparende und bedürfnisorientierte Aufbewahrungsstrategien kennenlernen.",
+    "services.service3.li3": "Euer Zuhause für die aktuelle Familiensituation optimal einrichten.",
+    "services.service3.li4": "Optimale Vorraussetzungen für lustvolles und selbstbestimmtes Lernen und kreatives Spielen schaffen.",
+    "services.service3.price": "Offerte nach Absprache",
+
+    "services.service4.title": "All in",
+    "services.service4.intro1": "Bist du bereit für dein nachhaltiges Aufräum-Abenteuer? Beim „All in“ – Aufräumfest räumst du deinen gesamten Haushalt systematisch auf und richtest ihn sinnvoll ein.",
+    "services.service4.intro2": "Wir werden während mindestens 6 Monaten intensiv zusammenarbeiten und ich werde dich regelmässig besuchen/online begleiten und dir schriftlich jederzeit zur Seite stehen, um dich auf dem Weg zu deinem Wohlfühlzuhause optimal zu unterstützen.",
+    "services.service4.support": "Mit diesem Service wirst du:",
+    "services.service4.li1": "Deine Aufräumreise mit Vertrauen beginnen",
+    "services.service4.li2": "Intensiv gemeinsam über mindestens 6 Monate arbeiten",
+    "services.service4.li3": "Regelmässig persönlich oder online begleitet werden",
+    "services.service4.li4": "Schriftlich jederzeit zur Seite stehen, um dich auf dem Weg zu deinem Wohlfühlzuhause optimal zu unterstützen",
+    "services.service4.price": "Offerte nach Absprache",
+
+    "services.final-cta.title": "Lass uns dein Zuhause gemeinsam vereinfachen",
+    "services.final-cta.p1": "Noch nicht sicher, wo du anfangen sollst?",
+    "services.final-cta.p2": "Buche eine kostenlose, unverbindliche Erstberatung und wir finden es gemeinsam heraus.",
+    "services.final-cta.cta": "Jetzt starten"
+  }
+  

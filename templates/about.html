@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="{{locale}}">
+  <head>
+    {{> components/head.html}}
+  </head>
+  <body>
+    {{> components/hero.html}}
+
+    <main class="content content--gap-xxl">
+      <!-- 1. INTRO -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h2 class="heading__level2">{{about.title}}</h2>
+        <p class="content__text">{{about.intro}}</p>
+        <p class="content__text">{{about.p1}}</p>
+        <!-- !Images hidden and to be added later when Simone has done the photshoot -->
+        <!-- <div class="content__three-column--with-gap">
+          <picture class="content__picture">
+            <source srcset="{{base-path}}images/about/simone1.webp" type="image/webp" />
+            <img
+              src="{{base-path}}images/about/simone1.jpg"
+              alt="KonMari Bronze Consultant certification logo"
+              class="content__image--vertical"
+            />
+          </picture>
+          <picture class="content__picture">
+            <source srcset="{{base-path}}images/about/simone1.webp" type="image/webp" />
+            <img
+              src="{{base-path}}images/about/simone1.jpg"
+              alt="KonMari Bronze Consultant certification logo"
+              class="content__image--vertical"
+            />
+          </picture>
+          <picture class="content__picture">
+            <source srcset="{{base-path}}images/about/simone1.webp" type="image/webp" />
+            <img
+              src="{{base-path}}images/about/simone1.jpg"
+              alt="KonMari Bronze Consultant certification logo"
+              class="content__image--vertical"
+            />
+          </picture>
+        </div> -->
+      </section>
+
+      <!-- 2. LIFE IN MOTION -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="heading__level3">{{about.subtitle2}}</h3>
+        <p class="content__text">{{about.p2a}}</p>
+        <p class="content__text">{{about.p2b}}</p>
+      </section>
+
+      <!-- 3. MY JOURNEY -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="heading__level3">{{about.subtitle3}}</h3>
+        <p class="content__text">{{about.p3a}}</p>
+        <p class="content__text">{{about.p3b}}</p>
+        <p class="content__text">{{about.p3c}}</p>
+        <picture class="content__picture">
+          <source srcset="{{base-path}}images/about/bronze-consultant-w-text.webp" type="image/webp" />
+          <img
+            src="{{base-path}}images/about/bronze-consultant-w-text.png"
+            alt="KonMari Bronze Consultant certification logo"
+            class="content__image--horizontal-no-shadow"
+          />
+        </picture>
+        <p class="content__text">{{about.p4a}}</p>
+        <p class="content__text">{{about.p4b}}</p>
+        <div class="cta">
+          <a href="../method/index.html" class="cta__button--secondary"
+            >{{about.cta1}}</a
+          >
+        </div>
+      </section>
+
+      <!-- 4. FAVOURITE THINGS -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="heading__level3">{{about.subtitle5}}</h3>
+        <p class="content__text">{{about.p5}}</p>
+        <div class="favourites">
+          <span>
+            <svg class="favourites__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            {{about.li1}}
+          </span>
+          <span>
+            <svg class="favourites__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            {{about.li2}}
+          </span>
+          <span>
+            <svg class="favourites__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+              <line x1="12" y1="18" x2="12.01" y2="18"/>
+            </svg>
+            {{about.li3}}
+          </span>
+          <span>
+            <svg class="favourites__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18L8 10L12 14L16 8L21 18"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+            {{about.li4}}
+          </span>
+          <span>
+            <svg class="favourites__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="4" height="11"/>
+              <rect x="9" y="7" width="4" height="15"/>
+              <rect x="15" y="13" width="4" height="9"/>
+              <line x1="3" y1="22" x2="21" y2="22"/>
+            </svg>
+            {{about.li5}}
+          </span>
+          <span>
+            <svg class="favourites__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+            {{about.li6}}
+          </span>
+          <span>
+            <svg class="favourites__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="6" width="16" height="14" rx="1"/>
+              <rect x="6" y="9" width="12" height="8" rx="0.5"/>
+              <line x1="18" y1="9" x2="18" y2="17"/>
+            </svg>
+            {{about.li7}}
+          </span>
+          <span>
+            <svg class="favourites__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="7" width="14" height="10" rx="1"/>
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <line x1="9" y1="7" x2="9" y2="17"/>
+              <line x1="15" y1="7" x2="15" y2="17"/>
+            </svg>
+            {{about.li8}}
+          </span>
+        </div>
+      </section>
+
+      <!-- 5. FINAL CTA -->
+      <section class="content__section" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="heading__level3">{{about.final-cta.title}}</h3>
+        <div>
+          <p class="content__text">{{about.final-cta.p1}}</p>
+          <p class="content__text">{{about.final-cta.p2}}</p>
+        </div>
+        <div class="cta">
+          <a href="../contact/index.html" class="cta__button--primary"
+            >{{about.final-cta.cta}}</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">{{> components/footer.html}}</footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="{{base-path}}js/scroll-animations.js" defer></script>
+    <script src="{{base-path}}js/navbar.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,293 @@
+/* Content for all the pages after the hero section */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxxl);
+  justify-content: start;
+  text-align: center;
+  color: var(--color-body);
+  width: min(100%, var(--container-medium));
+  margin: 0 auto;
+  padding: var(--space-xxl);
+  flex: 1; // Allows content to grow and fill the available space, pushing footer to bottom
+
+  // Modifier for smaller gap (for other pages)
+  &--gap-xxl {
+    gap: var(--space-xxl);
+  }
+
+  @media (max-width: 1024px) {
+    padding: var(--space-xl);
+  }
+
+  @media (max-width: 768px) {
+    gap: var(--space-xl);
+    padding: var(--space-lg);
+  }
+
+  // Gallery page - reduced spacing between sections
+  // (placed after media queries to override)
+  &--gallery {
+    gap: var(--space-xxl);
+
+    @media (max-width: 768px) {
+      gap: var(--space-lg);
+    }
+  }
+
+  // Each new content section
+  &__section {
+    padding: 0;
+    margin: 0;
+  }
+
+  // Each new content section
+  &__section {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__two-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__two-column--with-gap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+      max-width: 100%;
+    }
+  }
+
+  &__two-column-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__three-column {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__three-column--with-gap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+      gap: var(--space-xs);
+      max-width:90%;
+    }
+  }
+  
+  &__four-column {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--space-xl);
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 40rem;
+      margin: 0 auto;
+      gap: var(--space-md);
+    }
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+      max-width: 20rem;
+      margin: 0 auto;
+      gap: var(--space-sm);
+    }
+  }
+
+  // Equal width columns
+  &__multiple-column--md-gap > * {
+    flex: 1;
+  }
+
+  // One row with one column
+  &__single-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem); // (min 18px, max 22px)
+    font-weight: 300;
+    color: var(--color-body);
+    text-align: center;
+    margin-bottom: var(--space-md);
+    line-height: 1.4; 
+    max-width: 65ch; // Optimal reading width
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__text--no-margin {
+    margin-bottom: 0;
+  }
+
+  &__text--bold {
+    font-weight: 400;
+  }
+
+  &__text--small {
+    font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+    color: var(--color-sage-400);
+    opacity: 0.7;
+    margin-bottom: var(--space-xl);
+  }
+  
+  &__text--left-smaller {
+    font-size: clamp(1.1875rem, 1vw + 0.75rem, 1.25rem); // (min 19px, max 20px)
+    font-weight: 300;
+    color: var(--color-body);
+    text-align: left;
+    margin-bottom: var(--space-xs);
+    line-height: 1.4; 
+    max-width: 65ch; // Optimal reading width
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  // HTML picture wrapper for images
+  &__picture {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-bottom: var(--space-lg);
+
+    // Remove margin-bottom when copyright follows
+    &:has(+ .content__copyright) {
+      margin-bottom: 0;
+    }
+
+    // Slight brightness increase
+    &:hover img {
+      transition: filter 0.3s ease;
+      filter: brightness(1.05);
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: var(--space-sm);
+
+      &:has(+ .content__copyright) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__image--round {
+    width: 80%;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    box-shadow: var(--shadow-soft);
+    align-items: center;
+  }
+
+  // Simplify Living logo only
+  &__three-column picture:first-child .content__image--round {
+    background-color: var(--color-sage-200);
+
+    @media (max-width: 768px) {
+      border: 2.5px solid var(--color-white);
+    }
+  }
+
+  // Simone's round portrait only
+  &__three-column picture:nth-child(2) .content__image--round {
+    border: 3.5px solid var(--color-white);
+
+    @media (max-width: 768px) {
+      border: 2.5px solid var(--color-white);
+    }
+  }
+
+  &__image--horizontal {
+    width: 50%;
+    border-radius: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: var(--shadow-soft);
+
+    @media (max-width: 768px) {
+      width: 100%;
+      border-radius: 2rem;
+    }
+  }
+
+  &__image--horizontal-no-shadow {
+    width: 60%;
+    border-radius: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      border-radius: 2rem;
+    }
+  }
+
+  &__image--vertical {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-soft);
+  }
+
+  &__copyright {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: var(--color-body);
+    text-align: center;
+    margin-top: var(--space-xxs);
+    margin-bottom: var(--space-lg);
+
+    @media (max-width: 768px) {
+      margin-bottom: var(--space-sm);
+    }
+  }
+
+  // Copyright that follows a picture
+  &__picture + &__copyright {
+    margin-top: var(--space-xxs);
+  }
+}
