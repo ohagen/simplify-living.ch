@@ -26,7 +26,7 @@
     padding: var(--space-lg);
   }
 
-  // Gallery page - reduced spacing between sections 
+  // Gallery page - reduced spacing between sections
   // (placed after media queries to override)
   &--gallery {
     gap: var(--space-xxl);
@@ -34,6 +34,12 @@
     @media (max-width: 768px) {
       gap: var(--space-lg);
     }
+  }
+
+  // Each new content section
+  &__section {
+    padding: 0;
+    margin: 0;
   }
 
   // Each new content section
@@ -156,6 +162,13 @@
 
   &__text--bold {
     font-weight: 400;
+  }
+
+  &__text--small {
+    font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+    color: var(--color-sage-400);
+    opacity: 0.7;
+    margin-bottom: var(--space-xl);
   }
   
   &__text--left-smaller {

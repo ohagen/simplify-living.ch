@@ -11,6 +11,8 @@
   "common.nav.services": "Angebot",
   "common.nav.gallery": "Galerie",
   "common.nav.contact": "Kontakt",
+  "common.footer.legal-notice": "Impressum",
+  "common.footer.privacy-policy": "Datenschutz",
   "common.footer.copyright": "© {{year}} Simplify Living. Alle Rechte vorbehalten.",
   "common.copyright": "Foto mit freundlicher Genehmigung von KonMari Media, Inc."
 }

@@ -37,6 +37,16 @@ const PAGES = [
     template: "templates/method.html",
     output: "method/index.html",
   },
+  {
+    name: "legal-notice",
+    template: "templates/legal-notice.html",
+    output: "legal-notice/index.html",
+  },
+  {
+    name: "privacy-policy",
+    template: "templates/privacy-policy.html",
+    output: "privacy-policy/index.html",
+  },
 ];
 
 /**

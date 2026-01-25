@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="{{locale}}">
+  <head>
+    {{> components/head.html}}
+  </head>
+  <body>
+    <div class="hero__nav">{{> components/navbar.html}}</div>
+
+    <main class="legal legal--gap-xxl">
+      <!-- LEGAL NOTICE CONTENT -->
+      <section class="content__section content__section--legal-page" data-aos="fade-up" data-aos-delay="150">
+        <h1 class="heading__level2--legal">{{legal-notice.title}}</h1>
+
+        <h2 class="heading__level3--legal">{{legal-notice.operator.title}}</h2>
+        <p class="legal__text">{{legal-notice.operator.name}}</p>
+        <p class="legal__text">{{legal-notice.operator.address}}</p>
+        <p class="legal__text">{{legal-notice.operator.email}}</p>
+        <p class="legal__text">{{legal-notice.operator.phone-de}}</p>
+        <p class="legal__text">{{legal-notice.operator.phone-ch}}</p>
+        <p class="legal__text">{{legal-notice.operator.vat}}</p>
+        <p class="legal__text">{{legal-notice.operator.business}}</p>
+
+        <h2 class="heading__level3--legal">{{legal-notice.professional.title}}</h2>
+        <p class="legal__text">{{legal-notice.professional.p1}}</p>
+        <p class="legal__text">{{legal-notice.professional.p2}}</p>
+
+        <h2 class="heading__level3--legal">{{legal-notice.disclaimer.title}}</h2>
+        <p class="legal__text">{{legal-notice.disclaimer.p1}}</p>
+
+        <h2 class="heading__level3--legal">{{legal-notice.liability.title}}</h2>
+        <h3 class="heading__level4--legal">{{legal-notice.liability.content.title}}</h3>
+        <p class="legal__text">{{legal-notice.liability.content.p1}}</p>
+        <p class="legal__text">{{legal-notice.liability.content.p2}}</p>
+
+        <h3 class="heading__level4--legal">{{legal-notice.liability.links.title}}</h3>
+        <p class="legal__text">{{legal-notice.liability.links.p1}}</p>
+        <p class="legal__text">{{legal-notice.liability.links.p2}}</p>
+
+        <h3 class="heading__level4--legal">{{legal-notice.liability.external.title}}</h3>
+        <p class="legal__text">{{legal-notice.liability.external.p1}}</p>
+        <p class="legal__text">{{legal-notice.liability.external.p2}}</p>
+        <p class="legal__text">{{legal-notice.liability.external.p3}}</p>
+
+        <h2 class="heading__level3--legal">{{legal-notice.copyright.title}}</h2>
+        <p class="legal__text">{{legal-notice.copyright.p1}}</p>
+        <p class="legal__text">{{legal-notice.copyright.p2}}</p>
+
+        <h2 class="heading__level3--legal">{{legal-notice.supervisory.title}}</h2>
+        <p class="legal__text">{{legal-notice.supervisory.p1}}</p>
+        <ul class="legal__text--list">  
+          <li>{{legal-notice.supervisory.germany}}</li>
+          <li>{{legal-notice.supervisory.switzerland}}</li>
+        </ul>
+
+        <h2 class="heading__level3--legal">{{legal-notice.data-protection.title}}</h2>
+        <p class="legal__text">{{legal-notice.data-protection.p1}}</p>
+
+        <p class="legal__text--small">{{legal-notice.last-updated}}</p>
+      </section>
+    </main>
+
+    <footer class="site-footer site-footer--legal">{{> components/footer.html}}</footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="{{base-path}}js/scroll-animations.js" defer></script>
+    <script src="{{base-path}}js/navbar.js" defer></script>
+  </body>
+</html>

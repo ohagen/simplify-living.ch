@@ -63,6 +63,19 @@
     }
   }
 
+  &__level2--legal {
+    font-family: var(--font-subheading);
+    color: var(--color-heading);
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    text-align: left;
+    padding-bottom: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    font-size: clamp(1.875rem, 3vw + 1rem, 2.375rem); // (min 30px, max 38px)
+    font-weight: normal;
+    text-transform: none;
+  }
+
   &__level3 {
     @extend %heading-base;
     margin-bottom: var(--space-lg);
@@ -103,6 +116,15 @@
     margin-right: 0;
   }
 
+  &__level3--legal {
+    @extend %heading-base;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+    font-size: clamp(1.5rem, 2.5vw + 0.75rem, 1.75rem); // (min 24px, max 28px)
+    font-weight: 400;
+    text-align: left;
+  }
+
   &__level4 {
     @extend %heading-base;
     margin-top: var(--space-xl);
@@ -121,5 +143,14 @@
     margin-left: 0;
     margin-right: 0;
     line-height: 1.4;
+  }
+
+  &__level4--legal {
+    @extend %heading-base;
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-md);
+    font-size: clamp(1.125rem, 1.5vw + 0.75rem, 1.25rem); // (min 18px, max 20px)
+    font-weight: 400;
+    text-align: left;
   }
 }

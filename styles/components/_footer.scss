@@ -1,3 +1,4 @@
+// The whole footer
 .site-footer {
   text-align: center;
   padding: var(--space-lg) var(--space-sm);
@@ -9,5 +10,29 @@
   p {
     margin: 0;
   }
+
 }
 
+// Legal Notice and Privacy Poliy links
+.footer__links {
+  margin-top: var(--space-sm);
+
+  .footer__link {
+    color: var(--color-heading);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--color-light-green);
+      text-decoration: underline;
+    }
+  }
+
+  // Dot separator between links
+  .footer__separator {
+    margin: 0 var(--space-xs);
+    color: var(--color-dark-green);
+    opacity: 0.6;
+  }
+}
