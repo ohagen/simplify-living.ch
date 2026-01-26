@@ -2136,12 +2136,12 @@ a {
   font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem);
   color: var(--color-heading);
   font-weight: 300;
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.2s ease-in-out;
   word-break: break-all;
 }
 .contact-info__link:hover, .contact-info__link:focus-visible {
-  color: var(--color-dark-green-hover);
+  color: var(--color-sage-400);
   text-decoration: underline;
 }
 .contact-info__phones {
