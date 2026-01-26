@@ -2136,7 +2136,7 @@ a {
   font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem);
   color: var(--color-heading);
   font-weight: 300;
-  text-decoration: none;
+  text-decoration: underline;
   transition: color 0.2s ease-in-out;
   word-break: break-all;
 }
@@ -2261,6 +2261,16 @@ a {
     gap: var(--space-xl);
     padding: var(--space-lg);
   }
+}
+.legal__text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: var(--space-lg);
+}
+.legal__text-section .legal__text {
+  margin-bottom: 0;
+  line-height: 1.4;
 }
 .legal__text {
   font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem);
