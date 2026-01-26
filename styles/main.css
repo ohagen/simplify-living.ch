@@ -963,7 +963,7 @@ a {
   padding: var(--space-lg) var(--space-sm);
   background-color: var(--color-white);
   color: var(--color-dark-green);
-  font-size: 0.95rem;
+  font-size: 1rem;
   border-top: 1px solid rgba(83, 105, 66, 0.2);
 }
 .site-footer p {
@@ -976,7 +976,7 @@ a {
 .footer__links .footer__link {
   color: var(--color-heading);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1rem;
   transition: color 0.2s ease;
 }
 .footer__links .footer__link:hover {
@@ -2136,7 +2136,7 @@ a {
   font-size: clamp(1.125rem, 1vw + 0.75rem, 1.375rem);
   color: var(--color-heading);
   font-weight: 300;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color 0.2s ease-in-out;
   word-break: break-all;
 }

@@ -4,7 +4,7 @@
   padding: var(--space-lg) var(--space-sm);
   background-color: var(--color-white);
   color: var(--color-dark-green);
-  font-size: 0.95rem;
+  font-size: 1rem;
   border-top: 1px solid rgba(83, 105, 66, 0.2);
 
   p {
@@ -20,7 +20,7 @@
   .footer__link {
     color: var(--color-heading);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1rem;
     transition: color 0.2s ease;
 
     &:hover {
