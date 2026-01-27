@@ -222,10 +222,7 @@
   // Simplify Living logo only
   &__three-column picture:first-child .content__image--round {
     background-color: var(--color-sage-200);
-
-    @media (max-width: 768px) {
-      border: 2.5px solid var(--color-white);
-    }
+    border: none;
   }
 
   // Simone's round portrait only
