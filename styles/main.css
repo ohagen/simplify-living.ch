@@ -1146,7 +1146,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
   align-items: start;
   justify-content: center;
-  gap: var(--space-xl);
+  gap: var(--space-xxl);
   margin-left: auto;
   margin-right: auto;
   margin-top: var(--space-xl);
@@ -1166,7 +1166,15 @@ a {
 @media (max-width: 640px) {
   .before-after__two-column-container {
     grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+    gap: var(--space-xl);
+  }
+}
+@media (max-width: 500px) {
+  .before-after__two-column-container {
+    grid-template-columns: repeat(1, 1fr);
     width: 90%;
+    gap: var(--space-xl);
   }
 }
 .before-after__container {
