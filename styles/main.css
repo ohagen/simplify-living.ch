@@ -832,13 +832,21 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--space-md);
+  gap: var(--space-sm);
+}
+@media (max-width: 640px) {
+  .cta {
+    gap: var(--space-xs);
+  }
 }
 .cta__button--primary, .cta__button--secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
+  flex: 1 1 auto;
+  min-width: 10rem;
+  max-width: 21rem;
   padding: var(--space-sm) var(--space-lg);
   border-radius: 2rem;
   font-family: var(--font-body);
@@ -854,9 +862,11 @@ a {
     font-size: 0.941rem;
   }
 }
-@media (max-width: 544px) {
+@media (max-width: 640px) {
   .cta__button--primary, .cta__button--secondary {
-    font-size: 0.824rem;
+    font-size: 0.875rem;
+    min-width: 8rem;
+    max-width: 15rem;
   }
 }
 .cta__button--primary:active, .cta__button--secondary:active {
@@ -865,7 +875,7 @@ a {
 .cta__button--primary {
   color: var(--color-white);
   background-color: var(--color-dark-green);
-  border: none;
+  border: 1px solid var(--color-dark-green);
 }
 .cta__button--primary:hover, .cta__button--primary:focus-visible {
   background-color: var(--color-dark-green-hover);
