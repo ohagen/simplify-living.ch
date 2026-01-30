@@ -2180,10 +2180,15 @@ a {
   max-width: min(100%, var(--container-max));
   margin: 0 auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 723px) {
   .contact-info__grid {
     grid-template-columns: 1fr;
     gap: var(--space-md);
+    max-width: 60%;
+  }
+}
+@media (max-width: 544px) {
+  .contact-info__grid {
     max-width: 100%;
   }
 }
@@ -2191,7 +2196,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
-  padding: var(--space-sm);
+  padding: var(--space-xs);
   border: 1px solid var(--color-sage-100);
   border-radius: 1rem;
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -2202,7 +2207,7 @@ a {
 }
 @media (max-width: 768px) {
   .contact-info__item {
-    padding: var(--space-sm);
+    padding: var(--space-xs);
   }
 }
 .contact-info__label {
@@ -2235,13 +2240,18 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-sm);
-  padding: var(--space-sm);
+  padding: var(--space-xs);
   border-radius: 0.5rem;
   text-decoration: none;
   color: var(--color-heading);
   transition: all 0.2s ease-in-out;
-  border: 1px solid transparent;
+  border: 1px solid var(--color-sage-100);
   cursor: pointer;
+}
+@media (max-width: 640px) {
+  .contact-info__phone-link {
+    padding: 0.5rem;
+  }
 }
 .contact-info__phone-link:hover {
   border-color: var(--color-sage-100);
@@ -2252,9 +2262,6 @@ a {
 .contact-info__phone-link:focus-visible {
   outline: 2px solid var(--color-sage-200);
   outline-offset: 2px;
-}
-.contact-info__phone-link--whatsapp {
-  border: 1px solid var(--color-sage-100);
 }
 .contact-info__phone-link--whatsapp:hover {
   background-color: var(--color-sage-200);
