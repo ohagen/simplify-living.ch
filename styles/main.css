@@ -986,6 +986,7 @@ a {
   background-color: var(--color-white);
   color: var(--color-dark-green);
   font-size: 1rem;
+  font-weight: 400;
   border-top: 1px solid rgba(83, 105, 66, 0.2);
 }
 .site-footer p {
@@ -999,14 +1000,15 @@ a {
   color: var(--color-heading);
   text-decoration: none;
   font-size: 1rem;
+  font-weight: 400;
+  text-decoration: underline;
   transition: color 0.2s ease;
 }
 .footer__links .footer__link:hover {
   color: var(--color-light-green);
-  text-decoration: underline;
 }
 .footer__links .footer__separator {
-  margin: 0 var(--space-xs);
+  margin: 0 0.25rem;
   color: var(--color-dark-green);
   opacity: 0.6;
 }
