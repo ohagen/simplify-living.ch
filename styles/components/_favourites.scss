@@ -2,7 +2,8 @@
 
 .favourites {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--space-sm);
     margin: var(--space-xl) auto;
     max-width: 48rem;
@@ -17,6 +18,7 @@
   
     @media (max-width: 480px) {
       grid-template-columns: 1fr;
+      max-width: 80%;
     }
   
     // HTML element for each favourite thing

@@ -1,0 +1,24 @@
+[build]
+  # Install dependencies, build CSS, then build HTML
+  command = "npm install && npm run build:css && npm run build"
+  # Publish the root directory (contains de/, en/, images/, fonts/, js/, styles/)
+  publish = "."
+
+# Redirect root to German version (default language)
+[[redirects]]
+  from = "/"
+  to = "/de/"
+  status = 301
+  force = true
+
+# Handle language switching - redirect /en to /en/
+[[redirects]]
+  from = "/en"
+  to = "/en/"
+  status = 301
+
+# Handle language switching - redirect /de to /de/
+[[redirects]]
+  from = "/de"
+  to = "/de/"
+  status = 301

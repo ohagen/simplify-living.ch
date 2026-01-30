@@ -1,39 +1,61 @@
 {
   "meta.pageTitle": "Legal Notice | Simplify Living",
-  "meta.pageDescription": "Legal notice and disclaimer for Simplify Living professional home organization services.",
+  "meta.pageDescription": "Legal notice and disclaimer for Simplify Living professional home organisation services.",
+
   "legal-notice.title": "Legal Notice",
-  "legal-notice.operator.title": "Operator of the Website",
-  "legal-notice.operator.name": "Simone Hagen, Certified KonMari Consultant",
-  "legal-notice.operator.address": "Frankfurt am Main, Germany",
-  "legal-notice.operator.email": "Email: info@simplify-living.ch",
-  "legal-notice.operator.phone-de": "Phone DE: +49 1522 2503663 (Calls only)",
-  "legal-notice.operator.phone-ch": "Phone CH: +41 79 446 45 30 (WhatsApp only)",
-  "legal-notice.operator.vat": "VAT ID (USt-IdNr): XXXXXXXXXXXXX",
-  "legal-notice.operator.business": "This website is operated as a sole proprietorship (Einzelunternehmen). The business is registered with the local trade office (Gewerbeamt) as required by German law. Registration in the Commercial Register (Handelsregister) is not required for this type of business as it does not meet the turnover thresholds that would mandate such registration.",
+
+  "legal-notice.operator.title": "Operator of the Website according to § 5 DDG",
+  "legal-notice.operator.consultant-name": "Simone Hagen",
+  "legal-notice.operator.business-name": "Simplify Living",
+  "legal-notice.operator.business-address": "Else-Epstein-Weg 7",
+  "legal-notice.operator.business-postal-code": "60435 Frankfurt, Germany",  
+  "legal-notice.operator.email-text": "Email:",
+  "legal-notice.operator.email": "info@simplify-living.ch",
+  "legal-notice.operator.phone-de-text": "Phone DE:",
+  "legal-notice.operator.phone-de": "+49 1522 2503663 (calls only)",  
+  "legal-notice.operator.phone-ch-text": "Phone CH:",
+  "legal-notice.operator.phone-ch": "+41 79 446 45 30 (WhatsApp only)",
+  "legal-notice.operator.tax-number-text": "Tax Number:",
+  "legal-notice.operator.tax-number": "014/824/34312",
+  "legal-notice.operator.tax.vat-note": "As a small business owner according to § 19 UStG, no VAT is charged.",
+
   "legal-notice.professional.title": "Professional Information",
   "legal-notice.professional.p1": "Simone Hagen is a certified KonMari consultant, trained and certified by KonMari Media, Inc. The KonMari method is a proprietary tidying and organisation methodology developed by Marie Kondo.",
-  "legal-notice.professional.p2": "Professional organising services are not subject to specific licensing requirements in Germany. This service falls under general business regulations.",
-  "legal-notice.supervisory.title": "Supervisory Authority",
-  "legal-notice.supervisory.p1": "As this is a service business not subject to specific professional regulation, there is no designated supervisory authority. For consumer protection matters, you may contact:",
-  "legal-notice.supervisory.germany": "Verbraucherzentrale (German Consumer Advice Center)",
-  "legal-notice.supervisory.switzerland": "Schweizerische Eidgenossenschaft (Swiss Federal Administration)",
+
+  "legal-notice.dispute.title": "Online Dispute Resolution",
+  "legal-notice.dispute.eu-platform-text": "The European Commission provides a platform for online dispute resolution (ODR):",
+  "legal-notice.dispute.eu-platform-link": "https://consumer-redress.ec.europa.eu/index_en",
+  "legal-notice.dispute.participation": "We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+
   "legal-notice.disclaimer.title": "Disclaimer",
   "legal-notice.disclaimer.p1": "The information provided on this website is for general informational purposes only. We strive to keep the information accurate and up to date, but cannot guarantee completeness or that all information will always be current.",
+  
   "legal-notice.liability.title": "Limitation of Liability",
-  "legal-notice.liability.content.title": "Content of the Online Offer",
+  "legal-notice.liability.content.title": "Content of the Website",
   "legal-notice.liability.content.p1": "We strive to ensure that the information on this website is accurate and up to date. However, information may be updated or changed without prior notice.",
   "legal-notice.liability.content.p2": "All offers are non-binding and without obligation. Parts of the pages or the complete publication including all offers and information might be extended, changed or partly or completely deleted by the author without separate announcement.",
-  "legal-notice.liability.links.title": "References and Links",
-  "legal-notice.liability.links.p1": "The author is not responsible for any contents linked or referred to from her pages–unless she has full knowledge of illegal contents and would be able to prevent the visitors of her site from viewing those pages. If any damage occurs by the use of information presented there, only the author of the respective pages might be liable, not the one who has linked to these pages.",
-  "legal-notice.liability.links.p2": "Furthermore, the author is not liable for any postings or messages published by users of discussion boards, guestbooks or mailing lists provided on her page.",
-  "legal-notice.liability.external.title": "External Links and Third-Party Services",
-  "legal-notice.liability.external.p1": "This website contains links to external websites and integrates with third-party services (such as contact form providers, analytics services, and hosting platforms). We have no control over the content, availability, or privacy practices of these external sites and services.",
-  "legal-notice.liability.external.p2": "We cannot accept any responsibility for external websites, third-party services, or any loss or damage that may arise from your use of them. This includes but is not limited to services like Formspree (contact forms), Umami (analytics), and Netlify (hosting).",
-  "legal-notice.liability.external.p3": "Please note that Netlify, as our hosting provider, automatically collects standard server logs including client IP addresses, user agent information (browser type and device information), timestamps, requested URLs, referrer information, and bandwidth usage data. This data collection is part of standard web server logging and is used by Netlify for performance monitoring, security, and analytics purposes. For detailed information about data collection and processing, please refer to our Privacy Policy.",
+
+  "legal-notice.liability.references-links.title": "References and Links",
+  "legal-notice.liability.references-links.p1": "The author is not responsible for any contents linked or referred to from her pages–unless she has full knowledge of illegal contents and would be able to prevent the visitors of her site from viewing those pages. If any damage occurs by the use of information presented there, only the author of the respective pages might be liable, not the one who has linked to these pages.",
+  "legal-notice.liability.references-links.p2": "Furthermore, the author is not liable for any postings or messages published by users of discussion boards, guestbooks or mailing lists provided on her page.",
+
+  "legal-notice.liability.external-links.title": "External Links",
+  "legal-notice.liability.external-links.p1": "This website contains links to external websites. We have no control over the content of these external sites and cannot accept responsibility for their content or data protection practices.",
+
+  "legal-notice.liability.external-third-party-title": "Third-Party Services",
+  "legal-notice.liability.external-third-party.p1": "This website contains links to external websites and integrates with third-party services (such as contact form providers, analytics services, and hosting platforms). We have no control over the content, availability, or privacy practices of these external sites and services.",
+  "legal-notice.liability.external-third-party.p2": "Netlify automatically collects standard server logs including IP addresses, user agent information, timestamps, requested URLs, referrer information, and bandwidth usage data for performance monitoring and security purposes.",
+
+
   "legal-notice.copyright.title": "Copyright",
   "legal-notice.copyright.p1": "The author intended not to use any copyrighted material for the publication or, if not possible, to indicate the copyright of the respective object.",
-  "legal-notice.copyright.p2": "The copyright for any material created by the author is reserved. Any duplication or use of objects such as images, diagrams, sounds or texts in other electronic or printed publications is not permitted without the author's agreement.",
+  "legal-notice.copyright.p2": "All content on this website, including text, images, and graphics, is protected by copyright. Reproduction or use without written permission is not permitted.",
+
+
   "legal-notice.data-protection.title": "Data Protection",
-  "legal-notice.data-protection.p1": "If the opportunity for the input of personal or business data (email addresses, name, addresses) is given, the input of these data takes place voluntarily. The use and payment of all offered services are permitted–if and so far technically possible and reasonable–without specification of any personal data or under specification of anonymised data or an alias.",
-  "legal-notice.last-updated": "Last updated: January 23, 2026"
+  "legal-notice.data-protection.p1": "For information about how we handle your personal data, please refer to our",
+  "legal-notice.data-protection.privacy-policy": "Privacy Policy",
+  "legal-notice.data-protection.full-stop": ".",
+
+  "legal-notice.last-updated": "Last updated: January 26, 2026"
 }

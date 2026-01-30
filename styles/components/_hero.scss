@@ -10,6 +10,11 @@
   width: 100%;
   padding-top: clamp(5rem, 8vw, 7.5rem);
 
+  // Add bottom padding on mobile to prevent content from being hidden behind browser UI
+  @media (max-width: 768px) {
+    padding-bottom: max(4rem, calc(env(safe-area-inset-bottom, 0px) + 2rem));
+  }
+
   // For homepage only
   &--full {
     min-height: 100vh;
@@ -158,6 +163,16 @@
     // Hide alert if empty
     &:has(.hero__alert-text:empty) {
       display: none;
+    }
+
+    // Prevent alert from being hidden behind mobile browser UI
+    @media (max-width: 768px) {
+      bottom: max(8%, calc(env(safe-area-inset-bottom, 0px) + 4rem));
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    @media (max-width: 480px) {
+      bottom: max(6%, calc(env(safe-area-inset-bottom, 0px) + 3.5rem));
     }
   }
 

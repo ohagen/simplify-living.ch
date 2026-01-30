@@ -9,6 +9,20 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-xxxl); // gap between services
+
+  .content__image--vertical {
+    @media (max-width: 768px) {
+      width: 60%;
+      max-width: 60%;
+    }
+  }
+
+  .content__image--vertical {
+    @media (max-width: 500px) {
+      width: 80%;
+      max-width: 80%;
+    }
+  }
   
   /* Individual service item - image left, content right */
   &__item {
@@ -19,11 +33,29 @@
     margin-right: auto;
     gap: var(--space-xl);
     max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+
+    // Ensure picture element doesn't overflow
+    .content__picture {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
 
     // Stack vertically on mobile
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
       gap: var(--space-lg);
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+
+      .content__picture {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+      }
     }
   }
 
@@ -43,6 +75,10 @@
     gap: var(--space-xs);
     justify-content: start;
     text-align: left;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 
     // Override CTA centering to align left in services only
     .cta {
@@ -68,6 +104,15 @@
     padding: var(--space-md);
     background-color: var(--color-sage-50);
     border-radius: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      padding: var(--space-sm);
+      width: 100%;
+      max-width: 100%;
+    }
 
     // Tailor margin-top/bottom from CTA div inside this action group only
     .cta {
