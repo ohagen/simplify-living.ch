@@ -988,6 +988,7 @@ a {
   font-size: 1rem;
   font-weight: 400;
   border-top: 1px solid rgba(83, 105, 66, 0.2);
+  margin-top: var(--space-xxl);
 }
 .site-footer p {
   margin: 0;
