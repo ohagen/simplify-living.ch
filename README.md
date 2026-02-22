@@ -69,7 +69,14 @@ npm run watch:css
 
 ## 3. How to edit your page
 
-1. **Preview:**
+0. Before starting to edit your page, you must create your own branch where you'll edit/add your new code/stuff. You can name it, for eg, `simone/simplify-living`. 
+    - How? In Visual Studio Code, open a terminal and type:
+      ```json
+      git checkout -b simone/simplify-living
+      ```
+    - Check your left bottom corner and you'll see you're on your branch.
+
+1. **Preview page in your browser:**
     - Go to `de/index.html` 
     - Right click 'Open with Live Server'
     - See your page as it is now in your browser
@@ -109,6 +116,18 @@ npm run watch:css
       ```
     - Run `node build.js` or use `node watch.js` for auto-rebuild
 
+6. **Deploy/Publish changes for the world to see:**
+
+    ```json
+    git add . 
+
+    git commit -m "Add new image to homepage" // just an example
+    // These 2 steps above MUST be done with every change you make to your page
+    // Ask Oskar to explain to you how Git works
+
+    git push origin simone/simplify-living // your own branch, rmemember?
+    // Then ask Oskar to merge it with Main branch on GitHub so the world can see your page latest changes
+      ```
 
 <br>
 
@@ -149,4 +168,15 @@ node build.js
 - Conditions:
   - Free
   - Paired with Oskar's DNS
+
+<br>
+
+## 6. Compress images and convert formats
+
+I use this page to decrease the size of images used in this page and convert .png to .webp. It's intuitive and easy to use.                  
+
+EVERY IMAGE YOU ADD SHOULD BE COMPRESSED (MADE SMALLER) AND HAVE BOTH .JPG/.PNG **AND** .WEBP EXTENSIONS.                 
+
+
+https://squoosh.app/
 
