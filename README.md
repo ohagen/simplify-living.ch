@@ -169,6 +169,14 @@ node build.js
   - Free
   - Paired with Oskar's DNS
 
+### Google Search Console
+- Link: https://search.google.com/search-console/ownership?resource_id=https%3A%2F%2Fsimplify-living.ch%2F 
+- **What it is:** A free Google tool to prove you own the site (so only you can see the data), tell Google which pages to crawl (visit and read your pages so they can show up in search results), and see how the site appears in Google Search (e.g. which search terms led to your site, how many people clicked, which pages Google has stored).
+- **What was done:** The site was verified as yours (Google now knows you’re the owner) using two methods:
+  1. **HTML file:** A small file `google46e6b753d738807d.html` was added to the site. As long as this file stays online at `https://simplify-living.ch/google46e6b753d738807d.html`, ownership stays verified. Do not delete it.
+  2. **HTML tag:** A meta tag was added in the page header (a hidden line in the page code that only Google reads; same purpose, backup method).
+- **Goal:** Nothing additional must be done. The goal is so you can submit the sitemap (a list of your pages so Google knows what to look at), see which pages Google has indexed (saved so they can appear in search results), and (optionally) view search performance (how often your site showed up on Google and how many people clicked). No ongoing action required unless you want to use those reports.
+
 <br>
 
 ## 6. Compress images and convert formats
