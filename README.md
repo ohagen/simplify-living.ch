@@ -177,6 +177,16 @@ node build.js
   2. **HTML tag:** A meta tag was added in the page header (a hidden line in the page code that only Google reads; same purpose, backup method).
 - **Goal:** Nothing additional must be done. The goal is so you can submit the sitemap (a list of your pages so Google knows what to look at), see which pages Google has indexed (saved so they can appear in search results), and (optionally) view search performance (how often your site showed up on Google and how many people clicked). No ongoing action required unless you want to use those reports.
 
+### Robots and sitemap (for search engines)
+
+Two files in the project help search engines (like Google) understand and visit your site. You don’t need to change them unless you add or remove whole sections of the site.
+
+- **robots.txt**  
+  A short set of instructions that search engines read when they first visit your site. Ours says: “You may visit all pages” (Allow: /) and “Here is the list of pages to look at” (the sitemap). So it’s a welcome note, not a block. (Crawlers are the programs that scan the web to build search results; robots.txt tells them what they’re allowed to do on your site.)
+
+- **sitemap.xml**  
+  A list of the important pages on your site (home, about, services, contact, etc.) with their full URLs. We give this list to Google (via Google Search Console) so it knows which pages exist and can include them in search. (Indexing means Google saves and can show a page in search results.) If you add or remove a main page, this list should be updated so search engines stay in sync with your site.
+
 <br>
 
 ## 6. Compress images and convert formats
