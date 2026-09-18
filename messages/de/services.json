@@ -10,7 +10,7 @@
     
     "services.workshops.title": "Workshops",
     "services.workshops.subtitle": "4 Wochen. 1 Schwerpunkt. Gemeinsam statt allein. Hier erhältst du Infos zu den kommenden Workshops.",
-    "services.workshops.earlybird": "Earlybirds: Für die ersten 5 Teilnehmer*innen gibt es 25 Euro Rabatt. Im Dezember finden aufgrund der Feiertage nur 3 Workshops statt. Der Preis liegt dann bei 120 Euro.",
+    "services.workshops.earlybird": "Earlybirds: Für die ersten 5 Teilnehmer*innen gibt es 30 Euro Rabatt. Im Dezember finden aufgrund der Feiertage nur 3 Workshops statt. Der Preis liegt dann bei 120 Euro.",
     "services.workshops.image1Alt": "Workshop-Flyer mit Informationen zum ersten Workshop",
     "services.workshops.image2Alt": "Workshop-Flyer mit Informationen zum zweiten Workshop",
 
@@ -18,6 +18,7 @@
     "services.individual.title": "Individuelle Angebote",
     "services.subtitle": "Alle individuellen Dienstleistungen von Simplify Living sind vor Ort im Raum Frankfurt am Main oder weltweit als online Sessions buchbar.",
     "services.cta": "Kostenlose Beratung buchen",
+    "services.cta.workshop": "Jetzt buchen",
     "services.whats-included": "Ansehen, was enthalten ist",
     "services.hide-details": "Ausblenden",
 
