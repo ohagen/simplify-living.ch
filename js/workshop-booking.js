@@ -8,6 +8,10 @@
   const message = document.getElementById('message');
   if (!booking || !message) return;
 
+  // Workshop registrations are handled by email; remove the question and
+  // its required radio inputs so they cannot block or affect submission.
+  document.getElementById('preferred-contact-method-field')?.remove();
+
   booking.hidden = false;
   booking.querySelector('fieldset').disabled = false;
   const intro = booking.dataset.message;
