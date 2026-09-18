@@ -162,7 +162,8 @@
     cursor: pointer;
 
     // Circle to tick preferred contact option
-    input[type="radio"] {
+    input[type="radio"],
+    input[type="checkbox"] {
       width: 1rem;
       height: 1rem;
       margin: 0;

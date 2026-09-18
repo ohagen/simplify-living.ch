@@ -12,14 +12,20 @@
   booking.querySelector('fieldset').disabled = false;
   const intro = booking.dataset.message;
   const options = Array.from(booking.querySelectorAll('input[name="workshop"]'));
-  const selected = options.find(option => option.checked);
-  let generated = selected ? `${intro}\n${selected.value}` : intro;
 
+  function selectedMessage() {
+    const selected = options.filter(option => option.checked);
+    // Require at least one choice, rather than every checkbox.
+    if (options.length) options[0].required = selected.length === 0;
+    return [intro, ...selected.map(option => `- ${option.value}`)].join('\n');
+  }
+
+  let generated = selectedMessage();
   if (!message.value.trim()) message.value = generated;
 
   booking.addEventListener('change', function (event) {
-    if (!options.includes(event.target) || !event.target.checked) return;
-    const next = `${intro}\n${event.target.value}`;
+    if (!options.includes(event.target)) return;
+    const next = selectedMessage();
     // Update only our generated text. Keep any personal notes below it.
     if (!message.value.trim() || message.value === generated) {
       message.value = next;
@@ -27,5 +33,12 @@
       message.value = next + message.value.slice(generated.length);
     }
     generated = next;
+  });
+
+  // Formspree resets the form after a successful submission.
+  message.form.addEventListener('reset', function () {
+    queueMicrotask(function () {
+      generated = selectedMessage();
+    });
   });
 })();
