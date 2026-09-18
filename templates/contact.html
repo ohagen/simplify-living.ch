@@ -93,6 +93,33 @@
             />
           </div>
 
+          <!-- Enabled only when arriving from the workshop booking link. -->
+          <div id="workshop-booking" hidden data-message="{{contact.workshops.message}}">
+            <fieldset class="contact-form__field" disabled>
+              <legend>{{contact.workshops.title}}</legend>
+              <div class="contact-form__preferredcontactmethod-option">
+                <input type="radio" id="workshop-october" name="workshop" value="{{contact.workshops.october}}" required />
+                <label for="workshop-october">{{contact.workshops.october}}</label>
+              </div>
+              <div class="contact-form__preferredcontactmethod-option">
+                <input type="radio" id="workshop-november" name="workshop" value="{{contact.workshops.november}}" required />
+                <label for="workshop-november">{{contact.workshops.november}}</label>
+              </div>
+              <div class="contact-form__preferredcontactmethod-option">
+                <input type="radio" id="workshop-december" name="workshop" value="{{contact.workshops.december}}" required />
+                <label for="workshop-december">{{contact.workshops.december}}</label>
+              </div>
+              <div class="contact-form__preferredcontactmethod-option">
+                <input type="radio" id="workshop-january" name="workshop" value="{{contact.workshops.january}}" required />
+                <label for="workshop-january">{{contact.workshops.january}}</label>
+              </div>
+              <div class="contact-form__preferredcontactmethod-option">
+                <input type="radio" id="workshop-february" name="workshop" value="{{contact.workshops.february}}" required />
+                <label for="workshop-february">{{contact.workshops.february}}</label>
+              </div>
+            </fieldset>
+          </div>
+
           <!-- Message field -->
           <div class="contact-form__field">
             <label for="message">{{contact.form.message.label}}</label>
@@ -175,6 +202,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="{{base-path}}js/scroll-animations.js" defer></script>
     <script src="{{base-path}}js/navbar.js" defer></script>
+    <script src="{{base-path}}js/workshop-booking.js" defer></script>
     <script src="{{base-path}}js/form-submission.js" defer></script>
     <script src="{{base-path}}js/phone-copy.js" defer></script>
   </body>
