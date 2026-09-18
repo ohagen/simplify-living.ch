@@ -15,7 +15,7 @@
   "home.welcome.subtitle-name": "Simone Hagen",
   "home.welcome.subtitle-role": "KonMari Bronze Consultant",
   "home.welcome.p1": "Räumst du regelmässig auf und trotzdem herrscht Chaos?",
-  "home.welcome.p2": "Bist du gestresst und frustriert?",
+  "home.welcome.p2": "Bist du gestresst oder frustriert?",
   "home.welcome.p3": "Wünschst du dir Unterstützung unterwegs zu deinem Wohlfühl-Zuhause?",
   "home.welcome.p4": "Dann bist du hier bei Simplify Living genau richtig!",
   "home.welcome.p5": "Simplify Living hilft dir, Klarheit über das zu bekommen, was du in deinem Zuhause und in deinem Leben willst—und was nicht.",
@@ -37,13 +37,13 @@
 
   "home.services.title": "Angebote",
   "home.services.subtitle1": "Klamotten",
-  "home.services.p1": "Wir organisieren deinen Schrank auf seine volle Potenzial in einem einfachen und spaßigen Weg.",
+  "home.services.p1": "Wir organisieren deinen Schrank so, dass er genau zu deinen individuellen Bedürfnissen passt und du dich morgens wieder über deine Klamotten freust.",
   "home.services.subtitle2": "Papierkram",
-  "home.services.p2": "Wir reduzieren deine Papierarbeit und erstellen ein organisatorisches System für dich.",
+  "home.services.p2": "Wir reduzieren deine Papiere und erstellen ein organisatorisches System für dich, das dir zukünftige Abläufe erleichtert.",
   "home.services.subtitle3": "Kinderwelt",
-  "home.services.p3": "Zusammen mit den Kindern, erstellen wir Ordnung in einem spielerischen und altersgerechten Weg.",
+  "home.services.p3": "Zusammen mit den Kindern, erstellen wir auf spielerische und altersgerechte Weise Ordnung, die hält.",
   "home.services.subtitle4": "All In",
-  "home.services.p4": "Wir räumen dein gesamtes Haus auf und arrangieren es in einem optimalen Weg.",
+  "home.services.p4": "Wir räumen dein gesamtes zuhause auf und arrangieren es auf deine optimale Art.",
   "home.services.cta": "Alle Angebote ansehen",
 
   "home.gallery.title": "Gallerie",
@@ -68,6 +68,11 @@
       "image": "../images/testimonials/paedi.jpg",
       "text": "Ich habe mit Simone meine Klamotten aufgeräumt. Obwohl ich jetzt weniger besitze, finde ich schneller etwas, was mir auch wirklich gefällt. Mein Schrank ist übersichtlich. Es gibt jetzt tatsächlich ein neues Normal."
     },
+      {
+      "name": "Lena",
+      "image": "..images/testimonials/Lena2.jpg",
+      "text": "Ich habe mit Simone Papier ausgemistet. Das hätte ich alleine nie geschafft. Von einem ganzen Regal voller Ordner konnte ich auf vier Stück reduzieren. Dank des neuen Systems finde ich nun auch auf Anhieb die richtigen Unterlagen für Arztbesuche oder die Steuern."
+    },  
     {
       "name": "Stef",
       "image": "../images/testimonials/stef.jpg",
@@ -76,7 +81,7 @@
   ],
 
   "home.final-cta.title": "Bereit, dein Leben zu vereinfachen?",
-  "home.final-cta.p1": "Erstelle ein Zuhause, das dir wirklich gut gefällt.",
+  "home.final-cta.p1": "Schaffe ein Wohlfühlzuhause, das dir gut tut.",
   "home.final-cta.p2": "Kontaktiere mich jetzt! Kostenlos und ohne Verpflichtungen.",
   "home.final-cta.cta": "Kostenlose Beratung"
 }

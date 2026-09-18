@@ -8,8 +8,14 @@
     "services.hero.alt": "Angebote Seite Hero-Bild",
     "services.hero.title": "Angebot",
     
-    "services.title": "Alle Angebote verfügbar",
-    "services.subtitle": "Alle Dienstleistungen von Simplify Living sind vor Ort im Raum Frankfurt am Main oder weltweit als Online Sessions buchbar.",
+    "services.workshops.title": "Workshops",
+    "services.workshops.subtitle": "4 Wochen. 1 Schwerpunkt. Gemeinsam statt allein. Hier erhältst du Infos zu den kommenden Workshops.",
+    "services.workshops.earlybird": "Earlybird: Für die ersten 5 Teilnehmer*innen gibt es 25 Euro Rabatt. Im Dezember finden aufgrund der Feiertage nur 3 Workshops statt. Der Preis liegt dann bei 120 Euro.",
+    "services.workshops.image1Alt": "Workshop-Flyer mit Informationen zum ersten Workshop",
+    "services.workshops.image2Alt": "Workshop-Flyer mit Informationen zum zweiten Workshop",
+
+    "services.title": "Individuelle Angebote",
+    "services.subtitle": "Alle individuellen Dienstleistungen von Simplify Living sind vor Ort im Raum Frankfurt am Main oder weltweit als online Sessions buchbar.",
     "services.cta": "Kostenlose Beratung buchen",
     "services.whats-included": "Ansehen, was enthalten ist",
     "services.hide-details": "Ausblenden",
@@ -25,7 +31,7 @@
     "services.service1.price": "Ab €555",
 
     "services.service2.title": "Papierkram",
-    "services.service2.intro1": "Wo war nochmal die Garantie? Und die Unterlagen für die Steuererklärung? No problem. Kein Problem. In Zukunft findest du alles auf Anhin.",
+    "services.service2.intro1": "Wo war nochmal die Garantie? Und die Unterlagen für die Steuererklärung? Kein Problem. In Zukunft findest du alles auf Anhin.",
     "services.service2.intro2": "Ich helfe dir, deinen Papierkram sinnvoll zu reduzieren und zeige dir ein Ordnungssystem, das langfristig hält, was es verspricht.",
     "services.service2.support": "Mit diesem Service wirst du:",
     "services.service2.li1": "Deine Wünsche und Ziele formulieren.",
@@ -54,9 +60,8 @@
     "services.service4.li4": "Schriftlich jederzeit zur Seite stehen, um dich auf dem Weg zu deinem Wohlfühlzuhause optimal zu unterstützen",
     "services.service4.price": "Offerte nach Absprache",
 
-    "services.final-cta.title": "Lass uns dein Zuhause gemeinsam vereinfachen",
+    "services.final-cta.title": "Lass uns dein Zuhause gemeinsam optimieren",
     "services.final-cta.p1": "Noch nicht sicher, wo du anfangen sollst?",
     "services.final-cta.p2": "Buche eine kostenlose, unverbindliche Erstberatung und wir finden es gemeinsam heraus.",
     "services.final-cta.cta": "Jetzt starten"
   }
-  

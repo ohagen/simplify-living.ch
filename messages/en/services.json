@@ -8,6 +8,12 @@
     "services.hero.alt": "Services page hero image",
     "services.hero.title": "Services",
     
+    "services.workshops.title": "Workshops",
+    "services.workshops.subtitle": "Four weeks. One focus. Together instead of alone. Find information about the upcoming workshops here.",
+    "services.workshops.earlybird": "Early bird offer: The first five participants receive a €25 discount. Due to the holidays, there will only be three workshops in December. The price is then €120.",
+    "services.workshops.image1Alt": "Workshop flyer with information about the first workshop",
+    "services.workshops.image2Alt": "Workshop flyer with information about the second workshop",
+
     "services.title": "All Services Available",
     "services.subtitle": "Simplify Living services can be booked in person in the Frankfurt am Main area or online from anywhere in the world.",
     "services.cta": "Book a Free Consultation",
