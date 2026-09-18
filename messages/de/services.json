@@ -14,7 +14,8 @@
     "services.workshops.image1Alt": "Workshop-Flyer mit Informationen zum ersten Workshop",
     "services.workshops.image2Alt": "Workshop-Flyer mit Informationen zum zweiten Workshop",
 
-    "services.title": "Individuelle Angebote",
+    "services.title": "Alle Angebote",
+    "services.individual.title": "Individuelle Angebote",
     "services.subtitle": "Alle individuellen Dienstleistungen von Simplify Living sind vor Ort im Raum Frankfurt am Main oder weltweit als online Sessions buchbar.",
     "services.cta": "Kostenlose Beratung buchen",
     "services.whats-included": "Ansehen, was enthalten ist",
