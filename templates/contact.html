@@ -93,6 +93,33 @@
             />
           </div>
 
+          <!-- Enabled only when arriving from the workshop booking link. -->
+          <div id="workshop-booking" hidden data-message="{{contact.workshops.message}}">
+            <fieldset class="contact-form__field" disabled>
+              <legend>{{contact.workshops.title}}</legend>
+              <div class="contact-form__preferredcontactmethod-option">
+                <input type="checkbox" id="workshop-october" name="workshop" value="{{contact.workshops.october}}" />
+                <label for="workshop-october">{{contact.workshops.october}}</label>
+              </div>
+              <div class="contact-form__preferredcontactmethod-option">
+                <input type="checkbox" id="workshop-november" name="workshop" value="{{contact.workshops.november}}" />
+                <label for="workshop-november">{{contact.workshops.november}}</label>
+              </div>
+              <div class="contact-form__preferredcontactmethod-option">
+                <input type="checkbox" id="workshop-december" name="workshop" value="{{contact.workshops.december}}" />
+                <label for="workshop-december">{{contact.workshops.december}}</label>
+              </div>
+              <div class="contact-form__preferredcontactmethod-option">
+                <input type="checkbox" id="workshop-january" name="workshop" value="{{contact.workshops.january}}" />
+                <label for="workshop-january">{{contact.workshops.january}}</label>
+              </div>
+              <div class="contact-form__preferredcontactmethod-option">
+                <input type="checkbox" id="workshop-february" name="workshop" value="{{contact.workshops.february}}" />
+                <label for="workshop-february">{{contact.workshops.february}}</label>
+              </div>
+            </fieldset>
+          </div>
+
           <!-- Message field -->
           <div class="contact-form__field">
             <label for="message">{{contact.form.message.label}}</label>
@@ -105,7 +132,7 @@
           </div>
 
           <!-- Preferred contact method field -->
-          <div class="contact-form__field">
+          <div class="contact-form__field" id="preferred-contact-method-field">
             <label>{{contact.form.preferredcontactmethod.label}}</label>
             <div class="contact-form__preferredcontactmethod-group">
               <div class="contact-form__preferredcontactmethod-option">
@@ -175,6 +202,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="{{base-path}}js/scroll-animations.js" defer></script>
     <script src="{{base-path}}js/navbar.js" defer></script>
+    <script src="{{base-path}}js/workshop-booking.js" defer></script>
     <script src="{{base-path}}js/form-submission.js" defer></script>
     <script src="{{base-path}}js/phone-copy.js" defer></script>
   </body>

@@ -2157,7 +2157,8 @@ a {
   gap: var(--space-xs);
   cursor: pointer;
 }
-.contact-form__preferredcontactmethod-option input[type=radio] {
+.contact-form__preferredcontactmethod-option input[type=radio],
+.contact-form__preferredcontactmethod-option input[type=checkbox] {
   width: 1rem;
   height: 1rem;
   margin: 0;
